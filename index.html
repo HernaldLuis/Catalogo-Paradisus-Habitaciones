@@ -1,12 +1,17 @@
 <body>
-  <h1>Catálogo Interactivo de Habitaciones</h1>
+  <div class="contenedor">
+    <h1>Catálogo Interactivo de Habitaciones</h1>
+    <p class="descripcion">
+      Selecciona una habitación para visualizar su ficha con información detallada: tipo de vista, tipo de cama, piso, descripción y fotografía representativa.
+    </p>
 
-  <!-- Botones para mostrar info de cada habitación -->
-  <button onclick="mostrarInfo('1501')">Ver habitación 1501</button>
-  <button onclick="mostrarInfo('1502')">Ver habitación 1502</button>
+    <!-- Botones -->
+    <button onclick="mostrarInfo('1501')">Ver habitación 1501</button>
+    <button onclick="mostrarInfo('1502')">Ver habitación 1502</button>
 
-  <!-- Aquí se mostrará la info -->
-  <div id="panel"></div>
+    <!-- Panel informativo -->
+    <div id="panel"></div>
+  </div>
 
   <script>
     const habitaciones = {
@@ -30,13 +35,70 @@
       const h = habitaciones[numero];
       if (!h) return;
       document.getElementById('panel').innerHTML = `
-        <h2>Habitación ${numero}</h2>
-        <p><strong>Vista:</strong> ${h.vista}</p>
-        <p><strong>Cama:</strong> ${h.cama}</p>
-        <p><strong>Piso:</strong> ${h.piso}</p>
-        <p><strong>Descripción:</strong> ${h.descripcion}</p>
-        <img src="${h.imagen}" alt="Habitación ${numero}" width="300">
+        <div class="ficha">
+          <h2>Habitación ${numero}</h2>
+          <p><strong>Vista:</strong> ${h.vista}</p>
+          <p><strong>Cama:</strong> ${h.cama}</p>
+          <p><strong>Piso:</strong> ${h.piso}</p>
+          <p><strong>Descripción:</strong> ${h.descripcion}</p>
+          <img src="${h.imagen}" alt="Habitación ${numero}">
+        </div>
       `;
     }
   </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-image: url('fondo.jpg'); /* Cambia este nombre por el de tu imagen */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+    }
+
+    .contenedor {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+      margin-top: 40px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 32px;
+    }
+
+    .descripcion {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #panel img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    .ficha {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+  </style>
 </body>
