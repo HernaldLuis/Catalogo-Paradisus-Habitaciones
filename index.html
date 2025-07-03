@@ -1,5 +1,5 @@
 <body>
-  <!-- Contenedor solo para título y descripción -->
+  <!-- Contenedor de título y descripción -->
   <div class="contenedor">
     <h1>Catálogo Interactivo de Habitaciones</h1>
     <p class="descripcion">
@@ -7,14 +7,21 @@
     </p>
   </div>
 
-  <!-- Botones fuera del contenedor -->
-  <div class="botones">
-    <button onclick="mostrarInfo('1501')">1501</button>
-    <button onclick="mostrarInfo('1502')">1502</button>
-  </div>
+  <!-- Contenedor de dos columnas -->
+  <div class="layout">
+    <!-- Columna izquierda (botones) -->
+    <div class="columna izquierda">
+      <button onclick="mostrarInfo('1501')">1501</button>
+      <button onclick="mostrarInfo('1502')">1502</button>
+      <!-- Puedes agregar más botones aquí -->
+    </div>
 
-  <!-- Panel dinámico -->
-  <div id="panel"></div>
+    <!-- Columna derecha (panel) -->
+    <div class="columna derecha" id="panel">
+      <!-- Aquí se muestra la info dinámica -->
+      <p class="instruccion-panel">Selecciona una habitación para ver los detalles aquí.</p>
+    </div>
+  </div>
 
   <script>
     const habitaciones = {
@@ -54,7 +61,7 @@
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background-image: url('fondo.jpg.jpeg');
+      background-image: url('fondo.jpg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -67,41 +74,55 @@
       max-width: 800px;
       margin: 40px auto 10px;
       border-radius: 10px;
+      text-align: center;
     }
 
     h1 {
-      text-align: center;
       font-size: 32px;
     }
 
     .descripcion {
-      text-align: center;
       font-size: 18px;
       margin-bottom: 0;
     }
 
-    .botones {
-      text-align: left;
-      max-width: 800px;
-      margin: 20px auto 0;
+    .layout {
+      display: flex;
+      max-width: 1000px;
+      margin: 30px auto;
+      gap: 20px;
+      padding: 0 20px;
     }
 
-    .botones button {
-      padding: 10px 20px;
-      margin-right: 10px;
+    .columna {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+      height: fit-content;
+    }
+
+    .izquierda {
+      flex: 3; /* 75% */
+    }
+
+    .derecha {
+      flex: 1; /* 25% */
+    }
+
+    .izquierda button {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
       background-color: #3498db;
       color: white;
       border: none;
       border-radius: 6px;
       cursor: pointer;
+      text-align: left;
     }
 
-    #panel {
-      max-width: 800px;
-      margin: 20px auto;
-    }
-
-    #panel img {
+    .ficha img {
       max-width: 100%;
       border-radius: 10px;
       margin-top: 10px;
@@ -109,9 +130,13 @@
 
     .ficha {
       background-color: rgba(255, 255, 255, 0.1);
-      padding: 20px;
+      padding: 15px;
       border-radius: 10px;
-      margin-top: 20px;
+    }
+
+    .instruccion-panel {
+      font-style: italic;
+      opacity: 0.8;
     }
   </style>
 </body>
