@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo de Habitaciones</title>
+</head>
+<body>
+  <h1>Catálogo Interactivo de Habitaciones</h1>
+  <p>Haz clic en el botón para ver detalles de la habitación.</p>
+
+  <button onclick="mostrarInfo()">Mostrar Habitación 1501</button>
+
+  <div id="panel"></div>
+
+  <script>
+    function mostrarInfo() {
+      document.getElementById('panel').innerHTML = `
+        <h2>Habitación 1501</h2>
+        <p><strong>Vista:</strong> Jardín</p>
+        <p><strong>Cama:</strong> King size</p>
+        <p><strong>Piso:</strong> 5</p>
+        <p><strong>Descripción:</strong> Habitación con decoración cálida y vista al jardín.</p>
+        <img src="habitacion1501.jpeg" alt="Habitación 1501" width="300">
+      `;
+    }
+  </script>
+</body>
+</html>
