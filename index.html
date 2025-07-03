@@ -1,28 +1,42 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Catálogo de Habitaciones</title>
-</head>
 <body>
   <h1>Catálogo Interactivo de Habitaciones</h1>
-  <p>Haz clic en la habitacion que deseas visualizar.</p>
 
-  <button onclick="mostrarInfo()">Mostrar Habitación 1501</button>
+  <!-- Botones para mostrar info de cada habitación -->
+  <button onclick="mostrarInfo('1501')">Ver habitación 1501</button>
+  <button onclick="mostrarInfo('1502')">Ver habitación 1502</button>
 
+  <!-- Aquí se mostrará la info -->
   <div id="panel"></div>
 
   <script>
-    function mostrarInfo() {
+    const habitaciones = {
+      '1501': {
+        vista: 'Jardín',
+        cama: 'King Size',
+        piso: 5,
+        descripcion: 'Habitación con decoración cálida y vista al jardín.',
+        imagen: 'habitacion1501.jpeg'
+      },
+      '1502': {
+        vista: 'Mar',
+        cama: '2 Queen',
+        piso: 5,
+        descripcion: 'Habitación con vista directa al mar y decoración moderna.',
+        imagen: 'habitacion1502.jpeg'
+      }
+    };
+
+    function mostrarInfo(numero) {
+      const h = habitaciones[numero];
+      if (!h) return;
       document.getElementById('panel').innerHTML = `
-        <h2>Habitación 1501</h2>
-        <p><strong>Vista:</strong> Jardín</p>
-        <p><strong>Cama:</strong> King size</p>
-        <p><strong>Piso:</strong> 5</p>
-        <p><strong>Descripción:</strong> Habitación con decoración cálida y vista al jardín.</p>
-        <img src="habitacion1501.jpeg" alt="Habitación 1501" width="300">
+        <h2>Habitación ${numero}</h2>
+        <p><strong>Vista:</strong> ${h.vista}</p>
+        <p><strong>Cama:</strong> ${h.cama}</p>
+        <p><strong>Piso:</strong> ${h.piso}</p>
+        <p><strong>Descripción:</strong> ${h.descripcion}</p>
+        <img src="${h.imagen}" alt="Habitación ${numero}" width="300">
       `;
     }
   </script>
 </body>
-</html>
