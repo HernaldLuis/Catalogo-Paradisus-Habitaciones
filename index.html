@@ -1,127 +1,185 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Catálogo Interactivo de Habitaciones</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
+      font-family: 'Arial', sans-serif;
+      background-image: url('fondo.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+    }
+
+    .contenedor {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      max-width: 900px;
+      margin: 40px auto 10px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    .descripcion {
+      font-size: 18px;
+    }
+
+    .layout {
       display: flex;
-      flex-direction: row;
-      min-height: 100vh;
+      max-width: 1200px;
+      margin: 30px auto;
+      gap: 20px;
+      padding: 0 20px;
     }
-    .fila-nivel5-superior {
-    margin-left: 100px; /* Aumenta o reduce este valor para mover más o menos */
-      
-    }
-    .croquis {
-      flex: 2;
+
+    .croquis-pasillo {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      flex: 3;
+      background-color: rgba(0, 0, 0, 0.4);
       padding: 20px;
-      overflow-y: auto;
-    }
-
-    .panel {
-      flex: 1;
-      padding: 20px;
-      background-color: #fff;
-      border-left: 2px solid #ccc;
-      overflow-y: auto;
-    }
-
-    .nivel {
-      margin-bottom: 40px;
-    }
-
-    .nivel h2 {
-      margin-bottom: 10px;
-      font-size: 20px;
+      border-radius: 10px;
     }
 
     .fila {
       display: flex;
-      justify-content: flex-start; /* Alinea los botones a la izquierda */
+      justify-content: flex-start;
       gap: 6px;
       flex-wrap: wrap;
     }
 
-    .espacio {
-      padding: 10px;
-      background-color: #ddd;
-      border-radius: 4px;
-      font-size: 12px;
-      text-align: center;
+    .fila-invertida {
+      flex-direction: row-reverse;
     }
 
-    .habitacion {
-      width: 60px;
-      height: 60px;
+    /* 👇🏼 CSS que MUEVE la fila de los 1501 a la derecha */
+    .fila-nivel5-superior {
+      margin-left: 100px;
+    }
+
+    .pasillo {
+      height: 25px;
+      background-color: transparent;
+      border-bottom: 2px dashed rgba(255, 255, 255, 0.3);
+      margin: 0 auto;
+      width: 80%;
+    }
+
+    .croquis-pasillo button {
+      width: 50px;
+      height: 50px;
       background-color: #3498db;
       color: white;
       border: none;
       border-radius: 4px;
-      cursor: pointer;
       font-size: 12px;
+      cursor: pointer;
     }
 
-    .habitacion span {
-      display: block;
-      font-size: 10px;
+    .panel-derecho {
+      flex: 1.5;
+      background-color: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 10px;
+      min-height: 300px;
     }
 
-    .ficha img {
-      max-width: 100%;
-      max-height: 400px;
-      margin-top: 10px;
+    .panel-derecho img {
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 15px;
       display: block;
       margin-left: auto;
       margin-right: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .panel-derecho img:hover {
+      transform: scale(1.05);
+    }
+
+    .ficha {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    .instruccion-panel {
+      font-style: italic;
+      opacity: 0.8;
+    }
+
+    .vista-verde {
+      background-color: #27ae60;
+    }
+
+    .vista-amarilla {
+      background-color: #f1c40f;
+      color: black;
+    }
+
+    .vista-roja {
+      background-color: #e74c3c;
     }
   </style>
 </head>
 <body>
-  <div class="croquis">
-    <div class="nivel">
-      <h2>NIVEL 5</h2>
-      <div class="fila">
-        <div class="espacio">OFICINAS</div>
-      </div>
+
+  <div class="contenedor">
+    <h1>Catálogo Interactivo de Habitaciones</h1>
+    <p class="descripcion">
+      Selecciona una habitación desde el croquis inferior. El plano refleja la ubicación física real, con un pasillo central.
+    </p>
+  </div>
+
+  <div class="layout">
+    <div class="croquis-pasillo">
+
+      <!-- 🔵 AQUI ESTÁ LA FILA MODIFICADA DE 1501 A 1510 -->
       <div class="fila fila-nivel5-superior">
-        <button class="habitacion" onclick="mostrarInfo('1501')">1501<span>K</span></button>
-        <button class="habitacion" onclick="mostrarInfo('1502')">1502<span>D</span></button>
-        <button class="habitacion" onclick="mostrarInfo('1503')">1503<span>K</span></button>
-        <button class="habitacion" onclick="mostrarInfo('1504')">1504<span>D</span></button>
-        <button class="habitacion" onclick="mostrarInfo('1505')">1505<span>K</span></button>
-        <button class="habitacion" onclick="mostrarInfo('1506')">1506<span>D</span></button>
-        <button class="habitacion" onclick="mostrarInfo('1507')">1507<span>K</span></button>
-        <button class="habitacion" onclick="mostrarInfo('1508')">1508<span>D</span></button>
-        <button class="habitacion" onclick="mostrarInfo('1509')">1509<span>K</span></button>
-        <button class="habitacion" onclick="mostrarInfo('1510')">1510<span>D</span></button>
-        <div class="espacio">ESCALERAS</div>
+        <button onclick="mostrarInfo('1501')">1501</button>
+        <button onclick="mostrarInfo('1502')">1502</button>
+        <button onclick="mostrarInfo('1503')">1503</button>
+        <button onclick="mostrarInfo('1504')">1504</button>
+        <button onclick="mostrarInfo('1505')">1505</button>
+        <button onclick="mostrarInfo('1506')">1506</button>
+        <button onclick="mostrarInfo('1507')">1507</button>
+        <button onclick="mostrarInfo('1508')">1508</button>
+        <button onclick="mostrarInfo('1509')">1509</button>
+        <button onclick="mostrarInfo('1510')">1510</button>
       </div>
-      <div class="fila">
-        <div class="espacio">ELEVADOR</div>
-        <button class="habitacion" onclick="mostrarInfo('1522')">1522<span>K</span></button>
-        <button class="habitacion" onclick="mostrarInfo('1521')">1521<span>D</span></button>
-        <button class="habitacion" onclick="mostrarInfo('1520')">1520<span>K</span></button>
-        <button class="habitacion" onclick="mostrarInfo('1519')">1519<span>D</span></button>
-        <button class="habitacion" onclick="mostrarInfo('1518')">1518<span>K</span></button>
-        <button class="habitacion" onclick="mostrarInfo('1517')">1517<span>D</span></button>
-        <button class="habitacion" onclick="mostrarInfo('1516')">1516<span>K</span></button>
-        <button class="habitacion" onclick="mostrarInfo('1515')">1515<span>D</span></button>
-        <button class="habitacion" onclick="mostrarInfo('1514')">1514<span>K</span></button>
-        <button class="habitacion" onclick="mostrarInfo('1512')">1512<span>D</span></button>
-        <button class="habitacion" onclick="mostrarInfo('1511')">1511<span>K</span></button>
+      <!-- 🔵 FIN DE LA FILA MODIFICADA -->
+
+      <div class="pasillo"></div>
+
+      <div class="fila fila-invertida">
+        <button onclick="mostrarInfo('1522')">1522</button>
+        <button onclick="mostrarInfo('1521')">1521</button>
+        <button onclick="mostrarInfo('1520')">1520</button>
+        <button onclick="mostrarInfo('1519')">1519</button>
+        <button onclick="mostrarInfo('1518')">1518</button>
+        <button onclick="mostrarInfo('1517')">1517</button>
+        <button onclick="mostrarInfo('1516')">1516</button>
+        <button onclick="mostrarInfo('1515')">1515</button>
+        <button onclick="mostrarInfo('1514')">1514</button>
+        <button onclick="mostrarInfo('1511')">1511</button>
       </div>
     </div>
 
-    <!-- Aquí se agregarían más niveles como Nivel 4, 3, 2, 1 -->
-  </div>
-
-  <div class="panel" id="panel">
-    <p>Selecciona una habitación para ver los detalles aquí.</p>
+    <div class="panel-derecho" id="panel">
+      <p class="instruccion-panel">Selecciona una habitación para ver los detalles aquí.</p>
+    </div>
   </div>
 
   <script>
@@ -131,32 +189,31 @@
         cama: 'King Size',
         piso: 5,
         descripcion: 'Vista jardín. Muy solicitada.',
-        imagen: 'habitacion1501.jpeg'
+        imagen: 'habitacion1501.jpeg.png'
       },
       '1522': {
         vista: 'Mar',
-        cama: 'King Size',
+        cama: 'Queen Size',
         piso: 5,
-        descripcion: 'Excelente ubicación con vista al mar.',
+        descripcion: 'Vista al mar. Excelente ubicación.',
         imagen: 'habitacion1522.jpeg'
       }
     };
 
     function mostrarInfo(numero) {
       const h = habitaciones[numero];
-      const panel = document.getElementById('panel');
       if (!h) {
-        panel.innerHTML = `<p>No hay información disponible para la habitación ${numero}.</p>`;
+        document.getElementById('panel').innerHTML = `<p>No hay información para la habitación ${numero}.</p>`;
         return;
       }
-      panel.innerHTML = `
+      document.getElementById('panel').innerHTML = `
         <div class="ficha">
           <h2>Habitación ${numero}</h2>
           <p><strong>Vista:</strong> ${h.vista}</p>
           <p><strong>Cama:</strong> ${h.cama}</p>
           <p><strong>Piso:</strong> ${h.piso}</p>
           <p><strong>Descripción:</strong> ${h.descripcion}</p>
-          <img src="${h.imagen}" alt="Imagen de la habitación ${numero}">
+          <img src="${h.imagen}" alt="Habitación ${numero}">
         </div>
       `;
     }
