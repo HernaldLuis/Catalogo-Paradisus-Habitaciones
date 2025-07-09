@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Catálogo Interactivo de Habitaciones</title>
   <style>
     body {
@@ -13,37 +13,6 @@
       background-position: center;
       background-attachment: fixed;
       color: white;
-    }
-
-    /* LOGIN */
-    #login {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      background-color: rgba(0,0,0,0.7);
-    }
-
-    #login input {
-      padding: 10px;
-      margin: 10px;
-      border: none;
-      border-radius: 5px;
-    }
-
-    #login button {
-      padding: 10px 20px;
-      background-color: #2ecc71;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    #contenido {
-      display: none;
     }
 
     .contenedor {
@@ -149,96 +118,160 @@
       font-style: italic;
       opacity: 0.8;
     }
+
+    .login-container {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    #logout-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #logout-btn:hover {
+      background-color: #c0392b;
+    }
   </style>
+
+  <script src="https://cdn.auth0.com/js/auth0-spa-js/2.0/auth0-spa-js.production.js"></script>
 </head>
 <body>
 
-<div id="login">
-  <h2>Acceso Privado</h2>
-  <input type="text" id="usuario" placeholder="Usuario" />
-  <input type="password" id="password" placeholder="Contraseña" />
-  <button onclick="validarLogin()">Ingresar</button>
-</div>
-
-<div id="contenido">
-  <div class="contenedor">
-    <h1>Catálogo Interactivo de Habitaciones</h1>
-    <p class="descripcion">Selecciona una habitación desde el croquis inferior. El plano refleja la ubicación física real, con un pasillo central.</p>
+  <div class="login-container" id="login-view">
+    <h2>Acceso Privado</h2>
+    <button onclick="login()">Ingresar con Auth0</button>
   </div>
 
-  <div class="layout">
-    <div class="croquis-pasillo">
-      <div class="fila fila-nivel5-superior">
-        <button onclick="mostrarInfo('1501')">1501</button>
-        <button onclick="mostrarInfo('1502')">1502</button>
-        <button onclick="mostrarInfo('1503')">1503</button>
-        <button onclick="mostrarInfo('1504')">1504</button>
-        <button onclick="mostrarInfo('1505')">1505</button>
-        <button onclick="mostrarInfo('1506')">1506</button>
-        <button onclick="mostrarInfo('1507')">1507</button>
-        <button onclick="mostrarInfo('1508')">1508</button>
-        <button onclick="mostrarInfo('1509')">1509</button>
-        <button onclick="mostrarInfo('1510')">1510</button>
-      </div>
+  <div id="contenido-principal" style="display: none;">
+    <button id="logout-btn" onclick="logout()">Cerrar sesión</button>
 
-      <div class="pasillo"></div>
-
-      <div class="fila fila-invertida">
-        <button onclick="mostrarInfo('1522')">1522</button>
-        <button onclick="mostrarInfo('1521')">1521</button>
-        <button onclick="mostrarInfo('1520')">1520</button>
-        <button onclick="mostrarInfo('1519')">1519</button>
-        <button onclick="mostrarInfo('1518')">1518</button>
-        <button onclick="mostrarInfo('1517')">1517</button>
-        <button onclick="mostrarInfo('1516')">1516</button>
-        <button onclick="mostrarInfo('1515')">1515</button>
-        <button onclick="mostrarInfo('1514')">1514</button>
-        <button onclick="mostrarInfo('1511')">1511</button>
-      </div>
+    <div class="contenedor">
+      <h1>Catálogo Interactivo de Habitaciones</h1>
+      <p class="descripcion">Selecciona una habitación desde el croquis inferior. El plano refleja la ubicación física real, con un pasillo central.</p>
     </div>
 
-    <div class="panel-derecho" id="panel">
-      <p class="instruccion-panel">Selecciona una habitación para ver los detalles aquí.</p>
+    <div class="layout">
+      <div class="croquis-pasillo">
+        <div class="fila fila-nivel5-superior">
+          <button onclick="mostrarInfo('1501')">1501</button>
+          <button onclick="mostrarInfo('1502')">1502</button>
+          <button onclick="mostrarInfo('1503')">1503</button>
+          <button onclick="mostrarInfo('1504')">1504</button>
+          <button onclick="mostrarInfo('1505')">1505</button>
+        </div>
+
+        <div class="pasillo"></div>
+
+        <div class="fila fila-invertida">
+          <button onclick="mostrarInfo('1522')">1522</button>
+          <button onclick="mostrarInfo('1521')">1521</button>
+        </div>
+      </div>
+
+      <div class="panel-derecho" id="panel">
+        <p class="instruccion-panel">Selecciona una habitación para ver los detalles aquí.</p>
+      </div>
     </div>
   </div>
-</div>
 
-<script>
-  const habitaciones = {
-    '1501': { vista: 'Jardín', cama: 'King Size', piso: 5, descripcion: 'Vista jardín.', imagen: 'habitacion1501.jpeg.png' },
-    '1522': { vista: 'Mar', cama: 'Queen Size', piso: 5, descripcion: 'Vista al mar.', imagen: 'habitacion1522.jpeg' }
-  };
+  <script>
+    const auth0Client = await createAuth0Client({
+      domain: "dev-7asgvhhsemp8gidy.us.auth0.com",
+      clientId: "aHmGf8Wkm1TJ4SZN5FBwkigTHPDe4TrW",
+      authorizationParams: {
+        redirect_uri: window.location.origin
+      }
+    });
 
-  function mostrarInfo(numero) {
-    const h = habitaciones[numero];
-    if (!h) {
-      document.getElementById('panel').innerHTML = `<p>No hay información para la habitación ${numero}.</p>`;
-      return;
+    async function login() {
+      await auth0Client.loginWithRedirect();
     }
-    document.getElementById('panel').innerHTML = `
-      <div class="ficha">
-        <h2>Habitación ${numero}</h2>
-        <p><strong>Vista:</strong> ${h.vista}</p>
-        <p><strong>Cama:</strong> ${h.cama}</p>
-        <p><strong>Piso:</strong> ${h.piso}</p>
-        <p><strong>Descripción:</strong> ${h.descripcion}</p>
-        <img src="${h.imagen}" alt="Habitación ${numero}" />
-      </div>
-    `;
-  }
 
-  function validarLogin() {
-    const usuario = document.getElementById('usuario').value;
-    const password = document.getElementById('password').value;
-
-    if (usuario === 'admin' && password === 'paradisus2024') {
-      document.getElementById('login').style.display = 'none';
-      document.getElementById('contenido').style.display = 'block';
-    } else {
-      alert('Usuario o contraseña incorrectos.');
+    async function logout() {
+      await auth0Client.logout({
+        logoutParams: {
+          returnTo: window.location.origin
+        }
+      });
     }
-  }
-</script>
 
+    async function handleRedirect() {
+      const query = window.location.search;
+      if (query.includes("code=") && query.includes("state=")) {
+        await auth0Client.handleRedirectCallback();
+        window.history.replaceState({}, document.title, "/");
+      }
+
+      const isAuthenticated = await auth0Client.isAuthenticated();
+
+      if (isAuthenticated) {
+        document.getElementById("login-view").style.display = "none";
+        document.getElementById("contenido-principal").style.display = "block";
+      } else {
+        document.getElementById("login-view").style.display = "block";
+        document.getElementById("contenido-principal").style.display = "none";
+      }
+    }
+
+    window.onload = handleRedirect;
+
+    const habitaciones = {
+      '1501': {
+        vista: 'Jardín',
+        cama: 'King Size',
+        piso: 5,
+        descripcion: 'Vista jardín. Muy solicitada.',
+        imagen: 'habitacion1501.jpeg.png'
+      },
+      '1502': {
+        vista: 'Jardín 🌿',
+        cama: 'Doble 🛏️🛏️',
+        piso: 5,
+        descripcion: 'En excelente estado.',
+        imagen: 'habitacion1502.jpg'
+      },
+      '1521': {
+        vista: 'Jardín 🌿',
+        cama: 'King Size',
+        piso: 5,
+        descripcion: 'Amplia y silenciosa.',
+        imagen: 'habitacion1521.jpg'
+      },
+      '1522': {
+        vista: 'Mar abierta 🌊',
+        cama: 'Doble 🛏️🛏️',
+        piso: 5,
+        descripcion: 'Una de las mejores vistas.',
+        imagen: 'habitacion1522.jpeg'
+      }
+    };
+
+    function mostrarInfo(numero) {
+      const h = habitaciones[numero];
+      if (!h) {
+        document.getElementById('panel').innerHTML = `<p>No hay información para la habitación ${numero}.</p>`;
+        return;
+      }
+
+      document.getElementById('panel').innerHTML = `
+        <div class="ficha">
+          <h2>Habitación ${numero}</h2>
+          <p><strong>Vista:</strong> ${h.vista}</p>
+          <p><strong>Cama:</strong> ${h.cama}</p>
+          <p><strong>Piso:</strong> ${h.piso}</p>
+          <p><strong>Descripción:</strong> ${h.descripcion}</p>
+          <img src="${h.imagen}" alt="Habitación ${numero}">
+        </div>
+      `;
+    }
+  </script>
 </body>
 </html>
