@@ -1,4 +1,4 @@
-# Catalogo-Paradisus-Habitaciones
+# Catalogo-Paradisus-Habitaciones demo sin final
 Sitio web local convertido en catálogo público para operación hotelera
 # Catálogo de Habitaciones
 
