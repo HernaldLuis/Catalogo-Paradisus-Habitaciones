@@ -32,9 +32,10 @@
       white-space: nowrap;
     }
 
-    .torre {
-      flex: 0 0 auto;
-      width: 400px;
+.torre {
+  flex: 0 0 auto;
+  width: max-content; /* ¡Que crezca según el contenido! */
+  min-width: 420px;    /* Puedes ajustar este mínimo para que mantenga algo de orden */
       display: flex;
       flex-direction: column;
       gap: 10px;
