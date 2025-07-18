@@ -71,7 +71,22 @@
 
     .habitacion-btn:hover {
       background-color: #388e3c;
-    }
+
+  /* 
+------------------------------------------------
+  .pasillo: Se usa como espacio visual para separar 
+  habitaciones internas de externas en cada piso 
+  o para simular pasillos reales entre bloques. 
+  Este diseño genera un efecto visual claro tipo 
+  “corredor” en el croquis.
+------------------------------------------------
+*/
+      .pasillo {
+        min-width: 40px;
+        background-color: #dcdcdc;
+        border-radius: 5px;
+      }
+
   </style>
 </head>
 <body>
@@ -92,17 +107,20 @@
         <button class="habitacion-btn">1508</button>
         <button class="habitacion-btn">1509</button>
         <button class="habitacion-btn">1510</button>
-        <button class="habitacion-btn">1511</button>
-        <button class="habitacion-btn">1512</button>
-        <button class="habitacion-btn">1514</button>
-        <button class="habitacion-btn">1515</button>
-        <button class="habitacion-btn">1516</button>
-        <button class="habitacion-btn">1517</button>
-        <button class="habitacion-btn">1518</button>
-        <button class="habitacion-btn">1519</button>
-        <button class="habitacion-btn">1520</button>
-        <button class="habitacion-btn">1521</button>
+
+         <div class="pasillo"></div> <!-- PASILLO CENTRAL -->
+
         <button class="habitacion-btn">1522</button>
+        <button class="habitacion-btn">1521</button>
+        <button class="habitacion-btn">1520</button>
+        <button class="habitacion-btn">1519</button>
+        <button class="habitacion-btn">1518</button>
+        <button class="habitacion-btn">1517</button>
+        <button class="habitacion-btn">1516</button>
+        <button class="habitacion-btn">1515</button>
+        <button class="habitacion-btn">1514</button>
+        <button class="habitacion-btn">1512</button>
+        <button class="habitacion-btn">1511</button>
       </div>
 
       <div class="piso">
