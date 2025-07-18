@@ -5,12 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Catálogo de Habitaciones</title>
   <style>
-    /* ===== ESTILOS GENERALES ===== */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f0f0f0;
-      overflow-x: hidden;
     }
 
     h1 {
@@ -18,34 +16,32 @@
       padding: 20px;
     }
 
-    /* ===== ZONA DESPLAZABLE HORIZONTAL ===== */
-.zona-desplazable {
-  display: flex;
-  flex-direction: row; /* Asegura horizontalidad */
-  gap: 40px;
-  padding: 20px;
-  overflow-x: auto;
-  overflow-y: hidden; /* evita scroll vertical */
-  scroll-behavior: smooth;
-  background: #ffffff;
-  border-top: 4px solid #ccc;
-  border-bottom: 4px solid #ccc;
-  width: 100vw; /* Ocupar ancho total */
-  box-sizing: border-box;
-  white-space: nowrap; /* ¡clave para que no apile! */
-}
+    .zona-desplazable {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+      padding: 20px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-behavior: smooth;
+      background: #ffffff;
+      border-top: 4px solid #ccc;
+      border-bottom: 4px solid #ccc;
+      width: 100vw;
+      box-sizing: border-box;
+      white-space: nowrap;
+    }
 
-    /* ===== TORRE GENERAL ===== */
-.torre {
-  flex: 0 0 auto; /* NO se reduzca, NO crezca, tamaño fijo */
-  width: 400px;    /* o el tamaño que desees para cada torre */
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  background-color: #e6f0ff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
+    .torre {
+      flex: 0 0 auto;
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background-color: #e6f0ff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
 
     .torre h2 {
       text-align: center;
@@ -56,7 +52,6 @@
       border-radius: 6px;
     }
 
-    /* ===== PISO CON HABITACIONES ===== */
     .piso {
       display: flex;
       flex-wrap: wrap;
@@ -78,15 +73,6 @@
       background-color: #388e3c;
     }
 
-    /* 
-    ------------------------------------------------
-    .pasillo: Se usa como espacio visual para separar 
-    habitaciones internas de externas en cada piso 
-    o para simular pasillos reales entre bloques. 
-    Este diseño genera un efecto visual claro tipo 
-    “corredor” en el croquis.
-    ------------------------------------------------
-    */
     .pasillo {
       width: 100%;
       border-top: 2px dashed #aaa;
@@ -112,9 +98,11 @@
         <button class="habitacion-btn">1508</button>
         <button class="habitacion-btn">1509</button>
         <button class="habitacion-btn">1510</button>
+      </div>
 
-         <div class="pasillo"></div> <!-- PASILLO CENTRAL -->
+      <div class="pasillo"></div>
 
+      <div class="piso">
         <button class="habitacion-btn">1522</button>
         <button class="habitacion-btn">1521</button>
         <button class="habitacion-btn">1520</button>
@@ -128,10 +116,9 @@
         <button class="habitacion-btn">1511</button>
       </div>
 
-       <div class="pasillo"></div> <!-- PASILLO CENTRAL -->
+      <div class="pasillo"></div>
 
       <div class="piso">
-  <!-- Vista Interna - Piso 14 -->
         <button class="habitacion-btn">1401</button>
         <button class="habitacion-btn">1402</button>
         <button class="habitacion-btn">1403</button>
@@ -142,11 +129,11 @@
         <button class="habitacion-btn">1408</button>
         <button class="habitacion-btn">1409</button>
         <button class="habitacion-btn">1410</button>
+      </div>
 
-  <!-- Pasillo central entre interna y externa -->
-        <div class="pasillo"></div>
+      <div class="pasillo"></div>
 
-  <!-- Vista Externa - Piso 14 (de derecha a izquierda) -->
+      <div class="piso">
         <button class="habitacion-btn">1422</button>
         <button class="habitacion-btn">1421</button>
         <button class="habitacion-btn">1420</button>
@@ -158,61 +145,54 @@
         <button class="habitacion-btn">1414</button>
         <button class="habitacion-btn">1412</button>
         <button class="habitacion-btn">1411</button>
+      </div>
 
-          <!-- Pasillo central entre interna y externa -->
-        <div class="pasillo"></div>
+      <div class="pasillo"></div>
 
-<div class="piso">
-  <!-- Vista Interna - Piso 13 -->
-  <button class="habitacion-btn">1301</button>
-  <button class="habitacion-btn">1302</button>
-  <button class="habitacion-btn">1303</button>
-  <button class="habitacion-btn">1304</button>
-  <button class="habitacion-btn">1305</button>
-  <button class="habitacion-btn">1306</button>
-  <button class="habitacion-btn">1307</button>
-  <button class="habitacion-btn">1308</button>
-  <button class="habitacion-btn">1309</button>
-  <button class="habitacion-btn">1310</button>
+      <div class="piso">
+        <button class="habitacion-btn">1301</button>
+        <button class="habitacion-btn">1302</button>
+        <button class="habitacion-btn">1303</button>
+        <button class="habitacion-btn">1304</button>
+        <button class="habitacion-btn">1305</button>
+        <button class="habitacion-btn">1306</button>
+        <button class="habitacion-btn">1307</button>
+        <button class="habitacion-btn">1308</button>
+        <button class="habitacion-btn">1309</button>
+        <button class="habitacion-btn">1310</button>
+      </div>
 
-  <!-- Pasillo central -->
-  <div class="pasillo"></div>
+      <div class="pasillo"></div>
 
-  <!-- Vista Externa - Piso 13 (de derecha a izquierda) -->
-  <button class="habitacion-btn">1322</button>
-  <button class="habitacion-btn">1321</button>
-  <button class="habitacion-btn">1320</button>
-  <button class="habitacion-btn">1319</button>
-  <button class="habitacion-btn">1318</button>
-  <button class="habitacion-btn">1317</button>
-  <button class="habitacion-btn">1316</button>
-  <button class="habitacion-btn">1315</button>
-  <button class="habitacion-btn">1314</button>
-  <button class="habitacion-btn">1312</button>
-  <button class="habitacion-btn">1311</button>
-</div>
+      <div class="piso">
+        <button class="habitacion-btn">1322</button>
+        <button class="habitacion-btn">1321</button>
+        <button class="habitacion-btn">1320</button>
+        <button class="habitacion-btn">1319</button>
+        <button class="habitacion-btn">1318</button>
+        <button class="habitacion-btn">1317</button>
+        <button class="habitacion-btn">1316</button>
+        <button class="habitacion-btn">1315</button>
+        <button class="habitacion-btn">1314</button>
+        <button class="habitacion-btn">1312</button>
+        <button class="habitacion-btn">1311</button>
+      </div>
 
-          <!-- Pasillo central entre interna y externa -->
-        <div class="pasillo"></div>
+      <div class="pasillo"></div>
 
-<div class="piso">
-  <!-- Piso 12 solo tiene habitaciones de vista externa -->
-  <!-- No hay internas porque hay un jardín (lado 01 al 10 bloqueado) -->
-
-  <!-- Vista Externa - Piso 12 (de derecha a izquierda) -->
-  <button class="habitacion-btn">1222</button>
-  <button class="habitacion-btn">1221</button>
-  <button class="habitacion-btn">1220</button>
-  <button class="habitacion-btn">1219</button>
-  <button class="habitacion-btn">1218</button>
-  <button class="habitacion-btn">1217</button>
-  <button class="habitacion-btn">1216</button>
-  <button class="habitacion-btn">1215</button>
-  <button class="habitacion-btn">1214</button>
-  <button class="habitacion-btn">1212</button>
-  <button class="habitacion-btn">1211</button>
-</div>
-
+      <div class="piso">
+        <button class="habitacion-btn">1222</button>
+        <button class="habitacion-btn">1221</button>
+        <button class="habitacion-btn">1220</button>
+        <button class="habitacion-btn">1219</button>
+        <button class="habitacion-btn">1218</button>
+        <button class="habitacion-btn">1217</button>
+        <button class="habitacion-btn">1216</button>
+        <button class="habitacion-btn">1215</button>
+        <button class="habitacion-btn">1214</button>
+        <button class="habitacion-btn">1212</button>
+        <button class="habitacion-btn">1211</button>
+      </div>
     </div>
 
     <!-- Torre 2 -->
@@ -242,10 +222,5 @@
       </div>
     </div>
   </div>
-
-  <script>
-    // Aquí podrías después agregar el código para mostrar información al hacer click
-    // en los botones de cada habitación.
-  </script>
 </body>
 </html>
