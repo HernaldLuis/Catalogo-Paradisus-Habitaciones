@@ -19,28 +19,33 @@
     }
 
     /* ===== ZONA DESPLAZABLE HORIZONTAL ===== */
-    .zona-desplazable {
-      display: flex;
-      gap: 40px;
-      padding: 20px;
-      overflow-x: auto;
-      scroll-behavior: smooth;
-      background: #ffffff;
-      border-top: 4px solid #ccc;
-      border-bottom: 4px solid #ccc;
-    }
+.zona-desplazable {
+  display: flex;
+  flex-direction: row; /* Asegura horizontalidad */
+  gap: 40px;
+  padding: 20px;
+  overflow-x: auto;
+  overflow-y: hidden; /* evita scroll vertical */
+  scroll-behavior: smooth;
+  background: #ffffff;
+  border-top: 4px solid #ccc;
+  border-bottom: 4px solid #ccc;
+  width: 100vw; /* Ocupar ancho total */
+  box-sizing: border-box;
+  white-space: nowrap; /* ¡clave para que no apile! */
+}
 
     /* ===== TORRE GENERAL ===== */
-    .torre {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      min-width: 200px;
-      padding: 10px;
-      background-color: #e6f0ff;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+.torre {
+  flex: 0 0 auto; /* NO se reduzca, NO crezca, tamaño fijo */
+  width: 400px;    /* o el tamaño que desees para cada torre */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #e6f0ff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 
     .torre h2 {
       text-align: center;
