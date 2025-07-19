@@ -111,7 +111,22 @@
   overflow: hidden;               /* 🙅‍♂️ Oculta cualquier exceso visual */
   text-overflow: ellipsis;        /* (opcional) Muestra "..." si se pasa */
 }
-  
+
+      /* (PANTALLA FLOTANTE) */
+      .cuadro-inferior {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  z-index: 9999;
+  font-size: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+ 
       /* (ESTO CORRESPNDE AL PANEL DE LAS IMAGENES DE COSULTa */
 
   </style>
@@ -691,5 +706,9 @@
 
   </script>
   
+  <div class="cuadro-inferior">
+  Recuerda seleccionar una habitación para ver sus detalles.
+</div>
+
 </body>
 </html>
