@@ -114,6 +114,32 @@
   
       /* (ESTO CORRESPNDE AL PANEL DE LAS IMAGENES DE COSULTa */
 
+.habitacion-info-panel {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  display: none;
+
+}
+
+.habitacion-detalle {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  position: relative;
+}
+
+
   </style>
 </head>
 <body>
@@ -127,6 +153,15 @@
 
 
   <div class="zona-desplazable">
+
+
+    <div class="habitacion-info-panel" id="panelHabitacion">
+  <div class="habitacion-detalle" id="contenidoHabitacion">
+    <!-- Contenido dinámico aquí -->
+  </div>
+</div>
+
+    
     <!-- Torre 1 -->
     <div class="torre">
       <h2>Torre 1</h2>
@@ -717,6 +752,30 @@ function cerrarPanel() {
 }
 
     // Mostrar panel fijo al presionar una habitación
+
+function mostrarInfo(num) {
+  const panel = document.getElementById("panelHabitacion");
+  const contenido = document.getElementById("contenidoHabitacion");
+
+  contenido.innerHTML = `
+    <h2>Habitación ${num}</h2>
+    <p><strong>Vista:</strong> Información no disponible</p>
+    <p><strong>Piso:</strong> ---</p>
+    <p><strong>Torre:</strong> ---</p>
+    <p><strong>Tipo de cama:</strong> ---</p>
+    <p><strong>Descripción:</strong> En desarrollo...</p>
+    <button class="btn-volver" onclick="cerrarPanel()">Volver al croquis</button>
+  `;
+
+  panel.style.display = "flex";
+  document.body.style.overflow = "hidden";
+}
+
+function cerrarPanel() {
+  document.getElementById("panelHabitacion").style.display = "none";
+  document.body.style.overflow = "auto";
+}
+
 
   </script>
   
