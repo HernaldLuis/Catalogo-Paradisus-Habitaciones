@@ -88,20 +88,24 @@
       margin: 12px 0;
 
 .jardin-simulada {
-  width: 100%;
+  display: flex;                   /* 🔥 Activa Flexbox */
+  justify-content: center;        /* 🔄 Centra horizontalmente */
+  align-items: center;            /* 🔼 Centra verticalmente */
+  width: 100%;                    /* ✅ Ocupa el mismo ancho que la fila */
   background: linear-gradient(to right, #e8ffe8, #e0f7ff);
   color: #2e7d32;
   font-weight: bold;
   padding: 10px;
-  text-align: center;
   border: 2px dashed #81c784;
   border-radius: 8px;
   margin-bottom: 8px;
   font-size: 14px;
   box-shadow: inset 0 0 5px #b2dfdb;
+  box-sizing: border-box;         /* ✅ Evita que el padding agregue más ancho */
+  white-space: nowrap;            /* 🧠 Evita que el texto brinque de línea */
+  overflow: hidden;               /* 🙅‍♂️ Oculta cualquier exceso visual */
+  text-overflow: ellipsis;        /* (opcional) Muestra "..." si se pasa */
 }
-
-
 
     }
   </style>
