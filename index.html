@@ -100,6 +100,14 @@
   align-items: flex-end;
   gap: 4px;
 }
+
+      .columna-derecha {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;   /* Justifica hacia la derecha */
+  gap: 2px;                /* Espacio entre botones reducido */
+  margin-left: auto;       /* Lo empuja a la derecha si está dentro de flex */
+}
     }
   </style>
 </head>
@@ -380,17 +388,17 @@
   </div>
 
 
-<div class="fila-base">
+<div class="columna-derecha">
       <button class="habitacion-btn" onclick="mostrarInfo('3214')">3214</button>
-<div class="fila-base">
+<div class="columna-derecha">
       <button class="habitacion-btn" onclick="mostrarInfo('3215')">3215</button>
-<div class="fila-base">
+<div class="columna-derecha">
       <button class="habitacion-btn" onclick="mostrarInfo('3216')">3216</button>
-<div class="fila-base">
+<div class="columna-derecha">
       <button class="habitacion-btn" onclick="mostrarInfo('3217')">3217</button>
-<div class="fila-base">
+<div class="columna-derecha">
       <button class="habitacion-btn" onclick="mostrarInfo('3218')">3218</button>
-<div class="fila-base">
+<div class="columna-derecha">
       <button class="habitacion-btn" onclick="mostrarInfo('3219')">3219</button>
     </div>
 
