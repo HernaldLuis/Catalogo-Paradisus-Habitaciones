@@ -113,54 +113,65 @@
 }
   
       /* (ESTO CORRESPNDE AL PANEL DE LAS IMAGENES DE COSULTa */
-.galeria-imagenes {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  margin-top: 15px;
-}
-.galeria-imagenes img {
-  width: 120px;
-  border-radius: 8px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.3);
-}
 
-      .habitacion-info-panel {
+      .panel-central {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* OSCURECER FONDO */
-  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7); /* oscurece fondo */
+  display: none;
   align-items: center;
   justify-content: center;
-  z-index: 999;
-  display: none; /* INICIALMENTE OCULTO */
+  z-index: 9999;
 }
 
-      .habitacion-detalle {
+.panel-contenido {
   background: white;
-  border-radius: 12px;
-  padding: 30px;
-  width: 90%;
+  padding: 40px;
+  border-radius: 10px;
   max-width: 600px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  width: 90%;
   text-align: center;
-  z-index: 1001; /* Superior al fondo oscuro */
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.panel-contenido button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.panel-contenido button:hover {
+  background-color: #0056b3;
 }
 
 
   </style>
 </head>
 <body>
+
+  <div class="panel-central" id="panelCentral">
+  <div class="panel-contenido">
+    <h2>Información de la habitación</h2>
+    <p>Aquí aparecerán los detalles una vez seleccionada una habitación.</p>
+    <button onclick="cerrarPanelCentral()">Aceptar</button>
+  </div>
+</div>
+
+  
   <h1>Catálogo de Habitaciones</h1>
 
   <div class="habitacion-info-panel" id="panelHabitacion">
   <div class="habitacion-detalle" id="contenidoHabitacion">
     <!-- Aquí se insertará el contenido dinámico -->
   </div>
-  
+
 
   <div class="zona-desplazable">
     <!-- Torre 1 -->
@@ -751,7 +762,19 @@ function cerrarPanel() {
   document.body.style.overflow = "auto";
   document.body.style.paddingRight = "0px";
 }
-    
+
+    // Mostrar panel fijo al presionar una habitación
+function mostrarInfo(num) {
+  document.getElementById("panelCentral").style.display = "flex";
+  document.body.style.overflow = "hidden"; // Evita scroll del fondo
+}
+
+// Cerrar el panel
+function cerrarPanelCentral() {
+  document.getElementById("panelCentral").style.display = "none";
+  document.body.style.overflow = "auto";
+}
+
   </script>
   
 </body>
