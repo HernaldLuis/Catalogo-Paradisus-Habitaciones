@@ -111,7 +111,22 @@
   overflow: hidden;               /* 🙅‍♂️ Oculta cualquier exceso visual */
   text-overflow: ellipsis;        /* (opcional) Muestra "..." si se pasa */
 }
- 
+  
+      /* (ESTO CORRESPNDE AL PANEL DE LAS IMAGENES DE COSULTa */
+      .galeria-imagenes {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.galeria-imagenes img {
+  max-width: 180px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
   </style>
 </head>
 <body>
@@ -671,5 +686,42 @@
       </div>
     </div>
   </div>
+
+  <script>
+    // Aquí va tu JavaScript personalizado
+  function cerrarBienvenida() {
+    document.getElementById("bienvenida").style.display = "none";
+  }
+
+  function mostrarInfo(num) {
+    const panel = document.getElementById("panelHabitacion");
+    const contenido = document.getElementById("contenidoHabitacion");
+
+    // Aquí defines dinámicamente el contenido según la habitación
+    if (num === "2208") {
+      contenido.innerHTML = `
+        <h2>Habitación 2208</h2>
+        <p><strong>Vista:</strong> Jardín central</p>
+        <p><strong>Piso:</strong> 2</p>
+        <p><strong>Torre:</strong> 2</p>
+        <p><strong>Tipo de cama:</strong> King Size</p>
+        <p><strong>Descripción:</strong> Habitación cómoda con acceso a jardín central.</p>
+        <div class="galeria-imagenes">
+          <img src="https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/2208_Lobby_v1tkjn.jpg" alt="Vista Lobby">
+          <img src="https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/2208_Central_beqdos.jpg" alt="Vista Central">
+          <img src="https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/2208_Central_beqdos.jpg" alt="Vista Mar">
+        </div>
+        <button class="btn-volver" onclick="cerrarPanel()">Volver al croquis</button>
+      `;
+    }
+
+    panel.style.display = "flex";
+  }
+
+  function cerrarPanel() {
+    document.getElementById("panelHabitacion").style.display = "none";
+  }
+  </script>
+  
 </body>
 </html>
