@@ -114,59 +114,10 @@
   
       /* (ESTO CORRESPNDE AL PANEL DE LAS IMAGENES DE COSULTa */
 
-.panel-central {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.7); /* Oscurece el fondo */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2000;
-  display: none;
-}
-
-.panel-contenido {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  text-align: center;
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
-  width: 90%;
-  max-width: 600px;
-}
-.panel-contenido button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #007bff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.panel-contenido button:hover {
-  background-color: #0056b3;
-}
-
-
   </style>
 </head>
 <body>
 
-<div class="panel-central" id="panelCentral">
-  <div class="panel-contenido">
-    <h2>Habitación seleccionada</h2>
-    <p>Este es un panel fijo que aparece sobre el croquis. Aquí puedes mostrar información más adelante.</p>
-    <button onclick="cerrarPanelCentral()">Aceptar</button>
-  </div>
-</div>
-
-<button onclick="mostrarPanelCentral()">Probar panel</button>
-
-  
   <h1>Catálogo de Habitaciones</h1>
 
   <div class="habitacion-info-panel" id="panelHabitacion">
@@ -766,16 +717,6 @@ function cerrarPanel() {
 }
 
     // Mostrar panel fijo al presionar una habitación
-function mostrarPanelCentral() {
-  document.getElementById("panelCentral").style.display = "flex";
-  document.body.style.overflow = "hidden"; // evita scroll de fondo
-}
-
-function cerrarPanelCentral() {
-  document.getElementById("panelCentral").style.display = "none";
-  document.body.style.overflow = "auto";
-}
-
 
   </script>
   
