@@ -87,6 +87,17 @@
       border-top: 2px dashed #aaa;
       margin: 12px 0;
 
+      .jardin-ficticio {
+  height: 48px; /* Simula altura de fila de botones */
+  width: max-content;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Cactus_icon.png/32px-Cactus_icon.png') repeat-x;
+  background-color: #e1ffe1;
+  border: 1px dashed #66bb6a;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+
     }
   </style>
 </head>
@@ -191,7 +202,10 @@
       <div class="pasillo"></div>
 
       <!-- Piso 12 (solo externas) -->
-
+<div class="fila-base jardin-ficticio">
+  <!-- puede estar vacío o decorativo -->
+</div>
+      
       <div class="piso">
   <button class="habitacion-btn" onclick="mostrarInfo('1222')">1222</button>
   <button class="habitacion-btn" onclick="mostrarInfo('1221')">1221</button>
