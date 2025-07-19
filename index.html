@@ -772,7 +772,10 @@ function mostrarInfo(num) {
 }
 
 function cerrarPanel() {
-  document.getElementById("panelHabitacion").style.display = "none";
+  const panel = document.getElementById("panelHabitacion");
+  panel.style.display = "none";
+
+  // Asegúrate de restaurar el scroll si lo bloqueaste
   document.body.style.overflow = "auto";
 }
 
