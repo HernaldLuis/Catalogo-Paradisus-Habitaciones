@@ -88,17 +88,21 @@
       margin: 12px 0;
 
 .jardin-simulada {
-  width: 100%;
+  display: flex;
+  justify-content: center;     /* 🔥 Esto centra horizontalmente el texto */
+  align-items: center;         /* Centra verticalmente si agregas más altura */
   background: linear-gradient(to right, #e8ffe8, #e0f7ff);
   color: #2e7d32;
   font-weight: bold;
-  padding: 10px;
-  text-align: center;
+  padding: 10px 0;
   border: 2px dashed #81c784;
   border-radius: 8px;
   margin-bottom: 8px;
   font-size: 14px;
   box-shadow: inset 0 0 5px #b2dfdb;
+  width: fit-content;          /* Se ajusta al tamaño del contenido */
+  margin-left: auto;           /* ✨ Estos dos */
+  margin-right: auto;          /* ✨ lo centran dentro del contenedor */
 }
 
 
