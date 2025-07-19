@@ -721,36 +721,40 @@
   function cerrarBienvenida() {
     document.getElementById("bienvenida").style.display = "none";
   }
+function mostrarInfo(num) {
+  const panel = document.getElementById("panelHabitacion");
+  const contenido = document.getElementById("contenidoHabitacion");
 
-  function mostrarInfo(num) {
-    const panel = document.getElementById("panelHabitacion");
-    const contenido = document.getElementById("contenidoHabitacion");
+  // Fija el ancho actual del body para que no se mueva
+  document.body.style.overflow = "hidden";
+  document.body.style.paddingRight = "15px"; // Ajuste típico del scroll
 
-    // Aquí defines dinámicamente el contenido según la habitación
-if (num === "2208") {
-  contenido.innerHTML = `
-    <h2>Habitación 2208</h2>
-    <p><strong>Vista:</strong> Jardín central</p>
-    <p><strong>Piso:</strong> 2</p>
-    <p><strong>Torre:</strong> 2</p>
-    <p><strong>Tipo de cama:</strong> King Size</p>
-    <p><strong>Descripción:</strong> Habitación cómoda con acceso a jardín central.</p>
-    <div class="galeria-imagenes">
+  if (num === "2208") {
+    contenido.innerHTML = `
+      <h2>Habitación 2208</h2>
+      <p><strong>Vista:</strong> Jardín central</p>
+      <p><strong>Piso:</strong> 2</p>
+      <p><strong>Torre:</strong> 2</p>
+      <p><strong>Tipo de cama:</strong> King Size</p>
+      <p><strong>Descripción:</strong> Habitación cómoda con acceso a jardín central.</p>
+      <div class="galeria-imagenes">
       <img src="https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/2208_Lobby_v1tkjn.jpg" alt="Lobby">
       <img src="https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/2208_Central_beqdos.jpg" alt="Central">
       <img src="https://res.cloudinary.com/dor6za85u/image/upload/v1752723666/2208_Mar_xagttf.jpg" alt="Mar">
-    </div>
-    <button class="btn-volver" onclick="cerrarPanel()">Volver al croquis</button>
-  `;
+     </div>
+      <button class="btn-volver" onclick="cerrarPanel()">Volver al croquis</button>
+    `;
+  }
+
+  panel.style.display = "flex";
 }
 
-
-    panel.style.display = "flex";
-  }
-
-  function cerrarPanel() {
-    document.getElementById("panelHabitacion").style.display = "none";
-  }
+function cerrarPanel() {
+  document.getElementById("panelHabitacion").style.display = "none";
+  document.body.style.overflow = "auto";
+  document.body.style.paddingRight = "0px";
+}
+    
   </script>
   
 </body>
