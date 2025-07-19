@@ -88,22 +88,19 @@
       margin: 12px 0;
 
 .jardin-simulada {
-  display: flex;
-  justify-content: center;     /* 🔥 Esto centra horizontalmente el texto */
-  align-items: center;         /* Centra verticalmente si agregas más altura */
+  width: 100%;
   background: linear-gradient(to right, #e8ffe8, #e0f7ff);
   color: #2e7d32;
   font-weight: bold;
-  padding: 10px 0;
+  padding: 10px;
+  text-align: center;
   border: 2px dashed #81c784;
   border-radius: 8px;
   margin-bottom: 8px;
   font-size: 14px;
   box-shadow: inset 0 0 5px #b2dfdb;
-  width: fit-content;          /* Se ajusta al tamaño del contenido */
-  margin-left: auto;           /* ✨ Estos dos */
-  margin-right: auto;          /* ✨ lo centran dentro del contenedor */
 }
+
 
 
     }
@@ -322,6 +319,7 @@
     <button class="habitacion-btn" onclick="mostrarInfo('2209')">2209</button>
   </div>
 
+    <div class="pasillo"></div>
 
   <div class="fila-base jardin-ficticio">
     🌵 JARDÍN DE CACTUS — ESPEJO DE AGUA 🌊
