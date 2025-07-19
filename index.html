@@ -84,29 +84,13 @@
       margin: 12px 0;
 
       /* <-- ESTO CONTROLA LOS 3 OCEAN VIEW */
-.fila-base {
-  display: flex;
-  gap: 4px;
-  margin-bottom: 8px;
-}
-
-.fila-reversa {
-  flex-direction: row-reverse;
-}
-
-.columna-derecha {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 4px;
-}
-
       .columna-derecha {
   display: flex;
   flex-direction: column;
   align-items: flex-end;   /* Justifica hacia la derecha */
   gap: 2px;                /* Espacio entre botones reducido */
   margin-left: auto;       /* Lo empuja a la derecha si está dentro de flex */
+  justify-content: flex-end; /* empuja todo al lado derecho */
 }
     }
   </style>
