@@ -114,32 +114,6 @@
   
       /* (ESTO CORRESPNDE AL PANEL DE LAS IMAGENES DE COSULTa */
 
-.habitacion-info-panel {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  display: none;
-
-}
-
-.habitacion-detalle {
-  background: white;
-  border-radius: 12px;
-  padding: 30px;
-  width: 90%;
-  max-width: 600px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  text-align: center;
-  position: relative;
-}
-
-
   </style>
 </head>
 <body>
@@ -153,14 +127,6 @@
 
 
   <div class="zona-desplazable">
-
-
-    <div class="habitacion-info-panel" id="panelHabitacion">
-  <div class="habitacion-detalle" id="contenidoHabitacion">
-    <!-- Contenido dinámico aquí -->
-  </div>
-</div>
-
     
     <!-- Torre 1 -->
     <div class="torre">
@@ -717,67 +683,10 @@
 
   <script>
     // Aquí va tu JavaScript personalizado
-  function cerrarBienvenida() {
-    document.getElementById("bienvenida").style.display = "none";
-  }
-function mostrarInfo(num) {
-  const panel = document.getElementById("panelHabitacion");
-  const contenido = document.getElementById("contenidoHabitacion");
 
-  
-  if (num === "2208") {
-    contenido.innerHTML = `
-      <h2>Habitación 2208</h2>
-      <p><strong>Vista:</strong> Jardín central</p>
-      <p><strong>Piso:</strong> 2</p>
-      <p><strong>Torre:</strong> 2</p>
-      <p><strong>Tipo de cama:</strong> King Size</p>
-      <p><strong>Descripción:</strong> Habitación cómoda con acceso a jardín central.</p>
-      <div class="galeria-imagenes">
-      <img src="https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/2208_Lobby_v1tkjn.jpg" alt="Lobby">
-      <img src="https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/2208_Central_beqdos.jpg" alt="Central">
-      <img src="https://res.cloudinary.com/dor6za85u/image/upload/v1752723666/2208_Mar_xagttf.jpg" alt="Mar">
-     </div>
-      <button class="btn-volver" onclick="cerrarPanel()">Volver al croquis</button>
-    `;
-  }
 
-  panel.style.display = "flex";
-}
-
-function cerrarPanel() {
-  document.getElementById("panelHabitacion").style.display = "none";
-  document.body.style.overflow = "auto";
-  document.body.style.paddingRight = "0px";
-}
-
+    
     // Mostrar panel fijo al presionar una habitación
-
-function mostrarInfo(num) {
-  const panel = document.getElementById("panelHabitacion");
-  const contenido = document.getElementById("contenidoHabitacion");
-
-  contenido.innerHTML = `
-    <h2>Habitación ${num}</h2>
-    <p><strong>Vista:</strong> Información no disponible</p>
-    <p><strong>Piso:</strong> ---</p>
-    <p><strong>Torre:</strong> ---</p>
-    <p><strong>Tipo de cama:</strong> ---</p>
-    <p><strong>Descripción:</strong> En desarrollo...</p>
-    <button class="btn-volver" onclick="cerrarPanel()">Volver al croquis</button>
-  `;
-
-  panel.style.display = "flex";
-  document.body.style.overflow = "hidden";
-}
-
-function cerrarPanel() {
-  const panel = document.getElementById("panelHabitacion");
-  panel.style.display = "none";
-
-  // Asegúrate de restaurar el scroll si lo bloqueaste
-  document.body.style.overflow = "auto";
-}
 
 
   </script>
