@@ -918,7 +918,7 @@ border-bottom: none;
 
   <script>
 
-   async function mostrarInfo(num) {
+async function mostrarInfo(num) {
   const panel = document.getElementById("panelInferior");
   const mensaje = document.getElementById("mensajeSeleccion");
   if (mensaje) mensaje.style.display = "none";
@@ -953,16 +953,14 @@ border-bottom: none;
         </div>
       `;
     } else {
-     panel.innerHTML = `
-  <div class="contenido-inferior">
-    <p>🔍 Información no disponible para la habitación ${num}.</p>
-    <button class="btn-volver" onclick="cerrarPanelInferior()">Cerrar</button>
-  </div>
+      panel.innerHTML = `
+        <p>🔍 Información no disponible para la habitación ${num}.</p>
+        <button class="btn-volver" onclick="cerrarPanelInferior()">Cerrar</button>
       `;
     }
 
     panel.style.display = "block";
-    document.body.style.overflow = "hidden";S
+    document.body.style.overflow = "hidden";
   } catch (error) {
     panel.innerHTML = `
       <p>⚠️ Error al cargar la información. Intenta de nuevo.</p>
@@ -971,6 +969,7 @@ border-bottom: none;
     panel.style.display = "block";
   }
 }
+
 
     
 
