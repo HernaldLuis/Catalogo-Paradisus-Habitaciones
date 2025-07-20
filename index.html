@@ -953,6 +953,46 @@ function cerrarPanelInferior() {
 }
 
 
+    async function mostrarInfo(num) {
+  const panel = document.getElementById("panelInferior");
+  const mensaje = document.getElementById("mensajeSeleccion");
+  if (mensaje) mensaje.style.display = "none";
+
+  try {
+    const response = await fetch("habitaciones.json");
+    const data = await response.json();
+
+    if (data[num]) {
+      const habitacion = data[num];
+
+      let galeriaHTML = '<div class="galeria-habitacion">';
+      habitacion.imagenes.forEach((imgUrl, index) => {
+        galeriaHTML += `
+          <div class="bloque-imagen">
+            <img src="${imgUrl}" alt="Imagen ${index + 1}" onclick="hacerZoom(this.src)" />
+            <p><strong>Imagen ${index + 1}</strong></p>
+          </div>
+        `;
+      });
+      galeriaHTML += '</div>';
+
+      panel.innerHTML = `
+        <h3>${habitacion.titulo}</h3>
+        <p>${habitacion.descripcion}</p>
+        ${galeriaHTML}
+      `;
+    } else {
+      panel.innerHTML = `<p>🔍 Información no disponible para la habitación ${num}.</p>`;
+    }
+
+    panel.style.display = "block";
+    document.body.style.overflow = "hidden";
+  } catch (error) {
+    panel.innerHTML = `<p>⚠️ Error al cargar la información. Intenta de nuevo.</p>`;
+    panel.style.display = "block";
+  }
+}
+
   </script> 
 
 </body>
