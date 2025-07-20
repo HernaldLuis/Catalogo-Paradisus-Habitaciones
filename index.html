@@ -954,8 +954,10 @@ async function mostrarInfo(num) {
       `;
     } else {
       panel.innerHTML = `
-        <p>🔍 Información no disponible para la habitación ${num}.</p>
-        <button class="btn-volver" onclick="cerrarPanelInferior()">Cerrar</button>
+        <div class="contenido-inferior">
+          <p>🔍 Información no disponible para la habitación ${num}.</p>
+          <button class="btn-volver" onclick="cerrarPanelInferior()">Cerrar</button>
+        </div>
       `;
     }
 
@@ -963,14 +965,25 @@ async function mostrarInfo(num) {
     document.body.style.overflow = "hidden";
   } catch (error) {
     panel.innerHTML = `
-      <p>⚠️ Error al cargar la información. Intenta de nuevo.</p>
-      <button class="btn-volver" onclick="cerrarPanelInferior()">Cerrar</button>
-       </div>
+      <div class="contenido-inferior">
+        <p>⚠️ Error al cargar la información. Intenta de nuevo.</p>
+        <button class="btn-volver" onclick="cerrarPanelInferior()">Cerrar</button>
+      </div>
     `;
     panel.style.display = "block";
+    document.body.style.overflow = "hidden";
   }
 }
 
+function cerrarPanelInferior() {
+  const panel = document.getElementById("panelInferior");
+  const mensaje = document.getElementById("mensajeSeleccion");
+
+  panel.style.display = "none";
+  document.body.style.overflow = "auto";
+
+  if (mensaje) mensaje.style.display = "block";
+}
 
     
 
