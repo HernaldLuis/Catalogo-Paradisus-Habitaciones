@@ -69,7 +69,36 @@
       {
         "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1752723666/2208_Mar_xagttf.jpg",
         "etiqueta": "Mar"
-      }
+    }
     ]
-  }
+  },
+  "2314": {
+  "titulo": "Habitación 2314 · C2W",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Mar",
+  "piso": 3,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "caracteristicas": [
+    "Balcón",
+    "Cama King Size",
+    "Vista al Mar",
+    "Doble regadera tipo lluvia",
+    "Sofá cama pequeño (90)"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1752996723/2314_Mar_stiun6.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1752996723/2314_interno_lvgeed.jpg",
+      "etiqueta": "Interior"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1752996722/2314_frente_nqklkv.jpg",
+      "etiqueta": "Frente"
+    }
+  ]
 }
+
