@@ -170,6 +170,39 @@ border-bottom: none;
   transition: transform 0.3s ease;
 }
 
+
+#zoom-overlay {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(3px);
+}
+
+#zoom-img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  transition: transform 0.3s;
+}
+
+#zoom-close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 10001;
+}
+
     
 
 .piso {
@@ -818,6 +851,12 @@ border-bottom: none;
   <img id="zoom-img" src="" alt="Zoom" />
 </div>
 
+    <!-- Zoom grande con botón de cerrar -->
+<div id="zoom-overlay" onclick="cerrarZoom()">
+  <span id="zoom-close" onclick="cerrarZoom(event)">❌</span>
+  <img id="zoom-img" src="" alt="Zoom" />
+</div>
+
   </div>
 </div>
 
@@ -848,6 +887,10 @@ function cerrarZoom() {
   document.getElementById('zoom-overlay').style.display = 'none';
 }
 
+function cerrarZoom(event) {
+  if (event) event.stopPropagation(); // evita cerrar si se hace clic en el ❌
+  document.getElementById('zoom-overlay').style.display = 'none';
+}
 
       if (num === "2208") {
         panel.innerHTML = `
