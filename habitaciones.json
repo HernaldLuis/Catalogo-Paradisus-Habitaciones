@@ -14,5 +14,32 @@
       "https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/1502_Lobby.jpg",
       "https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/1502_Central.jpg"
     ]
+  },
+  "2208": {
+    "titulo": "Habitación 2208 · C2V",
+    "categoria": "Junior Suite",
+    "vista": "Vista al Jardín",
+    "piso": 2,
+    "capacidad": "Máx. 4 personas",
+    "fumadores": false,
+    "caracteristicas": [
+      "Balcón",
+      "Doble regadera tipo lluvia",
+      "2 camas de 1x2.20m"
+    ],
+    "imagenes": [
+      {
+        "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/2208_Lobby_v1tkjn.jpg",
+        "etiqueta": "Lobby"
+      },
+      {
+        "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/2208_Central_beqdos.jpg",
+        "etiqueta": "Central"
+      },
+      {
+        "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1752723666/2208_Mar_xagttf.jpg",
+        "etiqueta": "Mar"
+      }
+    ]
   }
 }
