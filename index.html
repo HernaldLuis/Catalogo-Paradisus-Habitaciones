@@ -82,17 +82,17 @@ border-bottom: none;
   /* <-- ESTO ES EL PANEL INFERIOR DONDE METEMOS IMAGENES Y DESCRIPCION */
 .panel-inferior {
   position: fixed;
-  bottom: 40px;
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
   background: rgba(255, 255, 255, 0.95);
-  padding: 35px 45px;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  padding: 40px 50px;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
   z-index: 9999;
   display: none;
-  max-width: 95vw;  /* le das más posibilidad de crecer horizontalmente */
-  width: 800px;      /* aumenta el tamaño fijo */
+  max-width: 98vw;
+  width: 1000px; /* antes 600px, luego 800px */
   color: black;
 }
 
@@ -132,24 +132,24 @@ border-bottom: none;
 .galeria-habitacion {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;  /* permite que brinquen a otra línea */
-  margin-top: 15px;
+  gap: 15px;
+  flex-wrap: wrap; /* esto permite que salten a otra fila */
+  margin-top: 20px;
 }
-
+  
 .bloque-imagen {
   text-align: center;
 }
 
 .bloque-imagen img {
-  width: 240px; /* Puedes hacerlo más pequeño aún si quieres */
-  border-radius: 8px;
-  transition: transform 0.3s ease; /* Suaviza la animación */
+  width: 280px; /* antes 200px → luego 240px */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
   cursor: zoom-in;
 }
 
 .bloque-imagen img:hover {
-  transform: scale(1.3); /* Aumenta el tamaño al pasar el mouse */
+  transform: scale(1.2);
   z-index: 10;
 }
 
