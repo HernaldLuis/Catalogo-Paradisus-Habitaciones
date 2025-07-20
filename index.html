@@ -296,6 +296,18 @@ border-bottom: none;
   from { opacity: 0; transform: translateX(-50%) translateY(20px); }
   to { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
+  
+.contenido-inferior {
+  max-width: 100%;
+  overflow-wrap: break-word; /* fuerza salto de línea si es necesario */
+  word-wrap: break-word;
+  white-space: normal; /* permite el salto de línea */
+}
+
+.contenido-inferior a {
+  display: inline;
+  word-break: break-word;
+}
 
  
       /* (ESTO CORRESPNDE AL PANEL DE LAS IMAGENES DE COSULTa */
