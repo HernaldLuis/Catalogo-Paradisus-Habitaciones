@@ -1,18 +1,48 @@
 {
   "1501": {
-    "titulo": "Habitación 1501 - Vista Jardín",
-    "descripcion": "Acogedora habitación en el quinto piso con vista a los jardines interiores. Equipada con cama king size, área de descanso y amenidades de lujo.",
+    "titulo": "Habitación 1501 · Vista Jardín",
+    "categoria": "Deluxe King",
+    "vista": "Jardín Interior",
+    "piso": 5,
+    "capacidad": "Máx. 2 personas",
+    "fumadores": false,
+    "caracteristicas": [
+      "Cama king size",
+      "Área de descanso",
+      "Amenidades de lujo"
+    ],
     "imagenes": [
-      "https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/1501_Lobby.jpg",
-      "https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/1501_Jardin.jpg"
+      {
+        "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/1501_Lobby.jpg",
+        "etiqueta": "Lobby"
+      },
+      {
+        "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/1501_Jardin.jpg",
+        "etiqueta": "Jardín"
+      }
     ]
   },
   "1502": {
-    "titulo": "Habitación 1502 - Vista Interior",
-    "descripcion": "Moderna habitación con decoración minimalista y vista a los pasillos centrales. Ideal para quienes buscan comodidad y tranquilidad.",
+    "titulo": "Habitación 1502 · Vista Interior",
+    "categoria": "Deluxe Queen",
+    "vista": "Pasillos centrales",
+    "piso": 5,
+    "capacidad": "Máx. 2 personas",
+    "fumadores": false,
+    "caracteristicas": [
+      "Decoración minimalista",
+      "Cama queen size",
+      "Ambiente silencioso"
+    ],
     "imagenes": [
-      "https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/1502_Lobby.jpg",
-      "https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/1502_Central.jpg"
+      {
+        "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/1502_Lobby.jpg",
+        "etiqueta": "Lobby"
+      },
+      {
+        "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/1502_Central.jpg",
+        "etiqueta": "Central"
+      }
     ]
   },
   "2208": {
