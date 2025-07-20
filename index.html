@@ -951,15 +951,12 @@ function cerrarPanelInferior() {
 
   if (mensaje) mensaje.style.display = "block"; // Vuelve a mostrar mensaje
 }
+
+
 async function mostrarInfo(num) {
   const panel = document.getElementById("panelInferior");
   const mensaje = document.getElementById("mensajeSeleccion");
   if (mensaje) mensaje.style.display = "none";
-
-  // Marcar botón activo
-  document.querySelectorAll('.habitacion-btn').forEach(btn => btn.classList.remove('disponible'));
-  const btnActual = document.querySelector(`.habitacion-btn[onclick*="${num}"]`);
-  if (btnActual) btnActual.classList.add('disponible');
 
   try {
     const response = await fetch("habitaciones.json");
@@ -968,46 +965,52 @@ async function mostrarInfo(num) {
     if (data[num]) {
       const habitacion = data[num];
 
-      // Galería (con etiquetas si existen)
       let galeriaHTML = '<div class="galeria-habitacion">';
       habitacion.imagenes.forEach((img, index) => {
-        const src = typeof img === "string" ? img : img.src;
-        const etiqueta = typeof img === "object" && img.etiqueta ? img.etiqueta : `Imagen ${index + 1}`;
+        const src = typeof img === 'string' ? img : img.src;
+        const etiqueta = typeof img === 'object' && img.etiqueta ? img.etiqueta : `Imagen ${index + 1}`;
         galeriaHTML += `
           <div class="bloque-imagen">
-            <img src="${src}" alt="${etiqueta}" onclick="hacerZoom(this.src)" style="cursor: zoom-in;" />
+            <img src="${src}" alt="${etiqueta}" onclick="hacerZoom('${src}')" style="cursor: zoom-in;" />
             <p><strong>${etiqueta}</strong></p>
           </div>
         `;
       });
       galeriaHTML += '</div>';
 
-      // HTML del panel
       panel.innerHTML = `
         <div class="contenido-inferior">
           <h2>${habitacion.titulo}</h2>
-          <p><strong>Categoría:</strong> ${habitacion.categoria || '—'}</p>
-          <p><strong>Vista:</strong> ${habitacion.vista || '—'}</p>
-          <p><strong>Piso:</strong> ${habitacion.piso || '—'}</p>
-          <p><strong>Capacidad:</strong> ${habitacion.capacidad || '—'} ${habitacion.fumadores === false ? '· No fumadores' : ''}</p>
-          <p><strong>Características:</strong> ${habitacion.caracteristicas ? habitacion.caracteristicas.join(', ') : '—'}</p>
+          ${habitacion.categoria ? `<p><strong>Categoría:</strong> ${habitacion.categoria} ${habitacion.vista ? '· ' + habitacion.vista : ''}</p>` : ''}
+          ${habitacion.piso ? `<p><strong>Piso:</strong> ${habitacion.piso}</p>` : ''}
+          ${habitacion.capacidad ? `<p><strong>Capacidad:</strong> ${habitacion.capacidad}${habitacion.fumadores === false ? ' · No fumadores' : ''}</p>` : ''}
+          ${habitacion.caracteristicas ? `<p><strong>Características:</strong> ${habitacion.caracteristicas.join(', ')}</p>` : ''}
           ${galeriaHTML}
           <button class="btn-volver" onclick="cerrarPanelInferior()">Cerrar</button>
         </div>
       `;
     } else {
-      panel.innerHTML = `<p>🔍 Información no disponible para la habitación ${num}.</p>`;
+      panel.innerHTML = `
+        <div class="contenido-inferior">
+          <p>🔍 Información no disponible para la habitación <strong>${num}</strong>.</p>
+          <button class="btn-volver" onclick="cerrarPanelInferior()">Cerrar</button>
+        </div>
+      `;
     }
 
     panel.style.display = "block";
     document.body.style.overflow = "hidden";
   } catch (error) {
-    console.error("Error cargando info:", error);
-    panel.innerHTML = `<p>⚠️ Error al cargar la información. Intenta de nuevo.</p>`;
+    panel.innerHTML = `
+      <div class="contenido-inferior">
+        <p>⚠️ Error al cargar la información. Intenta de nuevo.</p>
+        <button class="btn-volver" onclick="cerrarPanelInferior()">Cerrar</button>
+      </div>
+    `;
     panel.style.display = "block";
   }
 }
-
+    
 
     async function marcarHabitacionesDisponibles() {
   try {
