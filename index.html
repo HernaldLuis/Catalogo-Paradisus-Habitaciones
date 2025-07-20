@@ -239,8 +239,15 @@ border-bottom: none;
       background-color: #388e3c;
     }
 
-    .habitacion-btn.disponible {
-  background-color: #007bff !important;
+    .habitacion-btn.disponible {  /*🔥 Estas seccion cambiar el color de las habotaciones disponiblesx */
+  background-color: #007bff;
+  color: white;
+  border: 2px solid #0056b3;
+  font-weight: bold;
+}
+
+.habitacion-btn.disponible:hover {
+  background-color: #0056b3;
 }
 
     .pasillo {
@@ -992,6 +999,26 @@ function cerrarPanelInferior() {
     panel.style.display = "block";
   }
 }
+
+    async function marcarHabitacionesDisponibles() {
+  try {
+    const response = await fetch("habitaciones.json");
+    const data = await response.json();
+    const botones = document.querySelectorAll(".habitacion-btn");
+
+    botones.forEach(boton => {
+      const num = boton.textContent.trim();
+      if (data[num]) {
+        boton.classList.add("disponible");
+      }
+    });
+  } catch (error) {
+    console.error("Error al cargar habitaciones disponibles:", error);
+  }
+}
+
+// Ejecutar al cargar
+window.addEventListener("DOMContentLoaded", marcarHabitacionesDisponibles);
 
   </script> 
 
