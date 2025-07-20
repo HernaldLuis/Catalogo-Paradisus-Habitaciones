@@ -80,21 +80,22 @@ border-bottom: none;
     }
 
   /* <-- ESTO ES EL PANEL INFERIOR DONDE METEMOS IMAGENES Y DESCRIPCION */
-  .panel-inferior {
-    position: fixed;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(255, 255, 255, 0.95);
-    padding: 25px 35px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    z-index: 9999;
-    display: none;
-  max-width: 98vw;
-  width: 1000px;
-    color: black; /* 🖤 Esta es la línea que buscas */
-  }
+.panel-inferior {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 35px 45px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  z-index: 9999;
+  display: none;
+  max-width: 95vw;  /* le das más posibilidad de crecer horizontalmente */
+  width: 800px;      /* aumenta el tamaño fijo */
+  color: black;
+}
+
 
   .contenido-panel {
     position: relative;
@@ -128,11 +129,11 @@ border-bottom: none;
   }
 
 
-    .galeria-habitacion {
+.galeria-habitacion {
   display: flex;
   justify-content: center;
   gap: 10px;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;  /* permite que brinquen a otra línea */
   margin-top: 15px;
 }
 
@@ -141,7 +142,7 @@ border-bottom: none;
 }
 
 .bloque-imagen img {
-  width: 220px; /* Puedes hacerlo más pequeño aún si quieres */
+  width: 240px; /* Puedes hacerlo más pequeño aún si quieres */
   border-radius: 8px;
   transition: transform 0.3s ease; /* Suaviza la animación */
   cursor: zoom-in;
