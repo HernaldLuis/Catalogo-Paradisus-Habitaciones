@@ -938,49 +938,6 @@ function cerrarZoom(event) {
   document.getElementById('zoom-overlay').style.display = 'none';
 }
 
-      if (num === "2208") {
-        panel.innerHTML = `
-          <div class="contenido-inferior">
-            <h2>Habitación 2208 · C2V</h2>
-            <p><strong>Categoría:</strong> Junior Suite · Vista al Jardín</p>
-            <p><strong>Piso:</strong> 2</p>
-            <p><strong>Capacidad:</strong> Máx. 4 personas · No fumadores</p>
-            <p><strong>Características:</strong> Balcón, Doble regadera tipo lluvia, 2 camas de 1x2.20m</p>
-<div class="galeria-habitacion">
-  <div class="bloque-imagen">
-    <img 
-      src="https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/2208_Lobby_v1tkjn.jpg" 
-      alt="Vista Lobby" 
-      onclick="hacerZoom(this.src)" 
-      style="cursor: zoom-in;"
-    />
-    <p><strong>Lobby</strong></p>
-  </div>
-  <div class="bloque-imagen">
-    <img 
-      src="https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/2208_Central_beqdos.jpg" 
-      alt="Vista Central" 
-      onclick="hacerZoom(this.src)" 
-      style="cursor: zoom-in;"
-    />
-    <p><strong>Central</strong></p>
-  </div>
-  <div class="bloque-imagen">
-    <img 
-      src="https://res.cloudinary.com/dor6za85u/image/upload/v1752723666/2208_Mar_xagttf.jpg" 
-      alt="Vista Mar" 
-      onclick="hacerZoom(this.src)" 
-      style="cursor: zoom-in;"
-    />
-    <p><strong>Mar</strong></p>
-  </div>
-</div>
-
-            <button class="btn-volver" onclick="cerrarPanelInferior()">Cerrar</button>
-          </div>
-        `;
-      }
-
       panel.style.display = "block";
       document.body.style.overflow = "hidden";
     }
