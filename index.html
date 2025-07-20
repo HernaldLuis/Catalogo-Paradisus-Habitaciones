@@ -19,6 +19,14 @@ body {
       text-align: center;
       padding: 20px;
     }
+  
+.mensaje-inicial {
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  color: #444;
+  padding: 10px;
+}
 
     .zona-desplazable {
       display: flex;
@@ -850,9 +858,9 @@ border-bottom: none;
 
   <!-- Panel flotante inferior -->
   <div id="panelInferior" class="panel-inferior">
-  <div id="mensajeSeleccion" style="text-align:center; font-weight:bold;">
-    ℹ️ Selecciona una habitación para ver más detalles.
-  </div>
+    <div id="mensajeSeleccion" class="mensaje-inicial">
+  ℹ️ Selecciona una habitación para ver más detalles.
+</div>
 </div>
 
   <!-- Lightbox de imagen -->
