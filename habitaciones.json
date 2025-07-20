@@ -1,0 +1,18 @@
+{
+  "1501": {
+    "titulo": "Habitación 1501 - Vista Jardín",
+    "descripcion": "Acogedora habitación en el quinto piso con vista a los jardines interiores. Equipada con cama king size, área de descanso y amenidades de lujo.",
+    "imagenes": [
+      "https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/1501_Lobby.jpg",
+      "https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/1501_Jardin.jpg"
+    ]
+  },
+  "1502": {
+    "titulo": "Habitación 1502 - Vista Interior",
+    "descripcion": "Moderna habitación con decoración minimalista y vista a los pasillos centrales. Ideal para quienes buscan comodidad y tranquilidad.",
+    "imagenes": [
+      "https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/1502_Lobby.jpg",
+      "https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/1502_Central.jpg"
+    ]
+  }
+}
