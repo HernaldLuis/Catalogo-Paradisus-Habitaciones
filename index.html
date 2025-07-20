@@ -5,20 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Catálogo de Habitaciones</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f0f0f0;
-    }
-
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: Arial, sans-serif;
   background-image: url('https://github.com/HernaldLuis/Catalogo-Paradisus-Habitaciones/blob/main/fondo.jpg.jpeg?raw=true');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-}
+  background-color: #f0f0f0; /* fallback si la imagen no carga */
+
+  
     h1 {
       text-align: center;
       padding: 20px;
@@ -867,9 +863,12 @@ border-bottom: none;
 
 
   <!-- Panel flotante inferior -->
-  <div id="panelInferior" class="panel-inferior"></div>
-  ℹ️ Selecciona una habitación para ver más detalles.
+  <div id="panelInferior" class="panel-inferior">
+  <div id="mensajeSeleccion" style="text-align:center; font-weight:bold;">
+    ℹ️ Selecciona una habitación para ver más detalles.
+  </div>
 </div>
+
   <!-- Lightbox de imagen -->
 <div id="zoom-overlay" class="visor-oculto" onclick="cerrarZoom(event)">
   <span id="zoom-close" onclick="cerrarZoom(event)" style="position: absolute; top: 20px; right: 30px; font-size: 30px; cursor: pointer; color: white;">❌</span>
@@ -948,12 +947,17 @@ function cerrarZoom(event) {
       panel.style.display = "block";
       document.body.style.overflow = "hidden";
     }
+    
+function cerrarPanelInferior() {
+  const panel = document.getElementById("panelInferior");
+  const mensaje = document.getElementById("mensajeSeleccion");
 
-    function cerrarPanelInferior() {
-      const panel = document.getElementById("panelInferior");
-      panel.style.display = "none";
-      document.body.style.overflow = "auto";
-    }
+  panel.style.display = "none";
+  document.body.style.overflow = "auto";
+
+  if (mensaje) mensaje.style.display = "block"; // Vuelve a mostrar mensaje
+}
+
 
   </script> 
 
