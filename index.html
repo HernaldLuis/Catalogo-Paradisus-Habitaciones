@@ -918,42 +918,7 @@ border-bottom: none;
 
   <script>
 
-    function mostrarInfo(num) {
-      const panel = document.getElementById("panelInferior");
-
-      // Limpia otras habitaciones marcadas cambia los colores de las habitaciones disponibles
-      
-      document.querySelectorAll('.habitacion-btn').forEach(btn => {
-  btn.classList.remove('disponible'); // Limpia otras habitaciones marcadas
-});
-
-const btnActual = document.querySelector(`.habitacion-btn[onclick*="${num}"]`);
-if (btnActual) {
-  btnActual.classList.add('disponible');
-}
-
-
-function cerrarZoom(event) {
-  if (event) event.stopPropagation(); // evita cerrar si se hace clic en el ❌
-  document.getElementById('zoom-overlay').style.display = 'none';
-}
-
-      panel.style.display = "block";
-      document.body.style.overflow = "hidden";
-    }
-    
-function cerrarPanelInferior() {
-  const panel = document.getElementById("panelInferior");
-  const mensaje = document.getElementById("mensajeSeleccion");
-
-  panel.style.display = "none";
-  document.body.style.overflow = "auto";
-
-  if (mensaje) mensaje.style.display = "block"; // Vuelve a mostrar mensaje
-}
-
-
-async function mostrarInfo(num) {
+   async function mostrarInfo(num) {
   const panel = document.getElementById("panelInferior");
   const mensaje = document.getElementById("mensajeSeleccion");
   if (mensaje) mensaje.style.display = "none";
@@ -966,13 +931,11 @@ async function mostrarInfo(num) {
       const habitacion = data[num];
 
       let galeriaHTML = '<div class="galeria-habitacion">';
-      habitacion.imagenes.forEach((img, index) => {
-        const src = typeof img === 'string' ? img : img.src;
-        const etiqueta = typeof img === 'object' && img.etiqueta ? img.etiqueta : `Imagen ${index + 1}`;
+      habitacion.imagenes.forEach((imagen) => {
         galeriaHTML += `
           <div class="bloque-imagen">
-            <img src="${src}" alt="${etiqueta}" onclick="hacerZoom('${src}')" style="cursor: zoom-in;" />
-            <p><strong>${etiqueta}</strong></p>
+            <img src="${imagen.src}" alt="${imagen.etiqueta}" onclick="hacerZoom(this.src)" />
+            <p><strong>${imagen.etiqueta}</strong></p>
           </div>
         `;
       });
@@ -980,21 +943,19 @@ async function mostrarInfo(num) {
 
       panel.innerHTML = `
         <div class="contenido-inferior">
-          <h2>${habitacion.titulo}</h2>
-          ${habitacion.categoria ? `<p><strong>Categoría:</strong> ${habitacion.categoria} ${habitacion.vista ? '· ' + habitacion.vista : ''}</p>` : ''}
-          ${habitacion.piso ? `<p><strong>Piso:</strong> ${habitacion.piso}</p>` : ''}
-          ${habitacion.capacidad ? `<p><strong>Capacidad:</strong> ${habitacion.capacidad}${habitacion.fumadores === false ? ' · No fumadores' : ''}</p>` : ''}
-          ${habitacion.caracteristicas ? `<p><strong>Características:</strong> ${habitacion.caracteristicas.join(', ')}</p>` : ''}
+          <h3>${habitacion.titulo}</h3>
+          <p><strong>Categoría:</strong> ${habitacion.categoria} · ${habitacion.vista}</p>
+          <p><strong>Piso:</strong> ${habitacion.piso}</p>
+          <p><strong>Capacidad:</strong> ${habitacion.capacidad} ${habitacion.fumadores ? '' : '· No fumadores'}</p>
+          <p><strong>Características:</strong> ${habitacion.caracteristicas.join(', ')}</p>
           ${galeriaHTML}
           <button class="btn-volver" onclick="cerrarPanelInferior()">Cerrar</button>
         </div>
       `;
     } else {
       panel.innerHTML = `
-        <div class="contenido-inferior">
-          <p>🔍 Información no disponible para la habitación <strong>${num}</strong>.</p>
-          <button class="btn-volver" onclick="cerrarPanelInferior()">Cerrar</button>
-        </div>
+        <p>🔍 Información no disponible para la habitación ${num}.</p>
+        <button class="btn-volver" onclick="cerrarPanelInferior()">Cerrar</button>
       `;
     }
 
@@ -1002,14 +963,13 @@ async function mostrarInfo(num) {
     document.body.style.overflow = "hidden";
   } catch (error) {
     panel.innerHTML = `
-      <div class="contenido-inferior">
-        <p>⚠️ Error al cargar la información. Intenta de nuevo.</p>
-        <button class="btn-volver" onclick="cerrarPanelInferior()">Cerrar</button>
-      </div>
+      <p>⚠️ Error al cargar la información. Intenta de nuevo.</p>
+      <button class="btn-volver" onclick="cerrarPanelInferior()">Cerrar</button>
     `;
     panel.style.display = "block";
   }
 }
+
     
 
     async function marcarHabitacionesDisponibles() {
