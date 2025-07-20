@@ -75,6 +75,21 @@ border-bottom: none;
       border-radius: 6px;
     }
 
+.panel-inferior {  /* <-- ESTO ES EL PANEL INFERIOR DONDE METEMOS IMAGENES Y DESCRIPCION */
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 15px 25px;
+  border-radius: 12px;
+  color: white;
+  font-size: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  backdrop-filter: blur(5px);
+}    
+
 .piso {
   display: flex;
   gap: 5px;
@@ -722,9 +737,9 @@ border-bottom: none;
 
   </script>
 
-    <div class="mensaje-flotante" id="mensajeFlotante">
-    🔔 Selecciona una habitación para ver sus detalles.
-  </div>
+<div class="panel-inferior">
+  ℹ️ Selecciona una habitación para ver más detalles.
+</div>
 
 </body>
 </html>
