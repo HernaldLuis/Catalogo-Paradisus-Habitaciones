@@ -22,6 +22,37 @@
       }
     ]
   },
+
+  "4311": {
+  "titulo": "Habitación 4311 · SE7",
+  "categoria": "The Reserve Master Suite",
+  "vista": "Vista al Mar",
+  "piso": 3,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al Mar",
+    "Doble regadera tipo lluvia",
+    "Habitación conectada",
+    "1 cama king size"
+  ],
+  "habitacion_conectada": "4312 · The Reserve Suite",
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753038913/4312_Mar_wtjskm.jpg",
+      "etiqueta": "Mar (conectada)"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753038912/4312_Sky_ly1afu.jpg",
+      "etiqueta": "Sky (compartida)"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753038913/4312_Alberca_c688zq.jpg",
+      "etiqueta": "Área Alberca (conectada)"
+    }
+  ]
+},
   "1502": {
     "titulo": "Habitación 1502 · Vista Interior",
     "categoria": "Deluxe Queen",
