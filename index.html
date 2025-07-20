@@ -164,6 +164,10 @@ border-bottom: none;
       background-color: #388e3c;
     }
 
+    .habitacion-btn.disponible {
+  background-color: #007bff !important;
+}
+
     .pasillo {
       width: 100%;
       border-top: 2px dashed #aaa;
@@ -789,6 +793,18 @@ border-bottom: none;
 
     function mostrarInfo(num) {
       const panel = document.getElementById("panelInferior");
+
+      // Limpia otras habitaciones marcadas cambia los colores de las habitaciones disponibles
+      
+      document.querySelectorAll('.habitacion-btn').forEach(btn => {
+  btn.classList.remove('disponible'); // Limpia otras habitaciones marcadas
+});
+
+const btnActual = document.querySelector(`.habitacion-btn[onclick*="${num}"]`);
+if (btnActual) {
+  btnActual.classList.add('disponible');
+}
+
 
       if (num === "2208") {
         panel.innerHTML = `
