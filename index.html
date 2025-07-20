@@ -203,6 +203,28 @@ border-bottom: none;
   z-index: 10001;
 }
 
+
+.visor-oculto {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+}
+
+.visor-oculto img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  transition: transform 0.3s;
+  cursor: zoom-out;
+}
+
     
 
 .piso {
@@ -846,16 +868,12 @@ border-bottom: none;
   <div id="panelInferior" class="panel-inferior"></div>
   ℹ️ Selecciona una habitación para ver más detalles.
 </div>
-    <!-- ZOOM AL HACER CLIC -->
-<div id="zoom-overlay" style="display:none;" onclick="cerrarZoom()">
+  <!-- Lightbox de imagen -->
+<div id="zoom-overlay" class="visor-oculto" onclick="cerrarZoom(event)">
+  <span id="zoom-close" onclick="cerrarZoom(event)" style="position: absolute; top: 20px; right: 30px; font-size: 30px; cursor: pointer; color: white;">❌</span>
   <img id="zoom-img" src="" alt="Zoom" />
 </div>
 
-    <!-- Zoom grande con botón de cerrar -->
-<div id="zoom-overlay" onclick="cerrarZoom()">
-  <span id="zoom-close" onclick="cerrarZoom(event)">❌</span>
-  <img id="zoom-img" src="" alt="Zoom" />
-</div>
 
   </div>
 </div>
@@ -902,18 +920,34 @@ function cerrarZoom(event) {
             <p><strong>Características:</strong> Balcón, Doble regadera tipo lluvia, 2 camas de 1x2.20m</p>
 <div class="galeria-habitacion">
   <div class="bloque-imagen">
-    <img src="https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/2208_Lobby_v1tkjn.jpg" alt="Vista Lobby" onclick="hacerZoom(this.src)" />
+    <img 
+      src="https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/2208_Lobby_v1tkjn.jpg" 
+      alt="Vista Lobby" 
+      onclick="hacerZoom(this.src)" 
+      style="cursor: zoom-in;"
+    />
     <p><strong>Lobby</strong></p>
   </div>
   <div class="bloque-imagen">
-    <img src="https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/2208_Central_beqdos.jpg" alt="Vista Central" onclick="hacerZoom(this.src)" />
+    <img 
+      src="https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/2208_Central_beqdos.jpg" 
+      alt="Vista Central" 
+      onclick="hacerZoom(this.src)" 
+      style="cursor: zoom-in;"
+    />
     <p><strong>Central</strong></p>
   </div>
   <div class="bloque-imagen">
-    <img src="https://res.cloudinary.com/dor6za85u/image/upload/v1752723666/2208_Mar_xagttf.jpg" alt="Vista Mar" onclick="hacerZoom(this.src)" />
+    <img 
+      src="https://res.cloudinary.com/dor6za85u/image/upload/v1752723666/2208_Mar_xagttf.jpg" 
+      alt="Vista Mar" 
+      onclick="hacerZoom(this.src)" 
+      style="cursor: zoom-in;"
+    />
     <p><strong>Mar</strong></p>
   </div>
 </div>
+
             <button class="btn-volver" onclick="cerrarPanelInferior()">Cerrar</button>
           </div>
         `;
