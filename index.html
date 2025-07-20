@@ -75,20 +75,54 @@ border-bottom: none;
       border-radius: 6px;
     }
 
-.panel-inferior {  /* <-- ESTO ES EL PANEL INFERIOR DONDE METEMOS IMAGENES Y DESCRIPCION */
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.6);
-  padding: 15px 25px;
-  border-radius: 12px;
-  color: white;
-  font-size: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-  z-index: 999;
-  backdrop-filter: blur(5px);
-}    
+  /* <-- ESTO ES EL PANEL INFERIOR DONDE METEMOS IMAGENES Y DESCRIPCION */
+  .panel-inferior {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    z-index: 9999;
+    display: none;
+    max-width: 90vw;
+    width: 600px;
+  }
+
+  .contenido-panel {
+    position: relative;
+  }
+
+  .cerrar-panel {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: #ff4d4d;
+    color: white;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  }
+
+  .galeria-imagenes {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+    flex-wrap: wrap;
+  }
+
+  .galeria-imagenes img {
+    width: 180px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+
+    
 
 .piso {
   display: flex;
@@ -721,21 +755,60 @@ border-bottom: none;
   <button class="habitacion-btn" onclick="mostrarInfo('4112')">4112</button>
   <button class="habitacion-btn" onclick="mostrarInfo('4111')">4111</button>
 </div>
-</div>
 
-      </div>
+
+  <!-- Panel flotante inferior -->
+<div id="panel-inferior" class="panel-inferior">
+  <div class="contenido-panel">
+    <span class="cerrar-panel" onclick="cerrarPanelInferior()">✕</span>
+    <div id="info-habitacion">
+      <!-- Aquí se insertará la info de la habitación -->
     </div>
   </div>
+</div>
 
   <script>
     // Aquí va tu JavaScript personalizado
+<script>
+  function mostrarInfo(num) {
+    const panel = document.getElementById("panel-inferior");
+    const info = document.getElementById("info-habitacion");
+
+    if (num === "2208") {
+      info.innerHTML = `
+        <h2>Habitación 2208 - C2V</h2>
+        <p><strong>Categoría:</strong> Junior Suite Garden View</p>
+        <p><strong>Ocupación máxima:</strong> 4 personas</p>
+        <p><strong>Preferencia:</strong> No fumadores</p>
+        <p><strong>Piso:</strong> 2</p>
+        <p><strong>Vista:</strong> Jardín central</p>
+        <p><strong>Tipo de cama:</strong> 2 camas (1 x 2.20 m)</p>
+        <p><strong>Características:</strong> Balcón, vista al mar, regadera doble tipo lluvia</p>
+
+        <div class="galeria-imagenes">
+          <img src="https://res.cloudinary.com/dor6za85u/image/upload/v1752723666/2208_Lobby_v1tkjn.jpg" alt="Vista Lobby">
+          <img src="https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/2208_Central_beqdos.jpg" alt="Vista Central">
+          <img src="https://res.cloudinary.com/dor6za85u/image/upload/v1752723666/2208_Mar_xagttf.jpg" alt="Vista Mar">
+        </div>
+      `;
+    }
+
+    panel.style.display = "block";
+  }
+
+  function cerrarPanelInferior() {
+    document.getElementById("panel-inferior").style.display = "none";
+  }
 
 
+
+
+    
     
     // Mostrar panel fijo al presionar una habitación
 
 
-  </script>
+  </script> 
 
 <div class="panel-inferior">
   ℹ️ Selecciona una habitación para ver más detalles.
