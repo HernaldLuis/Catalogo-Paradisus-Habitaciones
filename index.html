@@ -257,6 +257,8 @@ border-bottom: none;
       border-top: 2px dashed #aaa;
       margin: 12px 0;
 
+}     
+
 .jardin-simulada {
   display: flex;                   /* 🔥 Activa Flexbox */
   justify-content: center;        /* 🔄 Centra horizontalmente */
@@ -894,16 +896,6 @@ if (btnActual) {
   btnActual.classList.add('disponible');
 }
 
-function hacerZoom(src) {
-  const zoomImg = document.getElementById('zoom-img');
-  const overlay = document.getElementById('zoom-overlay');
-  zoomImg.src = src;
-  overlay.style.display = 'flex';
-}
-
-function cerrarZoom() {
-  document.getElementById('zoom-overlay').style.display = 'none';
-}
 
 function cerrarZoom(event) {
   if (event) event.stopPropagation(); // evita cerrar si se hace clic en el ❌
