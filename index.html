@@ -42,15 +42,16 @@ border-bottom: none;
 
 .torre {
   flex: 0 0 auto;
-  width: max-content; /* ¡Que crezca según el contenido! */
-  min-width: 420px;    /* Puedes ajustar este mínimo para que mantenga algo de orden */
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      background-color: #e6f0ff;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+  width: max-content;
+  min-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.5); /* <- Fondo oscuro transparente */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  color: white; /* Para que el texto sea legible */
+}
 
     .torre-2 {
   margin-top: 145px;
