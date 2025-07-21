@@ -242,15 +242,38 @@ border-bottom: none;
    width: max-content;  /* ⬅️ esto fuerza a que se expanda lo necesario */
 }
 
-    .habitacion-btn {
-      padding: 6px 12px;
-      background-color: #4caf50;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-    }
+.habitacion-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 6px 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  min-width: 45px;
+  height: 46px;
+  cursor: pointer;
+}
+
+  .habitacion-num {
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.tipo-cama {
+  font-size: 0.7rem;
+  font-weight: bold;
+  background: rgba(255,255,255,0.2);
+  padding: 1px 5px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+  line-height: 1;
+}
 
     .habitacion-btn:hover {
       background-color: #388e3c;
@@ -1041,6 +1064,31 @@ function cerrarPanelInferior() {
       const num = boton.textContent.trim();
       if (data[num]) {
         boton.classList.add("disponible");
+      }
+    });
+  } catch (error) {
+    console.error("Error al cargar habitaciones disponibles:", error);
+  }
+}
+
+
+async function marcarHabitacionesDisponibles() {
+  try {
+    const response = await fetch("habitaciones.json");
+    const data = await response.json();
+    const botones = document.querySelectorAll(".habitacion-btn");
+
+    botones.forEach(boton => {
+      const num = boton.textContent.trim();
+      if (data[num]) {
+        const cama = data[num].cama || ""; // "D", "K" o vacío si no existe
+        boton.classList.add("disponible");
+
+        // Reemplazamos el contenido del botón
+        boton.innerHTML = `
+          <div class="habitacion-num">${num}</div>
+          <div class="tipo-cama">${cama}</div>
+        `;
       }
     });
   } catch (error) {
