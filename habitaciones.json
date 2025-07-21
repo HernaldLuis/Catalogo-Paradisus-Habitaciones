@@ -1,110 +1,63 @@
 {
-  "1501": {
-    "titulo": "Habitación 1501 · Vista Jardín",
-    "categoria": "Deluxe King",
-    "vista": "Jardín Interior",
-    "piso": 5,
-    "capacidad": "Máx. 2 personas",
+  "2309": {
+    "titulo": "Habitación 2309 · C2W",
+    "categoria": "Junior Suite",
+    "vista": "Vista al Mar",
+    "piso": "3",
+    "capacidad": "Máx. 4 personas",
     "fumadores": false,
+    "tipo_cama": "D",
+    "sofa": false,
     "caracteristicas": [
-      "Cama king size",
-      "Área de descanso",
-      "Amenidades de lujo"
+      "Balcón",
+      "Vista al Mar",
+      "Doble regadera tipo lluvia",
+      "2 camas 1x2.20"
     ],
     "imagenes": [
       {
-        "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/1501_Lobby.jpg",
-        "etiqueta": "Lobby"
+        "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753067838/2309_Central_qddwv0.jpg",
+        "etiqueta": "Central"
       },
       {
-        "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/1501_Jardin.jpg",
-        "etiqueta": "Jardín"
+        "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753067838/2309_Izquierda_rnckxi.jpg",
+        "etiqueta": "Izquierda"
+      },
+      {
+        "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753067838/2309_Mar_grqnwq.jpg",
+        "etiqueta": "Mar"
       }
     ]
   },
-
-  "2309": {
-  "titulo": "Habitación 2309 · C2W",
-  "categoria": "Junior Suite",
-  "vista": "Vista al Mar",
-  "piso": "3",
-  "capacidad": "Máx. 4 personas",
-  "fumadores": false,
-  "tipo_cama": "D",
-  "sofa": false,
-  "caracteristicas": [
-    "Balcón",
-    "Vista al Mar",
-    "Doble regadera tipo lluvia",
-    "2 camas 1x2.20"
-  ],
-  "imagenes": [
-    {
-      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753067838/2309_Central_qddwv0.jpg",
-      "etiqueta": "Central"
-    },
-    {
-      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753067838/2309_Izquierda_rnckxi.jpg",
-      "etiqueta": "Izquierda"
-    },
-    {
-      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753067838/2309_Mar_grqnwq.jpg",
-      "etiqueta": "Mar"
-    }
-  ]
-},
-
   "4311": {
-  "titulo": "Habitación 4311 · SE7",
-  "categoria": "The Reserve Master Suite",
-  "vista": "Vista al Mar",
-  "piso": 3,
-  "capacidad": "Máx. 4 personas",
-  "fumadores": false,
-  "sofa": true,
-  "caracteristicas": [
-    "Balcón",
-    "Vista al Mar",
-    "Doble regadera tipo lluvia",
-    "Habitación conectada",
-    "1 cama king size"
-  ],
-  "habitacion_conectada a 4311": "4312 · The Reserve Suite",
-  "imagenes": [
-    {
-      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753038913/4312_Mar_wtjskm.jpg",
-      "etiqueta": "Mar"
-    },
-    {
-      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753038912/4312_Sky_ly1afu.jpg",
-      "etiqueta": "Sky"
-    },
-    {
-      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753038913/4312_Alberca_c688zq.jpg",
-      "etiqueta": "Área Alberca"
-    }
-  ]
-},
-  "1502": {
-    "titulo": "Habitación 1502 · Vista Interior",
-    "categoria": "Deluxe Queen",
-    "vista": "Pasillos centrales",
-    "piso": 5,
-    "capacidad": "Máx. 2 personas",
+    "titulo": "Habitación 4311 · SE7",
+    "categoria": "The Reserve Master Suite",
+    "vista": "Vista al Mar",
+    "piso": 3,
+    "capacidad": "Máx. 4 personas",
     "fumadores": false,
+    "tipo_cama": "K",
+    "sofa": true,
     "caracteristicas": [
-      "Decoración minimalista",
-      "Cama queen size",
-      "Ambiente silencioso"
+      "Balcón",
+      "Vista al Mar",
+      "Doble regadera tipo lluvia",
+      "Habitación conectada",
+      "1 cama king size"
     ],
+    "habitacion_conectada": "4312 · The Reserve Suite",
     "imagenes": [
       {
-        "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/1502_Lobby.jpg",
-        "etiqueta": "Lobby"
+        "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753038913/4312_Mar_wtjskm.jpg",
+        "etiqueta": "Mar"
       },
       {
-        "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1752723665/1502_Central.jpg",
-        "etiqueta": "Central"
+        "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753038912/4312_Sky_ly1afu.jpg",
+        "etiqueta": "Sky"
+      },
+      {
+        "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753038913/4312_Alberca_c688zq.jpg",
+        "etiqueta": "Área Alberca"
       }
     ]
   },
@@ -115,6 +68,7 @@
     "piso": 2,
     "capacidad": "Máx. 4 personas",
     "fumadores": false,
+    "tipo_cama": "D",
     "sofa": false,
     "caracteristicas": [
       "Balcón",
@@ -143,6 +97,7 @@
     "piso": 3,
     "capacidad": "Máx. 4 personas",
     "fumadores": false,
+    "tipo_cama": "K",
     "sofa": true,
     "caracteristicas": [
       "Balcón",
@@ -167,3 +122,5 @@
     ]
   }
 }
+
+
