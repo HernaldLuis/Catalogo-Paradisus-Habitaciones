@@ -313,7 +313,22 @@ border-bottom: none;
   word-break: break-word;
 }
 
- 
+  
+ /* (ESTO CORRESPNDE la linea entre conectadas */
+ .fila-base {
+  position: relative;
+}
+
+.linea-conexion {
+  position: absolute;
+  top: 50%; /* Centrado vertical respecto a los botones */
+  left: calc(50% - 55px); /* Ajusta horizontalmente al centro */
+  width: 110px; /* Largo de la línea entre los botones */
+  height: 2px;
+  background-color: #00ffff; /* Color de la línea */
+  z-index: 1;
+}
+
       /* (ESTO CORRESPNDE AL PANEL DE LAS IMAGENES DE COSULTa */
 
   </style>
@@ -839,6 +854,12 @@ border-bottom: none;
 <button class="habitacion-btn" data-num="4314">4314</button>
 <button class="habitacion-btn" data-num="4312">4312</button>
 <button class="habitacion-btn" data-num="4311">4311</button>
+
+<div class="fila-base">
+  <button class="habitacion-btn" data-num="4312">4312</button>
+  <button class="habitacion-btn" data-num="4311">4311</button>
+  <div class="linea-conexion"></div> <!-- 🔗 Línea entre habitaciones -->
+</div>
 
 </div>
 
