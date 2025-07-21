@@ -8,7 +8,7 @@
     "fumadores": false,
     "tipo_cama": "D",
     "sofa": false,
-    "Discapacidad": true,
+    "Discapacidad": false,
     "caracteristicas": [
       "Balcón",
       "Vista al Mar",
@@ -39,7 +39,7 @@
     "fumadores": false,
     "tipo_cama": "K",
     "sofa": true,
-    "Discapacidad": false,
+    "Discapacidad": true,
     "caracteristicas": [
       "Balcón",
       "Vista al Mar",
