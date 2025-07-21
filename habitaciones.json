@@ -41,15 +41,15 @@
   "imagenes": [
     {
       "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753038913/4312_Mar_wtjskm.jpg",
-      "etiqueta": "Mar (conectada)"
+      "etiqueta": "Mar"
     },
     {
       "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753038912/4312_Sky_ly1afu.jpg",
-      "etiqueta": "Sky (compartida)"
+      "etiqueta": "Sky"
     },
     {
       "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753038913/4312_Alberca_c688zq.jpg",
-      "etiqueta": "Área Alberca (conectada)"
+      "etiqueta": "Área Alberca"
     }
   ]
 },
