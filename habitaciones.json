@@ -8,6 +8,7 @@
     "fumadores": false,
     "tipo_cama": "D",
     "sofa": false,
+    "Discapacidad": true,
     "caracteristicas": [
       "Balcón",
       "Vista al Mar",
@@ -38,6 +39,7 @@
     "fumadores": false,
     "tipo_cama": "K",
     "sofa": true,
+    "Discapacidad": false,
     "caracteristicas": [
       "Balcón",
       "Vista al Mar",
@@ -70,6 +72,7 @@
     "fumadores": false,
     "tipo_cama": "D",
     "sofa": false,
+    "Discapacidad": false,
     "caracteristicas": [
       "Balcón",
       "Doble regadera tipo lluvia",
@@ -99,6 +102,7 @@
     "fumadores": false,
     "tipo_cama": "K",
     "sofa": true,
+    "Discapacidad": false,
     "caracteristicas": [
       "Balcón",
       "Cama King Size",
