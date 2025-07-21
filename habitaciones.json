@@ -31,6 +31,7 @@
   "capacidad": "Máx. 4 personas",
   "fumadores": false,
   "tipo_cama": "D",
+  "sofa": false,
   "caracteristicas": [
     "Balcón",
     "Vista al Mar",
@@ -60,6 +61,7 @@
   "piso": 3,
   "capacidad": "Máx. 4 personas",
   "fumadores": false,
+  "sofa": true,
   "caracteristicas": [
     "Balcón",
     "Vista al Mar",
@@ -113,6 +115,7 @@
     "piso": 2,
     "capacidad": "Máx. 4 personas",
     "fumadores": false,
+    "sofa": false,
     "caracteristicas": [
       "Balcón",
       "Doble regadera tipo lluvia",
@@ -140,6 +143,7 @@
     "piso": 3,
     "capacidad": "Máx. 4 personas",
     "fumadores": false,
+    "sofa": true,
     "caracteristicas": [
       "Balcón",
       "Cama King Size",
