@@ -1068,7 +1068,12 @@ async function marcarHabitacionesDisponibles() {
         const tipoCama = habitacion.tipo_cama === "K" ? "K" : "D";
 
         // Verificar si tiene sofá cama
-        const sofaIcon = habitacion.sofa ? " 🛋️" : "";
+       const sofaIcon = habitacion.sofa
+  ? '<span style="font-size: 1.2em; line-height: 1;">🛋️</span>'
+  : '';
+
+       // Verificar si tiene sofá cama
+        const sofaIcon = habitacion.Discapacidad ? " ♿" : "";
 
         // Crear nuevo contenido
         boton.innerHTML = `
