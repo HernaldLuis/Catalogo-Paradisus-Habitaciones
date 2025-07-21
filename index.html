@@ -314,22 +314,26 @@ border-bottom: none;
 }
 
   
- /* (ESTO CORRESPNDE la linea entre conectadas */
- .fila-base {
-  position: relative;
-}
-
-.linea-conexion {
+  
+  .conector-habitacion {
   position: absolute;
-  top: 50%; /* Centrado vertical respecto a los botones */
-  left: calc(50% - 55px); /* Ajusta horizontalmente al centro */
-  width: 110px; /* Largo de la línea entre los botones */
+  top: 50%; /* Centrado vertical */
+  left: 55px; /* Ajusta según distancia entre botones */
+  width: 90px; /* Largo de la línea */
   height: 2px;
-  background-color: #00ffff; /* Color de la línea */
-  z-index: 1;
+  background-color: #ff9800; /* Naranja brillante o el color que desees */
+  z-index: 0;
+  transform: translateY(-50%);
+  border-bottom: 2px dashed #ff9800; /* Línea punteada tipo conexión */
 }
 
-      /* (ESTO CORRESPNDE AL PANEL DE LAS IMAGENES DE COSULTa */
+  .habitacion-btn:hover + .conector-habitacion {
+  background-color: #f44336;
+  border-bottom-style: solid;
+}
+
+
+  /* (ESTO CORRESPNDE AL PANEL DE LAS IMAGENES DE COSULTa */
 
   </style>
 </head>
@@ -854,14 +858,16 @@ border-bottom: none;
 <button class="habitacion-btn" data-num="4314">4314</button>
 <button class="habitacion-btn" data-num="4312">4312</button>
 <button class="habitacion-btn" data-num="4311">4311</button>
-
-<div class="fila-base">
-  <button class="habitacion-btn" data-num="4312">4312</button>
-  <button class="habitacion-btn" data-num="4311">4311</button>
-  <div class="linea-conexion"></div> <!-- 🔗 Línea entre habitaciones -->
 </div>
 
+  <div class="fila-base">
+  <button class="habitacion-btn" id="h4312">4312</button>
+  <button class="habitacion-btn" id="h4311">4311</button>
+
+  <!-- Línea tipo conector -->
+  <div class="conector-habitacion"></div>
 </div>
+
 
 <div class="fila-base">
 <button class="habitacion-btn" data-num="4301">4301</button>
