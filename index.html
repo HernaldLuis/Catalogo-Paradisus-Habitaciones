@@ -19,6 +19,22 @@ body {
       text-align: center;
       padding: 20px;
     }
+
+  .zona-desplazable,
+.zona-desplazable * {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.zona-desplazable {
+  cursor: grab;
+}
+
+.zona-desplazable.arrastrando {
+  cursor: grabbing;
+}
+
   
 .mensaje-inicial {
   text-align: center;
@@ -1061,6 +1077,38 @@ window.addEventListener("DOMContentLoaded", marcarHabitacionesDisponibles);
       const num = boton.dataset.num;
       mostrarInfo(num);
     });
+
+    // Habilitar desplazamiento tipo mapa con el mouse (drag-scroll)
+const zona = document.querySelector('.zona-desplazable');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+zona.addEventListener('mousedown', (e) => {
+  isDown = true;
+  zona.classList.add('arrastrando');
+  startX = e.pageX - zona.offsetLeft;
+  scrollLeft = zona.scrollLeft;
+});
+
+zona.addEventListener('mouseleave', () => {
+  isDown = false;
+  zona.classList.remove('arrastrando');
+});
+
+zona.addEventListener('mouseup', () => {
+  isDown = false;
+  zona.classList.remove('arrastrando');
+});
+
+zona.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - zona.offsetLeft;
+  const walk = (x - startX) * 1; // Velocidad del scroll
+  zona.scrollLeft = scrollLeft - walk;
+});
+
   });
 });  
 
