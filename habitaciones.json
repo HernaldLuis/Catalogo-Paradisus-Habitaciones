@@ -23,6 +23,36 @@
     ]
   },
 
+  "2309": {
+  "titulo": "Habitación 2309 · C2W",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Mar",
+  "piso": "3",
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "caracteristicas": [
+    "Balcón",
+    "Vista al Mar",
+    "Doble regadera tipo lluvia",
+    "2 camas 1x2.20"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753067838/2309_Central_qddwv0.jpg",
+      "etiqueta": "Central"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753067838/2309_Izquierda_rnckxi.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753067838/2309_Mar_grqnwq.jpg",
+      "etiqueta": "Mar"
+    }
+  ]
+},
+
   "4311": {
   "titulo": "Habitación 4311 · SE7",
   "categoria": "The Reserve Master Suite",
