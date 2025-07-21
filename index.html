@@ -324,6 +324,15 @@ border-bottom: none;
   pointer-events: none;    /* No clickeable, solo visual */
 }
 
+  .habitacion-btn .tipo-cama {   /* (Controla la letra por el tipo de cama de cada habitacion*/
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  color: #f0f0f0;
+  margin-top: 2px;
+}
+
+
 
   /* (ESTO CORRESPNDE AL PANEL DE LAS IMAGENES DE COSULTa */
 
@@ -1015,7 +1024,7 @@ function cerrarPanelInferior() {
 
     
 
-    async function marcarHabitacionesDisponibles() {
+async function marcarHabitacionesDisponibles() {
   try {
     const response = await fetch("habitaciones.json");
     const data = await response.json();
@@ -1023,8 +1032,18 @@ function cerrarPanelInferior() {
 
     botones.forEach(boton => {
       const num = boton.textContent.trim();
-      if (data[num]) {
+      const habitacion = data[num];
+
+      if (habitacion) {
         boton.classList.add("disponible");
+
+        // Buscar si contiene "King" o "Double"
+        const tipo = habitacion.caracteristicas.find(c =>
+          c.toLowerCase().includes("king")
+        ) ? "K" : "D";
+
+        // Actualiza el contenido del botón con número y letra
+        boton.innerHTML = `${num}<div class="tipo-cama">${tipo}</div>`;
       }
     });
   } catch (error) {
