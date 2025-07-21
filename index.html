@@ -316,12 +316,14 @@ border-bottom: none;
   
 .conector-conectadas {
   display: inline-block;
-  color: white;          /* ← Color blanco */
-  font-size: 18px;       /* ← Más corto visualmente */
+  color: white;            /* Color blanco */
+  font-size: 12px;         /* Más corta visualmente */
   font-weight: bold;
-  margin: 0 4px;         /* ← Menor separación horizontal */
-  line-height: 32px;     /* ← Alineación vertical con botón */
+  margin: 0 2px;           /* Muy poco espacio entre botones */
+  line-height: 30px;       /* Alineación vertical */
+  pointer-events: none;    /* No clickeable, solo visual */
 }
+
 
   /* (ESTO CORRESPNDE AL PANEL DE LAS IMAGENES DE COSULTa */
 
@@ -847,7 +849,7 @@ border-bottom: none;
 <button class="habitacion-btn" data-num="4315">4315</button>
 <button class="habitacion-btn" data-num="4314">4314</button>
 <button class="habitacion-btn" data-num="4312">4312</button>
-  <div class="conector-conectadas">──▶</div>
+  <div class="conector-conectadas">⇄</div>  <!-- Flecha de doble punta -->
 <button class="habitacion-btn" data-num="4311">4311</button>
 </div>
 
