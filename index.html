@@ -1007,18 +1007,18 @@ async function mostrarInfo(num) {
       });
       galeriaHTML += '</div>';
 
-      panel.innerHTML = `
-        <div class="contenido-inferior">
-          <h3>${habitacion.titulo}</h3>
-          <p><strong>Categoría:</strong> ${habitacion.categoria} · ${habitacion.vista}</p>
-          <p><strong>Habitación conectada:</strong> ${habitacion.habitacion_conectada ? habitacion.habitacion_conectada : 'Sin conexión'}</p>
-          <p><strong>Piso:</strong> ${habitacion.piso}</p>
-          <p><strong>Capacidad:</strong> ${habitacion.capacidad} ${habitacion.fumadores ? '' : '· No fumadores'}</p>
-          <p><strong>Características:</strong> ${habitacion.caracteristicas.join(', ')}</p>
-          ${galeriaHTML}
-          <button class="btn-volver" onclick="cerrarPanelInferior()">Cerrar</button>
-        </div>
-      `;
+panel.innerHTML = `
+  <div class="contenido-inferior">
+    <h3>${habitacion.titulo}</h3>
+    <p><strong>Categoría:</strong> ${habitacion.categoria} · ${habitacion.vista}</p>
+    <p><strong>Habitación conectada:</strong> ${habitacion.habitacion_conectada ? habitacion.habitacion_conectada : 'Sin conexión'}</p>
+    <p><strong>Piso:</strong> ${habitacion.piso}</p>
+    <p><strong>Capacidad:</strong> ${habitacion.capacidad} · ${habitacion.fumadores ? '' : 'No fumadores'}</p>
+    <p><strong>Características:</strong> ${habitacion.caracteristicas.join(', ')}</p>
+    ${galeriaHTML}
+    <button class="btn-volver" onclick="cerrarPanelInferior()">Cerrar</button>
+  </div>
+`;
     } else {
       panel.innerHTML = `
         <div class="contenido-inferior">
