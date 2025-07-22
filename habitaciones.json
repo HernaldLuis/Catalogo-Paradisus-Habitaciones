@@ -1,4 +1,35 @@
 {
+  "4521": {
+  "título": "Habitación 4521 - C2V",
+  "categoría": "Junior Suite",
+  "vista": "Vista al Mar",
+  "piso": 5,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "habitacion_conectada": "Sin conexión",
+  "caracteristicas": [
+    "Balcón",
+    "Vista al Mar",
+    "Doble regadera tipo lluvia",
+    "2 camas de 1x2.20m"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753173268/4521_Izquierda_spryfn.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753173270/4521_Central_eblufm.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753173267/4521_Mar_vx6jk1.jpg",
+      "etiqueta": "Mar"
+    }
+  ]
+},
   "4507": {
   "título": "Habitación 4507 - C2V",
   "categoría": "Junior Suite",
@@ -14,7 +45,7 @@
     "Vista al Jardín",
     "Cama King Size",
     "Doble regadera tipo lluvia",
-    "Sofá cama pequeño (90)"
+    "Sofá cama"
   ],
   "imagenes": [
     {
