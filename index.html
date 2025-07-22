@@ -1069,10 +1069,9 @@ async function marcarHabitacionesDisponibles() {
 
         // Verificar si tiene sofá cama
 const sofaIcon = `
-  ${habitacion.sofa ? '<img src="https://hernaldluis.github.io/favicon-32x32.png" alt="Sofá cama" style="height: 16px; vertical-align: middle;" />' : ''}
+  ${habitacion.sofa ? '<img src="https://hernaldluis.github.io/favicon-32x32.png" alt="Sofá cama" style="height: 16px; vertical-align: middle; margin-left: 4px;" />' : ''}
   ${habitacion.Discapacidad ? '<span style="font-size: 1.2em;">♿</span>' : ''}
 `;
-
         // Crear nuevo contenido
         boton.innerHTML = `
           <div style="display: flex; flex-direction: column; align-items: center;">
