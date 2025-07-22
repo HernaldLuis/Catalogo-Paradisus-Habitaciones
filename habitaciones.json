@@ -39,13 +39,14 @@
     "fumadores": false,
     "tipo_cama": "K",
     "sofa": true,
-    "Discapacidad": true,
+    "Discapacidad": false,
     "caracteristicas": [
       "Balcón",
       "Vista al Mar",
       "Doble regadera tipo lluvia",
       "Habitación conectada",
-      "1 cama king size"
+      "1 cama king size",
+      "Sofá cama incluido"
     ],
     "habitacion_conectada": "4312 · The Reserve Suite",
     "imagenes": [
@@ -77,7 +78,6 @@
       "Balcón",
       "Doble regadera tipo lluvia",
       "2 camas de 1x2.20m",
-      "Esta habitacion incluye Handicap"
     ],
     "imagenes": [
       {
@@ -109,7 +109,7 @@
       "Cama King Size",
       "Vista al Mar",
       "Doble regadera tipo lluvia",
-      "Sofá cama pequeño (90)"
+      "Sofá cama incluido"
     ],
     "imagenes": [
       {
