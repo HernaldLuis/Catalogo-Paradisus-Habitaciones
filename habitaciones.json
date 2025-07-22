@@ -1,4 +1,36 @@
 {
+  "4507": {
+  "título": "Habitación 4507 - C2V",
+  "categoría": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 5,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "habitacion_conectada": "Sin conexión",
+  "caracteristicas": [
+    "Balcón",
+    "Vista al Jardín",
+    "Cama King Size",
+    "Doble regadera tipo lluvia",
+    "Sofá cama pequeño (90)"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753172709/4507_Mar_fewqed.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753172707/4507_Centrales_tm4o3x.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753172708/4507_lobby_bludhe.jpg",
+      "etiqueta": "Lobby"
+    }
+  ]
+},
   "4407": {
   "título": "Habitación 4407 - C2V",
   "categoría": "Junior Suite",
