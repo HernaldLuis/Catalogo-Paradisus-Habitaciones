@@ -1,4 +1,38 @@
-{"4406": {
+{
+  "4407": {
+  "título": "Habitación 4407 - C2V",
+  "categoría": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "habitacion_conectada": "4406 · Junior Suite - Garden View",
+  "caracteristicas": [
+    "Balcón",
+    "Vista al Jardín",
+    "Club Meliá",
+    "Doble regadera tipo lluvia",
+    "Habitación conectada",
+    "2 camas de 1x2.20m"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753172297/4407_Mar_wawpxk.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753172298/4407_Centrales_nfdvzw.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753172296/4407_Lobby_ybkxno.jpg",
+      "etiqueta": "Lobby"
+    }
+  ]
+},
+"4406": {
   "título": "Habitación 4406 - C2V",
   "categoría": "Junior Suite",
   "vista": "Vista al Jardín",
