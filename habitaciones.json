@@ -1,7 +1,7 @@
 {
   "4521": {
-    "título": "Habitación 4521 - C2V",
-    "categoría": "Junior Suite",
+    "titulo": "Habitación 4521 - C2V",
+    "categoria": "Junior Suite",
     "vista": "Vista al Mar",
     "piso": 5,
     "capacidad": "Máx. 4 personas",
@@ -31,8 +31,8 @@
     ]
   },
   "4507": {
-    "título": "Habitación 4507 - C2V",
-    "categoría": "Junior Suite",
+    "titulo": "Habitación 4507 - C2V",
+    "categoria": "Junior Suite",
     "vista": "Vista al Jardín",
     "piso": 5,
     "capacidad": "Máx. 4 personas",
@@ -63,8 +63,8 @@
     ]
   },
   "4407": {
-    "título": "Habitación 4407 - C2V",
-    "categoría": "Junior Suite",
+    "titulo": "Habitación 4407 - C2V",
+    "categoria": "Junior Suite",
     "vista": "Vista al Jardín",
     "piso": 4,
     "capacidad": "Máx. 4 personas",
@@ -96,8 +96,8 @@
     ]
   },
   "4406": {
-    "título": "Habitación 4406 - C2V",
-    "categoría": "Junior Suite",
+    "titulo": "Habitación 4406 - C2V",
+    "categoria": "Junior Suite",
     "vista": "Vista al Jardín",
     "piso": 4,
     "capacidad": "Máx. 4 personas",
