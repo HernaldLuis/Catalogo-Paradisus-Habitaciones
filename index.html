@@ -1056,25 +1056,39 @@ function cerrarPanelInferior() {
   if (mensaje) mensaje.style.display = "block";
 }
 
-    
-
 async function marcarHabitacionesDisponibles() {
   try {
-    const response = await fetch("habitaciones.json");
-    const data = await response.json();
+    const [habitacionesResponse, camasResponse] = await Promise.all([
+      fetch("habitaciones.json"),
+      fetch("tipos_cama.json")
+    ]);
+
+    const habitacionesData = await habitacionesResponse.json();
+    const camasData = await camasResponse.json();
+
     const botones = document.querySelectorAll(".habitacion-btn");
 
     botones.forEach(boton => {
       const num = boton.textContent.trim();
-      const habitacion = data[num];
+      const habitacion = habitacionesData[num];
+      const tipoCama = camasData[num] || "N/A";
+      const sofaIcon = habitacion?.sofa ? " 🛋️" : "";
 
       if (habitacion) {
         boton.classList.add("disponible");
 
-        // Determinar tipo de cama
-const tipoCama = habitacion.tipo_cama?.toLowerCase().includes("king") ? "K" : "D";
-
-
+        boton.innerHTML = `
+          <div style="display: flex; flex-direction: column; align-items: center;">
+            <div>${num}</div>
+            <div style="font-size: 0.9em;">${tipoCama}${sofaIcon}</div>
+          </div>
+        `;
+      }
+    });
+  } catch (error) {
+    console.error("Error al cargar datos de habitaciones o camas:", error);
+  }
+}
         // Verificar si tiene sofá cama
 const sofaIcon = `
   ${habitacion.sofa ? '<img src="https://res.cloudinary.com/dor6za85u/image/upload/v1753173371/sof%C3%A0_pzyjdc.png" style="height: 18px; vertical-align: middle;" />' : ''}
