@@ -1072,7 +1072,8 @@ async function marcarHabitacionesDisponibles() {
         boton.classList.add("disponible");
 
         // Determinar tipo de cama
-        const tipoCama = habitacion.tipo_cama === "K" ? "K" : "D";
+const tipoCama = habitacion.tipo_cama?.toLowerCase().includes("king") ? "K" : "D";
+
 
         // Verificar si tiene sofá cama
 const sofaIcon = `
