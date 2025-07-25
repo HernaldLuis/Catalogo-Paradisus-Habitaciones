@@ -1,4 +1,44 @@
 {
+  "4115": {
+    "numero": "4115",
+    "codigo": "C2W",
+    "nombre": "Junior Suite - Ocean View",
+    "ocupacion_maxima": 4,
+    "preferencia_fumadores": "Non-Smoking Room",
+    "piso": "01 Floor",
+    "caracteristicas": [
+      "Front Sea View",
+      "Balcony",
+      "Double Rain Shower",
+      "2 Camas 1X2,20"
+    ],
+    "imagenes": {
+      "Mar": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422072/4115_M_swplsh.jpg",
+      "Centrales": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422070/4115_C_q6wwq5.jpg",
+      "Alberca": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422072/4115_L_upyzjy.jpg"
+    }
+  }
+},
+  "4114": {
+    "numero": "4114",
+    "codigo": "C2W",
+    "nombre": "Junior Suite - Ocean View",
+    "ocupacion_maxima": 4,
+    "preferencia_fumadores": "Non-Smoking Room",
+    "piso": "01 Floor",
+    "caracteristicas": [
+      "Front Sea View",
+      "Balcony",
+      "Double Rain Shower",
+      "2 Camas 1X2,20"
+    ],
+    "imagenes": {
+      "Mar": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422071/4114_M_njwwzm.jpg",
+      "Centrales": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422070/4114_C_wvbwlg.jpg",
+      "Alberca": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422069/4114_L_ahsbih.jpg"
+    }
+  }
+},
   "4112": {
     "numero": "4112",
     "codigo": "C2W",
