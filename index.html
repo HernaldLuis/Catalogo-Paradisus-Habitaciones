@@ -1060,36 +1060,18 @@ async function marcarHabitacionesDisponibles() {
   try {
     const response = await fetch("habitaciones.json");
     const data = await response.json();
-
-    const camasResponse = await fetch("habitaciones_camas.json");
-    const camasData = await camasResponse.json();
-
     const botones = document.querySelectorAll(".habitacion-btn");
 
     botones.forEach(boton => {
       const num = boton.textContent.trim();
       const habitacion = data[num];
-      const cama = camasData[num]; // Aquí usas tu JSON personalizado
 
       if (habitacion) {
         boton.classList.add("disponible");
 
-        // Verificar si tiene sofá cama
-        const sofaIcon = habitacion.sofa ? " 🛋️" : "";
+        // Determinar tipo de cama
+        const tipoCama = habitacion.tipo_cama === "K" ? "K" : "D";
 
-        // Crear nuevo contenido
-        boton.innerHTML = `
-          <div style="display: flex; flex-direction: column; align-items: center;">
-            <div>${num}</div>
-            <div style="font-size: 0.9em;">${cama}${sofaIcon}</div>
-          </div>
-        `;
-      }
-    });
-  } catch (error) {
-    console.error("Error al cargar habitaciones disponibles:", error);
-  }
-}
 
         // Verificar si tiene sofá cama
 const sofaIcon = `
