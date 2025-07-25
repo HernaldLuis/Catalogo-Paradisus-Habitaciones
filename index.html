@@ -1012,9 +1012,12 @@ panel.innerHTML = `
   <div class="contenido-inferior">
     <h3>${habitacion.titulo}</h3>
     <p><strong>Categoría:</strong> ${habitacion.categoria} · ${habitacion.vista}</p>
-    <p><strong>Habitación conectada:</strong> ${habitacion.habitacion_conectada ? habitacion.habitacion_conectada : 'Sin conexión'}</p>
+    <p><strong>Habitación conectada:</strong> ${habitacion.habitacion_conectada ? habitacion.habitacion_conectada : 'No aplica'}</p>
     <p><strong>Piso:</strong> ${habitacion.piso}</p>
     <p><strong>Capacidad:</strong> ${habitacion.capacidad} · ${habitacion.fumadores ? '' : 'No fumadores'}</p>
+    <p><strong>Tipo de cama:</strong> ${habitacion.tipo_cama}</p>
+    <p><strong>Sofá cama:</strong> ${habitacion.sofa ? 'Incluido' : 'No disponible'}</p>
+    <p><strong>Accesibilidad:</strong> ${habitacion.discapacidad ? 'Adaptada' : 'No adaptada'}</p>
     <p><strong>Características:</strong> ${habitacion.caracteristicas.join(', ')}</p>
     ${galeriaHTML}
     <button class="btn-volver" onclick="cerrarPanelInferior()">Cerrar</button>
@@ -1074,7 +1077,7 @@ async function marcarHabitacionesDisponibles() {
         // Verificar si tiene sofá cama
 const sofaIcon = `
   ${habitacion.sofa ? '<img src="https://res.cloudinary.com/dor6za85u/image/upload/v1753173371/sof%C3%A0_pzyjdc.png" style="height: 18px; vertical-align: middle;" />' : ''}
-  ${habitacion.Discapacidad ? '<span style="font-size: 1.2em;">♿</span>' : ''}
+  ${habitacion.discapacidad ? '<span style="font-size: 1.2em;">♿</span>' : ''}
 `;
 
         // Crear nuevo contenido
