@@ -1,4 +1,52 @@
 {
+  "4112": {
+    "numero": "4112",
+    "codigo": "C2W",
+    "nombre": "Junior Suite - Ocean View",
+    "ocupacion_maxima": 4,
+    "preferencia_fumadores": "Non-Smoking Room",
+    "piso": "01 Floor",
+    "habitacion_conectada": "4111",
+    "tipo_conectada": "The Reserve Master Suite",
+    "caracteristicas": [
+      "Front Sea View",
+      "Balcony",
+      "Double Rain Shower",
+      "Interconnecting Rooms",
+      "2 Camas 1X2,20"
+    ],
+    "imagenes": {
+      "Mar": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422069/4112_M_cylmma.jpg",
+      "Central": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422069/4112_C_sqetqt.jpg",
+      "Alberca": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422069/4112_L_ha24vl.jpg"
+    }
+  }
+},
+  "4111": {
+    "numero": "4111",
+    "codigo": "SE7",
+    "nombre": "The Reserve Master Suite",
+    "ocupacion_maxima": 5,
+    "preferencia_fumadores": "Non-Smoking Room",
+    "piso": "01 Floor",
+    "habitacion_conectada": "4112",
+    "tipo_conectada": "Junior Suite - Ocean View",
+    "caracteristicas": [
+      "Front Sea View",
+      "King Size Bed",
+      "Oversized Bath With Tub",
+      "Rain Shower",
+      "Interconnecting Rooms",
+      "Small Sofa Bed (90)",
+      "Terrace"
+    ],
+    "imagenes": {
+      "Mar": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422069/4111_M_li63of.jpg",
+      "Central": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422067/4111_C_rz02zg.jpg",
+      "Alberca": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422067/4111_L_p9ou3f.jpg"
+    }
+  }
+},
   "4521": {
     "titulo": "Habitación 4521 - C2V",
     "categoria": "Junior Suite",
