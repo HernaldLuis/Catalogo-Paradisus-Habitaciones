@@ -289,7 +289,7 @@
     "piso": 5,
     "capacidad": "Máx. 4 personas",
     "fumadores": false,
-    "tipo_cama": "K",
+    "tipo_cama": "D",
     "sofa": false,
     "habitacion_conectada": "Sin conexión",
     "caracteristicas": [
@@ -352,7 +352,7 @@
     "piso": 4,
     "capacidad": "Máx. 4 personas",
     "fumadores": false,
-    "tipo_cama": "K",
+    "tipo_cama": "D",
     "sofa": false,
     "habitacion_conectada": "4406 · Junior Suite - Garden View",
     "caracteristicas": [
@@ -385,7 +385,7 @@
     "piso": 4,
     "capacidad": "Máx. 4 personas",
     "fumadores": false,
-    "tipo_cama": "K",
+    "tipo_cama": "D",
     "sofa": true,
     "habitacion_conectada": "4407 · Junior Suite - Garden View",
     "caracteristicas": [
@@ -419,7 +419,7 @@
     "piso": 4,
     "capacidad": "Máx. 4 personas",
     "fumadores": false,
-    "tipo_cama": "K",
+    "tipo_cama": "D",
     "sofa": false,
     "habitacion_conectada": "4404 · Junior Suite - Garden View",
     "caracteristicas": [
@@ -452,7 +452,7 @@
     "piso": "3",
     "capacidad": "Máx. 4 personas",
     "fumadores": false,
-    "tipo_cama": "K",
+    "tipo_cama": "D",
     "sofa": false,
     "Discapacidad": false,
     "caracteristicas": [
@@ -517,7 +517,7 @@
     "piso": 2,
     "capacidad": "Máx. 4 personas",
     "fumadores": false,
-    "tipo_cama": "K",
+    "tipo_cama": "D",
     "sofa": false,
     "Discapacidad": false,
     "caracteristicas": [
