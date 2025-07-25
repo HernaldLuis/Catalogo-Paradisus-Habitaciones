@@ -1,4 +1,35 @@
 {
+  "4116": {
+  "titulo": "Habitación 4116 · CVD",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Mar",
+  "piso": 1,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "2 camas de 1x2.20m",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "Sin conexión",
+  "caracteristicas": [
+    "Balcón",
+    "Vista al Mar",
+    "Doble regadera tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422073/4116_M_lxbt6a.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422073/4116_C_fmtpkb.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422073/4116_L_v2cnvx.jpg",
+      "etiqueta": "Alberca"
+    }
+  ]
+},
   "4111": {
     "titulo": "Habitación 4111 · SE7",
     "categoria": "The Reserve Master Suite",
