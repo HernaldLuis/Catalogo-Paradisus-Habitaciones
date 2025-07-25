@@ -1056,34 +1056,40 @@ function cerrarPanelInferior() {
   if (mensaje) mensaje.style.display = "block";
 }
 
- async function marcarHabitacionesDisponibles() {
+async function marcarHabitacionesDisponibles() {
   try {
-    const camasResponse = await fetch("tipos_cama.json"); // tu nuevo archivo
-    const camasData = await camasResponse.json();
+    const responseHabitaciones = await fetch("habitaciones.json");
+    const dataHabitaciones = await responseHabitaciones.json();
+
+    const responseCamas = await fetch("tipos_cama.json");
+    const dataCamas = await responseCamas.json();
 
     const botones = document.querySelectorAll(".habitacion-btn");
 
     botones.forEach(boton => {
       const num = boton.textContent.trim();
+      const habitacion = dataHabitaciones[num];
 
-      // Verifica si hay información de tipo de cama
-      const tipoCama = camasData[num] || "N/A";
+      if (habitacion) {
+        boton.classList.add("disponible");
 
-      // Opción para mostrar ícono de sofá si quieres mantenerlo
-      const sofaIcon = " 🛋️";
+        // Obtener tipo de cama desde JSON externo
+        const tipoCama = dataCamas[num] || "—";
 
-      boton.classList.add("disponible");
+        // Verificar si tiene sofá cama
+        const sofaIcon = habitacion.sofa ? " 🛋️" : "";
 
-      // Inserta el contenido con el tipo de cama (K o D)
-      boton.innerHTML = `
-        <div style="display: flex; flex-direction: column; align-items: center;">
-          <div>${num}</div>
-          <div style="font-size: 0.9em;">${tipoCama}${sofaIcon}</div>
-        </div>
-      `;
+        // Actualizar contenido del botón
+        boton.innerHTML = `
+          <div style="display: flex; flex-direction: column; align-items: center;">
+            <div>${num}</div>
+            <div style="font-size: 0.9em;">${tipoCama}${sofaIcon}</div>
+          </div>
+        `;
+      }
     });
   } catch (error) {
-    console.error("Error al cargar los datos de camas:", error);
+    console.error("Error al cargar habitaciones o tipos de cama:", error);
   }
 }
         // Verificar si tiene sofá cama
