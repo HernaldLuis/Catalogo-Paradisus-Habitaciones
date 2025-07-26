@@ -1,4 +1,76 @@
 {
+  "4206": {
+  "titulo": "Habitación 4206 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Vista al Jardín",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "4207",
+  "caracteristicas": [
+    "1 cama king size",
+    "Vista al Jardín",
+    "Balcón",
+    "Cocineta",
+    "Club Melia",
+    "Ducha tipo lluvia",
+    "Sofá cama individual (90)",
+    "Habitación conectada"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753561303/4206_M_txdjn9.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753561261/4206_C_zml7gz.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753561293/4206_L_ibelzw.jpg",
+      "etiqueta": "Lobby"
+    }
+  ]
+},
+  "4402": {
+  "titulo": "Habitación 4402 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Vista al Jardín",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "4403",
+  "caracteristicas": [
+    "1 cama king size",
+    "Vista al Jardín",
+    "Balcón",
+    "Cocineta",
+    "Club Melia",
+    "Ducha tipo lluvia",
+    "Sofá cama individual (90)",
+    "Habitación conectada"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753560586/4402_M_pojgki.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753560577/4402_C_spaaav.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753560567/4402_L_jwguuo.jpg",
+      "etiqueta": "Lobby"
+    }
+  ]
+},
   "4415": {
   "titulo": "Habitación 4415 · SE4",
   "categoria": "The Reserve Suite - Ocean Front",
