@@ -1,4 +1,272 @@
 {
+  "4418": {
+  "titulo": "Habitación 4418 · C2W",
+  "categoria": "Junior Suite - Ocean View",
+  "vista": "Vista al Mar",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Vista al Mar",
+    "Balcón",
+    "Club Melia",
+    "Doble regadera tipo lluvia",
+    "Habitación conectada",
+    "2 camas 1X2,20"
+  ],
+  "habitacion_conectada": "Habitación conectada",
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422155/4418_m_ycexai.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422154/4418_C_dytkal.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422154/4418_L_zb6qgk.jpg",
+      "etiqueta": "Lateral"
+    }
+  ]
+},
+  "4417": {
+  "titulo": "Habitación 4417 · SE4",
+  "categoria": "The Reserve Suite - Ocean Front",
+  "vista": "Vista al Mar",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Vista al Mar",
+    "Balcón",
+    "1 cama king size",
+    "Doble regadera tipo lluvia",
+    "Habitación conectada",
+    "Sofá cama incluido"
+  ],
+  "habitacion_conectada": "4416 · The Reserve Suite - Ocean Front",
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422153/4417_M_pbzer6.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422153/4417_C_j31tld.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422154/4417_L_knsbow.jpg",
+      "etiqueta": "Alberca"
+    }
+  ]
+},
+  "4414": {
+  "titulo": "Habitación 4414 · SE4",
+  "categoria": "The Reserve Suite - Ocean Front",
+  "vista": "Vista al Mar",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Vista al Mar",
+    "Balcón",
+    "1 cama king size",
+    "Doble regadera tipo lluvia",
+    "Sofá cama incluido"
+  ],
+  "habitacion_conectada": "No aplica",
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422153/4414_M_z9vt8t.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422151/4414_C_ok4604.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422153/4414_L_zwhbgf.jpg",
+      "etiqueta": "Alberca"
+    }
+  ]
+},
+  "4412": {
+  "titulo": "Habitación 4412 · SE4",
+  "categoria": "The Reserve Suite - Ocean Front",
+  "vista": "Vista al Mar",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al Mar",
+    "Doble regadera tipo lluvia",
+    "Terraza",
+    "2 camas 1X2,20",
+    "Habitación conectada"
+  ],
+  "habitacion_conectada": "4411 · The Reserve Master Suite",
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422153/4412_M_x6hvvy.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422151/4412_C_nbqijz.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422151/4412_L_bjon0e.jpg",
+      "etiqueta": "Alberca"
+    }
+  ]
+},
+  "4411": {
+  "titulo": "Habitación 4411 · SE7",
+  "categoria": "The Reserve Master Suite",
+  "vista": "Vista al Mar",
+  "piso": 4,
+  "capacidad": "Máx. 5 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Vista al Mar",
+    "1 cama king size",
+    "Bañera amplia con tina",
+    "Regadera tipo lluvia",
+    "Habitación conectada",
+    "Sofá cama incluido",
+    "Terraza"
+  ],
+  "habitacion_conectada": "4412 · The Reserve Suite - Ocean Front",
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422150/4411_M_pjmsoj.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422149/4411_C_sacl23.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422151/WhatsApp_Image_2025-07-24_at_3.30.49_PM_nhtce4.jpg",
+      "etiqueta": "Alberca"
+    }
+  ]
+},
+  "4410": {
+  "titulo": "Habitación 4410 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "No aplica",
+  "caracteristicas": [
+    "Balcón",
+    "Vista al Jardín",
+    "Doble regadera tipo lluvia",
+    "1 cama king size",
+    "Sofá cama incluido"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422149/4410_M_kyqc60.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422149/4410_L_giknhw.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422148/4410_C_fjwend.jpg",
+      "etiqueta": "Lobby"
+    }
+  ]
+},
+  "4409": {
+  "titulo": "Habitación 4409 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "No aplica",
+  "caracteristicas": [
+    "Balcón",
+    "Vista al Jardín",
+    "Doble regadera tipo lluvia",
+    "2 camas 1X2,20"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422146/4409_M_l33dxq.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422145/4409_L_ygrhoo.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422148/4409_C_cirl7h.jpg",
+      "etiqueta": "Lobby"
+    }
+  ]
+},
+  "4408": {
+  "titulo": "Habitación 4408 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "No aplica",
+  "caracteristicas": [
+    "Balcón",
+    "Vista al Jardín",
+    "Club Melia",
+    "Doble regadera tipo lluvia",
+    "2 camas 1X2,20"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422145/4408_M_wodaow.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422144/4408_L_lq60cg.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422145/4409_C_tpso8u.jpg",
+      "etiqueta": "Lobby"
+    }
+  ]
+},
   "4407": {
   "titulo": "Habitación 4407 · C2V",
   "categoria": "Junior Suite",
