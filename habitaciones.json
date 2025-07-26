@@ -1,4 +1,36 @@
 {
+  "4415": {
+  "titulo": "Habitación 4415 · SE4",
+  "categoria": "The Reserve Suite - Ocean Front",
+  "vista": "Vista Frontal al Mar",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "1 cama king size",
+    "Vista Frontal al Mar",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Sofá cama individual (90)"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221792/4415_I_ax4om4.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221789/4415_C_lvblxt.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221791/4415_D_uuv8dw.jpg",
+      "etiqueta": "Alberca"
+    }
+  ]
+},
   "4416": {
   "titulo": "Habitación 4416 · SE4",
   "categoria": "The Reserve Suite - Ocean Front",
