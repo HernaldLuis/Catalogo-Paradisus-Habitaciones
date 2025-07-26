@@ -1,4 +1,432 @@
 {
+  "4225": {
+  "titulo": "Habitación 4225 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "4224",
+  "caracteristicas": [
+    "2 camas 1x2.20",
+    "Vista al Jardín",
+    "Balcón",
+    "Club Meliá",
+    "Ducha tipo lluvia",
+    "Conectada con habitación 4224"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221790/4225_M_qdvyug.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221789/4225_C_hubdne.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221793/4225_L_y1kqke.jpg",
+      "etiqueta": "Lateral"
+    }
+  ]
+},
+"4224": {
+  "titulo": "Habitación 4224 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "4225",
+  "caracteristicas": [
+    "1 cama king size",
+    "Vista al Jardín",
+    "Balcón",
+    "Club Meliá",
+    "Ducha tipo lluvia",
+    "Sofá cama individual (90)",
+    "Cocina",
+    "Conectada con habitación 4225"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221784/4224_M_qguhyh.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221788/4224_C_gwgyol.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221791/4224_L_ox5cmn.jpg",
+      "etiqueta": "Lateral"
+    }
+  ]
+},
+  "4219": {
+  "titulo": "Habitación 4219 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "4218",
+  "caracteristicas": [
+    "2 camas 1x2.20",
+    "Vista al Jardín",
+    "Balcón",
+    "Club Meliá",
+    "Ducha tipo lluvia",
+    "Conectada con habitación 4218"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221786/4219_M_sdd0ur.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221787/4219_C_ll8gpq.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221787/4219_L_iscqsx.jpg",
+      "etiqueta": "Lateral"
+    }
+  ]
+},
+  "4217": {
+  "titulo": "Habitación 4217 · CVD",
+  "categoria": "Junior Suite",
+  "vista": "Vista Frontal al Mar",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "4216",
+  "caracteristicas": [
+    "1 cama king size",
+    "Vista Frontal al Mar",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Sofá cama individual (90)",
+    "Conectada con habitación 4216"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221785/4217_I_bmy969.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221785/4217_C_qnyxgu.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221785/4217_D_cpxgaf.jpg",
+      "etiqueta": "Alberca"
+    }
+  ]
+},
+  "4211": {
+  "titulo": "Habitación 4211 · SE7",
+  "categoria": "The Reserve Master Suite",
+  "vista": "Vista Frontal al Mar",
+  "piso": 2,
+  "capacidad": "Máx. 5 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "4212",
+  "caracteristicas": [
+    "1 cama king size",
+    "Vista Frontal al Mar",
+    "Bañera grande con tina",
+    "Ducha tipo lluvia",
+    "Sofá cama individual (90)",
+    "Terraza",
+    "Conectada con habitación 4212"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221782/4211_M_llyesm.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221783/4211_C_bmjo4a.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221782/WhatsApp_Image_2025-07-20_at_4.32.26_PM_1_hp62y2.jpg",
+      "etiqueta": "Alberca"
+    }
+  ]
+},
+  "4210": {
+  "titulo": "Habitación 4210 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "4209",
+  "caracteristicas": [
+    "2 camas 1x2.20",
+    "Vista al Jardín",
+    "Balcón",
+    "Club Meliá",
+    "Ducha tipo lluvia",
+    "Conectada con habitación 4209"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221783/4210_M_nerouu.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221781/4210_C_h2ygbo.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221783/4210_L_ngjkiv.jpg",
+      "etiqueta": "Lobby"
+    }
+  ]
+},
+  "4207": {
+  "titulo": "Habitación 4207 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "4206",
+  "caracteristicas": [
+    "2 camas 1x2.20",
+    "Vista al Jardín",
+    "Balcón",
+    "Club Meliá",
+    "Ducha tipo lluvia",
+    "Conectada con habitación 4206"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221785/4207_M_w7fnsq.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221780/4207_C_uvbbnx.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221782/4207_L_um397r.jpg",
+      "etiqueta": "Lobby"
+    }
+  ]
+},
+  "4205": {
+  "titulo": "Habitación 4205 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "2 camas 1x2.20",
+    "Vista al Jardín",
+    "Balcón",
+    "Ducha tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221784/4205_M_rlnfru.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221782/4205_C_gc07h9.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221781/4205_L_ywfw5s.jpg",
+      "etiqueta": "Lobby"
+    }
+  ]
+},
+"4204": {
+  "titulo": "Habitación 4204 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "2 camas 1x2.20",
+    "Vista al Jardín",
+    "Balcón",
+    "Ducha tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221783/4204_M_t1byh0.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221782/4204_C_hseyfh.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221781/4204_L_qj8pip.jpg",
+      "etiqueta": "Lobby"
+    }
+  ]
+},
+  "4202": {
+  "titulo": "Habitación 4202 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "2 camas 1x2.20",
+    "Vista al Jardín",
+    "Balcón",
+    "Ducha tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221811/4202_M_idf16j.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221809/4202_C_zbak9c.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221805/4202_L_ccyzfx.jpg",
+      "etiqueta": "Lobby"
+    }
+  ]
+},
+  "4528": {
+  "titulo": "Habitación 4528 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 5,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "2 camas 1x2.20",
+    "Vista al Jardín",
+    "Balcón",
+    "Ducha tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422067/4528_M_gejbgk.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422066/4528_C_hqo3fi.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422066/4528_L_wwfxyu.jpg",
+      "etiqueta": "Lateral"
+    }
+  ]
+},
+  "4527": {
+  "titulo": "Habitación 4527 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 5,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "2 camas 1x2.20",
+    "Vista al Jardín",
+    "Balcón",
+    "Ducha tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422066/4527_M_ag1f3w.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422064/4527_C_hliz4b.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422065/4527_L_hfdo9z.jpg",
+      "etiqueta": "Lateral"
+    }
+  ]
+},
+  "4526": {
+  "titulo": "Habitación 4526 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 5,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "1 cama king size",
+    "Vista al Jardín",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Sofá cama individual (90)"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422065/4526_M_oxw9nz.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422064/4526_C_om3uip.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422064/4526_L_qa7kzf.jpg",
+      "etiqueta": "Lateral"
+    }
+  ]
+},
   "4525": {
   "titulo": "Habitación 4525 · C2V",
   "categoria": "Junior Suite",
