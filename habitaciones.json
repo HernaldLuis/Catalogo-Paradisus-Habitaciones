@@ -1,4 +1,106 @@
 {
+  "4216": {
+  "titulo": "Habitación 4216 · CVD",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Mar Frente",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "4217 · Junior Suite - Ocean Front",
+  "caracteristicas": [
+    "Vista al Mar Frente",
+    "Balcón",
+    "Doble regadera tipo lluvia",
+    "2 camas de 1x2.20m",
+    "Habitación conectada"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422083/4216_M_xxuydl.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422082/4216_C_uleo36.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422083/4216_L_xujx5g.jpg",
+      "etiqueta": "Alberca"
+    }
+  ]
+},
+  "4214": {
+  "titulo": "Habitación 4214 · C2W",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Mar",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "Sin conexión",
+  "caracteristicas": [
+    "Vista al Mar",
+    "Balcón",
+    "Cama King Size",
+    "Doble regadera tipo lluvia",
+    "Sofá cama pequeño (90)"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422082/4214_M_aktwzm.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422082/4214_C_rlb4yk.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422080/4214_L_c4dovb.jpg",
+      "etiqueta": "Alberca"
+    }
+  ]
+},
+  "4209": {
+  "titulo": "Habitación 4209 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "4210 · Junior Suite - Garden View",
+  "caracteristicas": [
+    "Vista al Jardín",
+    "Balcón",
+    "Cama King Size",
+    "Club Melia",
+    "Doble regadera tipo lluvia",
+    "Sofá cama pequeño (90)",
+    "Cocineta",
+    "Habitación conectada"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422082/4209_M_i93tb6.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422079/4209_C_tmy6mg.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422080/4209_L_e0xobr.jpg",
+      "etiqueta": "Lobby"
+    }
+  ]
+},
   "4208": {
     "titulo": "Habitación 4208 · C2V",
     "categoria": "Junior Suite",
