@@ -1,4 +1,37 @@
 {
+  "4212": {
+  "titulo": "Habitación 4212 · C2W",
+  "categoria": "Junior Suite",
+  "vista": "Vista Frontal al Mar",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "4211",
+  "caracteristicas": [
+    "2 camas 1x2.20",
+    "Vista Frontal al Mar",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Conectada con habitación 4211"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221783/4212_M_xyhe3r.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221783/4212_C_kw0hmh.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221786/4212_L_fqbonf.jpg",
+      "etiqueta": "Alberca"
+    }
+  ]
+},
   "4312": {
   "titulo": "Habitación 4312 · S6E",
   "categoria": "The Reserve Suite - Ocean View",
