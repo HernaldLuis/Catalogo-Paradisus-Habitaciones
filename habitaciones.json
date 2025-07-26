@@ -1,4 +1,178 @@
 {
+  "4407": {
+  "titulo": "Habitación 4407 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "4406 · Junior Suite",
+  "caracteristicas": [
+    "Balcón",
+    "Vista al Jardín",
+    "Club Melia",
+    "Doble regadera tipo lluvia",
+    "Habitación conectada",
+    "2 camas 1X2,20"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422144/4407_Mar_r3u5li.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422144/4407_Centrales_s44onm.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422144/4407_Lobby_os67et.jpg",
+      "etiqueta": "Lobby"
+    }
+  ]
+},
+  "4406": {
+  "titulo": "Habitación 4406 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "4407 · Junior Suite",
+  "caracteristicas": [
+    "Balcón",
+    "Vista al Jardín",
+    "Club Melia",
+    "Doble regadera tipo lluvia",
+    "Cocina",
+    "Habitación conectada",
+    "1 cama king size",
+    "Sofá cama incluido"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422144/4406_Mar_mhf8rm.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753171943/4406_centrales_fjjiqf.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753171942/4406_lobby_cumzfh.jpg",
+      "etiqueta": "Lobby"
+    }
+  ]
+},
+  "4405": {
+  "titulo": "Habitación 4405 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "4404 · Junior Suite",
+  "caracteristicas": [
+    "Balcón",
+    "Vista al Jardín",
+    "Club Melia",
+    "Doble regadera tipo lluvia",
+    "Habitación conectada",
+    "2 camas 1X2,20"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422138/4405_Mar_y8ib3p.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422137/4405_Centrales_rdfsit.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422138/4405_Lobby_fqxbbu.jpg",
+      "etiqueta": "Lobby"
+    }
+  ]
+},
+  "4404": {
+  "titulo": "Habitación 4404 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "4405 · Junior Suite",
+  "caracteristicas": [
+    "Balcón",
+    "Vista al Jardín",
+    "Club Melia",
+    "Doble regadera tipo lluvia",
+    "Habitación conectada",
+    "1 cama king size",
+    "Sofá cama incluido",
+    "Cocineta"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422135/4404_M_a7sbz4.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422136/4404_C_m1kk4l.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422137/4404_L_mhyyqs.jpg",
+      "etiqueta": "Lobby"
+    }
+  ]
+},
+  "4403": {
+  "titulo": "Habitación 4403 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "4402 · Junior Suite",
+  "caracteristicas": [
+    "Balcón",
+    "Vista al Jardín",
+    "Club Melia",
+    "Doble regadera tipo lluvia",
+    "Habitación conectada",
+    "2 camas 1X2,20"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422134/4403_M_kci2at.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422134/4403_C_pyf8te.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422135/4403_L_b7dptx.jpg",
+      "etiqueta": "Lobby"
+    }
+  ]
+},
   "4401": {
   "titulo": "Habitación 4401 · C2V",
   "categoria": "Junior Suite",
