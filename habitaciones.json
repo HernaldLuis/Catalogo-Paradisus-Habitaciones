@@ -1,4 +1,78 @@
 {
+  "4220": {
+  "titulo": "Habitación 4220 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín con Vista Parcial al Mar",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "4221 · Junior Suite - Garden View",
+  "caracteristicas": [
+    "Balcón",
+    "Vista parcial al mar",
+    "Vista al Jardín",
+    "Cama King Size",
+    "Club Meliá",
+    "Doble regadera tipo lluvia",
+    "Cocineta",
+    "Habitación conectada",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422087/4220_M_b7cnii.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422085/4220_C_lcor3n.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422087/4220_L_m5f5xr.jpg",
+      "etiqueta": "Lateral"
+    }
+  ]
+},
+  "4218": {
+  "titulo": "Habitación 4218 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín con Vista Parcial al Mar",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "4219 · Junior Suite - Garden View",
+  "caracteristicas": [
+    "Balcón",
+    "Vista parcial al mar",
+    "Vista al Jardín",
+    "Cama King Size",
+    "Club Meliá",
+    "Doble regadera tipo lluvia",
+    "Cocineta",
+    "Habitación conectada",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422086/4218_M_y1zzw6.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422085/4218_C_tcrvcq.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753422085/4218_L_wmajt9.jpg",
+      "etiqueta": "Lateral"
+    }
+  ]
+},
   "4216": {
   "titulo": "Habitación 4216 · CVD",
   "categoria": "Junior Suite",
