@@ -1,4 +1,69 @@
 {
+  "4416": {
+  "titulo": "Habitación 4416 · SE4",
+  "categoria": "The Reserve Suite - Ocean Front",
+  "vista": "Vista Frontal al Mar",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "4417",
+  "caracteristicas": [
+    "2 camas 1x2.20",
+    "Vista Frontal al Mar",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Conectada con habitación 4417"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221792/4416_I_a3zrls.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221792/4416_C_k5d2nv.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221797/4416_D_fa8hab.jpg",
+      "etiqueta": "Alberca"
+    }
+  ]
+},
+  "4518": {
+  "titulo": "Habitación 4518 · C2W",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Mar",
+  "piso": 5,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "1 cama king size",
+    "Vista al Mar",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Sofá cama individual (90)"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221798/4518_M_k8lptc.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221810/4518_C_hvtc1h.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753221807/4518_L_fqjfyx.jpg",
+      "etiqueta": "Lateral"
+    }
+  ]
+},
   "4519": {
   "titulo": "Habitación 4519 · C2W",
   "categoria": "Junior Suite",
