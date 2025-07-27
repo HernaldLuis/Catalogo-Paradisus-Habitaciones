@@ -1,4 +1,102 @@
 {
+  "4516": {
+  "titulo": "Habitación 4516 · SE4",
+  "categoria": "The Reserve Suite - Ocean Front",
+  "vista": "Vista al mar",
+  "piso": 5,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "4517",
+  "caracteristicas": [
+    "2 camas 1X2,20",
+    "Vista frontal al mar",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Habitación conectada",
+    "Terraza"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753600089/4516_m_vhhecp.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753600089/4516_f_ozudqt.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753600088/4516_alb_uijhtp.jpg",
+      "etiqueta": "Alberca"
+    }
+  ]
+},
+  "4517": {
+  "titulo": "Habitación 4517 · SE4",
+  "categoria": "The Reserve Suite - Ocean Front",
+  "vista": "Vista al mar",
+  "piso": 5,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "4516",
+  "caracteristicas": [
+    "1 cama king size",
+    "Vista frontal al mar",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Sofá cama individual",
+    "Habitación conectada",
+    "Terraza"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753599778/4517_M_nubesv.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753599778/4517_FRENTE_jgyruu.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753599778/4517_ALB_dllusx.jpg",
+      "etiqueta": "Alberca"
+    }
+  ]
+},
+  "4529": {
+  "titulo": "Habitación 4529 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Vista al Jardín",
+  "piso": 5,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "",
+  "caracteristicas": [
+    "1 cama king size",
+    "Vista al jardín",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Sofá cama individual"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753599389/4529_L_qijfnj.jpg",
+      "etiqueta": "Lateral"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753599389/4529_M_f4qcsu.jpg",
+      "etiqueta": "Mar"
+    }
+  ]
+},
   "4228": {
   "titulo": "Habitación 4228 · C2V",
   "categoria": "Junior Suite - Garden View",
