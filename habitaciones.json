@@ -1,4 +1,38 @@
 {
+  "4223": {
+  "titulo": "Habitación 4223 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Vista al jardín con vista parcial al mar",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "",
+  "caracteristicas": [
+    "2 camas 1X2,20",
+    "Balcón",
+    "Club Melia",
+    "Vista al mar",
+    "Ducha tipo lluvia",
+    "Habitación conectada"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753601209/4223_L_rfk1ym.jpg",
+      "etiqueta": "Lateral"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753601208/4223_F_bbjaqj.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753601209/4223_M_ldinsj.jpg",
+      "etiqueta": "Mar"
+    }
+  ]
+},
   "4514": {
   "titulo": "Habitación 4514 · SE4",
   "categoria": "The Reserve Suite - Ocean Front",
