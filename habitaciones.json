@@ -1,4 +1,170 @@
 {
+  "3122": {
+  "titulo": "Habitación 3122 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Campo de Golf",
+  "piso": 2,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "",
+  "caracteristicas": [
+    "2 camas 1x2.20",
+    "Vista al Campo de Golf",
+    "Balcón",
+    "Ducha tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753659887/3122_D_jbnbj4.jpg",
+      "etiqueta": "Derecha"
+    },
+    {
+
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753659893/3122_C_n8rcai.jpg",
+      "etiqueta": "Central"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753659895/3122_I_nyluer.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
+  "3120": {
+  "titulo": "Habitación 3120 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Campo de Golf",
+  "piso": 2,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "",
+  "caracteristicas": [
+    "2 camas 1x2.20",
+    "Vista al Campo de Golf",
+    "Balcón",
+    "Ducha tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753658822/3120_C_hdkwpf.jpg",
+      "etiqueta": "Central"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753658823/3120I_tapod7.jpg",
+      "etiqueta": "Derecha"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753658822/3120_D_zmu670.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
+  "3115": {
+  "titulo": "Habitación 3115 · SE4",
+  "categoria": "The Reserve Suite",
+  "vista": "Frente al Mar",
+  "piso": 2,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "3114 · The Reserve Master Suite - Ocean Front",
+  "caracteristicas": [
+    "1 cama King size",
+    "Frente al Mar",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Habitación conectada"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753659521/3115_C_cjgief.jpg",
+      "etiqueta": "Central"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753659522/3115_D_hnfx1j.jpg",
+      "etiqueta": "Derecha"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753659524/3115_I_ojbcso.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
+  "3118": {
+  "titulo": "Habitación 3118 · SE4",
+  "categoria": "The Reserve Suite",
+  "vista": "Frente al Mar",
+  "piso": 2,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "3119 · The Reserve Suite - Ocean Front",
+  "caracteristicas": [
+    "1 cama King size",
+    "Frente al Mar",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Habitación conectada",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753659338/3118_C_v2elsg.jpg",
+      "etiqueta": "Central"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753659341/3118_D_wnocbf.jpg",
+      "etiqueta": "Derecha"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753659339/3118_I_kqktfz.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
+  "3119": {
+  "titulo": "Habitación 3119 · SE4",
+  "categoria": "The Reserve Suite",
+  "vista": "Frente al Mar",
+  "piso": 2,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "3118 · The Reserve Suite - Ocean Front",
+  "caracteristicas": [
+    "1 cama King size",
+    "Frente al Mar",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Habitación conectada",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753658925/3119_C_lffrcq.jpg",
+      "etiqueta": "Central"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753658925/3119_D_gppeyl.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753658937/3119_I_tsmwa9.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
   "3320": {
   "titulo": "Habitación 3320 · C2W",
   "categoria": "Junior Suite",
