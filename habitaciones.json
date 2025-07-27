@@ -1,4 +1,69 @@
 {
+  "1507": {
+  "titulo": "Habitación 1507 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "",
+  "caracteristicas": [
+    "1 cama King size",
+    "Vista al Jardín",
+    "Balcón",
+    "Ducha tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753654440/1507_M_wbdtu4.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753654443/1507_F_y75cmw.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753654438/1507_L_um1zqk.jpg",
+      "etiqueta": "Lobby"
+    }
+  ]
+},
+  "1522": {
+  "titulo": "Habitación 1522 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "",
+  "caracteristicas": [
+    "1 cama King size",
+    "Vista al Jardín",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Vista parcial al mar"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753654294/1522_M_of5vel.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753654289/1522_F_jb2gh9.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753654290/1522_L_gkrmdq.jpg",
+      "etiqueta": "Lateral"
+    }
+  ]
+},
   "1521": {
   "titulo": "Habitación 1521 · C2V",
   "categoria": "Junior Suite",
