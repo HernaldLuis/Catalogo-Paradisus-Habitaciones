@@ -1,4 +1,36 @@
 {
+  "1508": {
+  "titulo": "Habitación 1508 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "",
+  "caracteristicas": [
+    "2 camas 1x2.20",
+    "Vista al Jardín",
+    "Balcón",
+    "Ducha tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753654770/1508_L_umwg0c.jpg",
+      "etiqueta": "Lobby"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753654767/1508_F_xuhuum.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753654802/1508_M_jgp7ka.jpg",
+      "etiqueta": "Mar"
+    }
+  ]
+},
   "1507": {
   "titulo": "Habitación 1507 · C2V",
   "categoria": "Junior Suite",
