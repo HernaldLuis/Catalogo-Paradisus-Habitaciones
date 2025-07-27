@@ -1,4 +1,132 @@
 {
+  "3320": {
+  "titulo": "Habitación 3320 · C2W",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Mar",
+  "piso": 4,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "",
+  "caracteristicas": [
+    "1 cama King size",
+    "Vista al Mar",
+    "Balcón",
+    "Ducha tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753658360/WhatsApp_Image_2025-07-27_at_10.56.29_AM_cgchil.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753658359/WhatsApp_Image_2025-07-27_at_10.56.28_AM_d8e9ru.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753658358/WhatsApp_Image_2025-07-27_at_10.56.28_AM_1_eekcgm.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "3202": {
+  "titulo": "Habitación 3202 · S6E",
+  "categoria": "The Reserve Suite",
+  "vista": "Vista al Mar",
+  "piso": 3,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "",
+  "caracteristicas": [
+    "2 camas 1x2.20",
+    "Vista al Mar",
+    "Balcón",
+    "Ducha tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753658146/WhatsApp_Image_2025-07-27_at_10.51.33_AM_1_gtrpqb.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753658147/WhatsApp_Image_2025-07-27_at_10.51.32_AM_k6etui.jpg",
+      "etiqueta": "Alberca"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753658146/WhatsApp_Image_2025-07-27_at_10.51.33_AM_lmchxy.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "3203": {
+  "titulo": "Habitación 3203 · S6E",
+  "categoria": "The Reserve Suite",
+  "vista": "Vista al Mar",
+  "piso": 3,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "",
+  "caracteristicas": [
+    "2 camas 1x2.20",
+    "Vista al Mar",
+    "Balcón",
+    "Ducha tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753657995/central_azuyv8.jpg",
+      "etiqueta": "Centro"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753657995/Alberca_tsfhht.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753657995/derecha_sga5zf.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "3214": {
+  "titulo": "Habitación 3214 · SE6",
+  "categoria": "The Reserve Master Suite",
+  "vista": "Vista al Mar",
+  "piso": 3,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "3215 · The Reserve Suite",
+  "caracteristicas": [
+    "Vista al Mar",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Conectada con otra habitación"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753657731/3214_M_gfccww.jpg",
+      "etiqueta": "Central"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753657731/3214_l_hdqbyk.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753657731/3214_D_rvg4ay.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
   "1508": {
   "titulo": "Habitación 1508 · C2V",
   "categoria": "Junior Suite",
