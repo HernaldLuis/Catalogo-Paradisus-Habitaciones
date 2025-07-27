@@ -1,4 +1,69 @@
 {
+  "4221": {
+  "titulo": "Habitación 4221 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "4220 · Junior Suite - Vista al Jardín",
+  "caracteristicas": [
+    "2 camas 1x2.20",
+    "Vista al Mar",
+    "Club Meliá",
+    "Balcón",
+    "Ducha tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753602569/4221_LATERAL_nxrkq0.jpg",
+      "etiqueta": "Lateral"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753602567/4221_FRENTE_mj3gmu.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753602566/4221_MAR_opze4h.jpg",
+      "etiqueta": "Mar"
+    }
+  ]
+},
+  "4226": {
+  "titulo": "Habitación 4226 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Jardín",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "",
+  "caracteristicas": [
+    "2 camas 1x2.20",
+    "Vista al Jardín",
+    "Balcón",
+    "Ducha tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753601925/4226_M_o1bdzt.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753601923/4226_F_cikrtj.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753601924/4226_L_qspksn.jpg",
+      "etiqueta": "Lobby"
+    }
+  ]
+},
   "4223": {
   "titulo": "Habitación 4223 · C2V",
   "categoria": "Junior Suite - Garden View",
