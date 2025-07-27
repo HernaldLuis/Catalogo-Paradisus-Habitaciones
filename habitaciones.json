@@ -18,16 +18,17 @@
   ],
   "imagenes": [
     {
-      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753651592/1503_M_mwltxn.jpg",
-      "etiqueta": "Mar"
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753651590/1503_L_l7ybmf.jpg",
+      "etiqueta": "Lobby"
+
     },
     {
       "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753651591/1503_F_tt99wc.jpg",
       "etiqueta": "Frente"
     },
     {
-      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753651590/1503_L_l7ybmf.jpg",
-      "etiqueta": "Lobby"
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753651592/1503_M_mwltxn.jpg",
+      "etiqueta": "Mar"
     }
   ]
 },
