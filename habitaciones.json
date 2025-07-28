@@ -1,4 +1,174 @@
 {
+  "3322": {
+  "titulo": "Habitación 3322 · C2W",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Mar",
+  "piso": 4,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "",
+  "caracteristicas": [
+    "1 cama King Size",
+    "Vista al mar",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Sofá cama individual"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753661615/WhatsApp_Image_2025-07-27_at_10.56.28_AM_cc2dfo.jpg",
+      "etiqueta": "Derecha"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753661621/WhatsApp_Image_2025-07-27_at_10.56.29_AM_ucklfj.jpg",
+      "etiqueta": "Central"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753661617/WhatsApp_Image_2025-07-27_at_10.56.28_AM_1_dhobbw.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
+  "3130": {
+  "titulo": "Habitación 3130 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Campo de Golf",
+  "piso": 2,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "",
+  "caracteristicas": [
+    "1 cama King Size",
+    "Vista al Campo de Golf",
+    "Vista parcial al mar",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Sofá cama individual"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753661415/3130_D_nhmh5c.jpg",
+      "etiqueta": "Derecha"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753661418/3130_C_cxzdnl.jpg",
+      "etiqueta": "Central"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753661447/3130_I_gzu30e.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
+  "3129": {
+  "titulo": "Habitación 3129 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Campo de Golf",
+  "piso": 2,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "",
+  "caracteristicas": [
+    "1 cama King Size",
+    "Vista al Campo de Golf",
+    "Vista parcial al mar",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Sofá cama individual"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753661170/3129_D_j1n5ym.jpg",
+      "etiqueta": "Derecha"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753661167/3129_C_y5rywx.jpg",
+      "etiqueta": "Central"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753661166/3129_I_g3wbhm.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
+  "3127": {
+  "titulo": "Habitación 3127 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Campo de Golf",
+  "piso": 2,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "",
+  "caracteristicas": [
+    "1 cama King Size",
+    "Vista al Campo de Golf",
+    "Vista parcial al mar",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Sofá cama individual"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753660733/3127_D_oohcpy.jpg",
+      "etiqueta": "Derecha"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753660735/3127_C_qnjati.jpg",
+      "etiqueta": "Central"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753660737/3127_I_jdrtaf.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
+  "3126": {
+  "titulo": "Habitación 3126 · C2V",
+  "categoria": "Junior Suite",
+  "vista": "Vista al Campo de Golf",
+  "piso": 2,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "",
+  "caracteristicas": [
+    "1 cama King Size",
+    "Vista al Campo de Golf",
+    "Vista parcial al mar",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Sofá cama individual"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753660424/3126_D_ekg22m.jpg",
+      "etiqueta": "Derecha"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753660425/3126_C_orrwaq.jpg",
+      "etiqueta": "Central"
+
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753660427/3126_I_zglgo6.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
   "3122": {
   "titulo": "Habitación 3122 · C2V",
   "categoria": "Junior Suite",
