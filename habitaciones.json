@@ -1,4 +1,204 @@
 {
+  "1219": {
+  "titulo": "Habitación 1219 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 1,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "1220",
+  "caracteristicas": [
+    "2 camas 1x2.20",
+    "Vista al jardín",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Habitación conectada"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753677869/WhatsApp_Image_2025-07-27_at_4.20.04_PM_1_tgmz6m.jpg",
+      "etiqueta": "Derecha"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753677875/WhatsApp_Image_2025-07-27_at_4.20.04_PM_opvzfa.jpg",
+      "etiqueta": "Centro"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753677865/WhatsApp_Image_2025-07-27_at_4.20.04_PM_2_blkdse.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+"1218": {
+  "titulo": "Habitación 1218 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 1,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "1217",
+  "caracteristicas": [
+    "1 cama king size",
+    "Vista al jardín",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Habitación conectada",
+    "Sofá cama individual"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753677614/WhatsApp_Image_2025-07-27_at_4.18.45_PM_vsbpkh.jpg",
+      "etiqueta": "Derecha"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753677617/WhatsApp_Image_2025-07-27_at_4.18.46_PM_pny5fl.jpg",
+      "etiqueta": "Centro"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753677611/WhatsApp_Image_2025-07-27_at_4.18.46_PM_1_h9ebom.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
+  "1221": {
+  "titulo": "Habitación 1221 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 1,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "1222",
+  "caracteristicas": [
+    "2 camas individuales",
+    "Vista al jardín",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Habitación conectada"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753676722/WhatsApp_Image_2025-07-27_at_4.24.21_PM_1_epuqpm.jpg",
+      "etiqueta": "Derecha"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753676720/WhatsApp_Image_2025-07-27_at_4.24.21_PM_sugla4.jpg",
+      "etiqueta": "Centro"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753676726/WhatsApp_Image_2025-07-27_at_4.24.22_PM_lrvqj5.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
+  "1222": {
+  "titulo": "Habitación 1222 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 1,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "1221",
+  "caracteristicas": [
+    "1 cama king size",
+    "Vista al jardín",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Habitación conectada",
+    "Sofá cama individual"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753676286/WhatsApp_Image_2025-07-27_at_4.25.59_PM_1_rq5jij.jpg",
+      "etiqueta": "Derecha"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753676284/WhatsApp_Image_2025-07-27_at_4.25.59_PM_d5jroe.jpg",
+      "etiqueta": "Centro"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753676288/WhatsApp_Image_2025-07-27_at_4.25.59_PM_2_id9f3z.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
+  "1217": {
+  "titulo": "Habitación 1217 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 1,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "1218",
+  "caracteristicas": [
+    "2 camas 1X2.20",
+    "Vista al jardín",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Habitación conectada"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753676095/WhatsApp_Image_2025-07-27_at_4.17.03_PM_2_afugsu.jpg",
+      "etiqueta": "Derecha"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753676097/WhatsApp_Image_2025-07-27_at_4.17.03_PM_d5rqrz.jpg",
+      "etiqueta": "Centro"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753676094/WhatsApp_Image_2025-07-27_at_4.17.03_PM_1_npefy5.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
+  "1212": {
+  "titulo": "Habitación 1212 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 1,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "1214",
+  "caracteristicas": [
+    "2 camas 1X2.20",
+    "Vista al jardín",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Habitación conectada"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753675927/WhatsApp_Image_2025-07-27_at_4.15.14_PM_publbi.jpg",
+      "etiqueta": "Derecha"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753675926/WhatsApp_Image_2025-07-27_at_4.15.12_PM_yqsieg.jpg",
+      "etiqueta": "Centro"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753675925/WhatsApp_Image_2025-07-27_at_4.15.13_PM_f5kvwu.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
   "3121": {
   "titulo": "Habitación 3121 · C2V",
   "categoria": "Junior Suite - Garden View",
