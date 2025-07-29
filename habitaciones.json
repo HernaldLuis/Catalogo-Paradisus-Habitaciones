@@ -1,4 +1,130 @@
 {
+  "1301": {
+  "titulo": "Habitación 1301 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "2 camas 1x2.20",
+    "Vista al jardín",
+    "Balcón",
+    "Ducha tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753751692/WhatsApp_Image_2025-07-27_at_10.46.13_AM_shmd6u.jpg",
+      "etiqueta": "LOBBY (SIN VISTA)"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753751693/WhatsApp_Image_2025-07-27_at_10.46.14_AM_q4ocfs.jpg",
+      "etiqueta": "CENTRALES"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753751692/WhatsApp_Image_2025-07-27_at_10.46.13_AM_1_ozrcyl.jpg",
+      "etiqueta": "MAR"
+    }
+  ]
+},
+  "1304": {
+  "titulo": "Habitación 1304 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "King Size Bed",
+    "Vista al jardín",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Sofá cama pequeño"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753751476/1304_L_gnrv3j.jpg",
+      "etiqueta": "LOBBY"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753751475/1304_C_terg3v.jpg",
+      "etiqueta": "CENTRALES"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753751476/1304_M_thhsfu.jpg",
+      "etiqueta": "MAR"
+    }
+  ]
+},  
+  "1307": {
+  "titulo": "Habitación 1307 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "2 camas 1x2.20",
+    "Vista al jardín",
+    "Balcón",
+    "Ducha tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753751312/1307_L_mriuhc.jpg",
+      "etiqueta": "Lobby"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753751311/1307_C_ckvfqi.jpg",
+      "etiqueta": "Centro"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753751313/1307_M_el9dhs.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
+  "1308": {
+  "titulo": "Habitación 1308 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "King Size Bed",
+    "Vista al jardín",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Sofá cama pequeño"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753750811/1308_L_an0ane.jpg",
+      "etiqueta": "Lobby"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753750811/1308_C_rksthk.jpg",
+      "etiqueta": "Centro"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753750811/1308_M_acnw4w.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
   "1219": {
   "titulo": "Habitación 1219 · C2V",
   "categoria": "Junior Suite - Garden View",
@@ -28,7 +154,7 @@
     },
     {
       "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753677865/WhatsApp_Image_2025-07-27_at_4.20.04_PM_2_blkdse.jpg",
-      "etiqueta": "Derecha"
+      "etiqueta": "Izquierda"
     }
   ]
 },
