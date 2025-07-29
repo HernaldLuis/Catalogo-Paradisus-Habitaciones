@@ -1,4 +1,98 @@
 {
+  "1505": {
+  "titulo": "Habitación 1505 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "King Size Bed",
+    "Vista al mar",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Sofá cama pequeño"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753822671/1505_L_w6aiys.jpg",
+      "etiqueta": "LOBBY"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753822670/1505_C_wt6fpp.jpg",
+      "etiqueta": "CENTRALES"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753822677/1505_M_znwlbb.jpg",
+      "etiqueta": "MAR"
+    }
+  ]
+},
+  "1504": {
+  "titulo": "Habitación 1504 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "2 camas 1x2.20",
+    "Vista al mar",
+    "Balcón",
+    "Ducha tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753822556/1504_L_g1vvhu.jpg",
+      "etiqueta": "LOBBY"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753822556/1504_C_zx8gdt.jpg",
+      "etiqueta": "CENTRALES"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753822557/1504_M_qfttyl.jpg",
+      "etiqueta": "MAR"
+    }
+  ]
+},
+  "1502": {
+  "titulo": "Habitación 1502 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "2 camas 1x2.20",
+    "Vista al mar",
+    "Balcón",
+    "Ducha tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753822360/1501_L_idu1pq.jpg",
+      "etiqueta": "LOBBY"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753822360/1502_C_neyhex.jpg",
+      "etiqueta": "CENTRALES"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753822361/1502_M_r4e2jo.jpg",
+      "etiqueta": "MAR"
+    }
+  ]
+},
   "1501": {
   "titulo": "Habitación 1501 · C2V",
   "categoria": "Junior Suite - Garden View",
