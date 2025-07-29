@@ -1,4 +1,32 @@
 {
+  "1501": {
+  "titulo": "Habitación 1501 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "King Size Bed",
+    "Vista al mar",
+    "Balcón",
+    "Ducha tipo lluvia",
+    "Sofá cama pequeño"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753819519/1501_l_znimgb.jpg",
+      "etiqueta": "LOBBY"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753819519/1501_edwce6.jpg",
+      "etiqueta": "MAR"
+    }
+  ]
+},
   "1315": {
   "titulo": "Habitación 1315 · C2V",
   "categoria": "Junior Suite - Garden View",
