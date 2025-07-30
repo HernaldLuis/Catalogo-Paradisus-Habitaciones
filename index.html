@@ -1007,7 +1007,7 @@ border-bottom: none;
   </div>
 </div>
 
-  <script>
+  <script>  <script>
 
 async function mostrarInfo(num) {
   const panel = document.getElementById("panelInferior");
@@ -1116,36 +1116,6 @@ const sofaIcon = `
     console.error("Error al cargar habitaciones disponibles:", error);
   }
 }
-    async function actualizarHabitaciones() {
-  try {
-    const response = await fetch("habitaciones.json?timestamp=" + new Date().getTime());
-    const data = await response.json();
-
-    const botones = document.querySelectorAll(".habitacion-btn");
-
-    botones.forEach(boton => {
-      const num = boton.textContent.trim();
-      const habitacion = data[num];
-
-      if (habitacion) {
-        if (!boton.classList.contains("disponible")) {
-          boton.classList.add("disponible");
-        }
-      }
-    });
-  } catch (error) {
-    console.error("Error al actualizar habitaciones:", error);
-  }
-}
-
-// Ejecutar al cargar
-actualizarHabitaciones();
-
-// Ejecutar cada minuto
-setInterval(actualizarHabitaciones, 60000);
-
-      }
-}    
 
 // Ejecutar al cargar
 window.addEventListener("DOMContentLoaded", marcarHabitacionesDisponibles);
