@@ -1,4 +1,35 @@
 {
+  "1406": {
+  "titulo": "Habitación 1406 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Sea / Ocean View",
+  "piso": 3,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "2 camas 1x2.20",
+    "Vista al mar",
+    "Balcón",
+    "Ducha tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753914275/WhatsApp_Image_2025-07-27_at_11.20.39_AM_pzh0cp.jpg",
+      "etiqueta": "Lobby"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753914279/WhatsApp_Image_2025-07-27_at_11.20.40_AM_1_t5e2sv.jpg",
+      "etiqueta": "Centro"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753914282/WhatsApp_Image_2025-07-27_at_11.20.40_AM_rpv2zj.jpg",
+      "etiqueta": "Mar"
+    }
+  ]
+},
   "1404": {
   "titulo": "Habitación 1404 · C2V",
   "categoria": "Junior Suite - Garden View",
