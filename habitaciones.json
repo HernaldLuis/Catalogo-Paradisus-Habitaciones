@@ -1,4 +1,126 @@
 {
+  "1411": {
+  "titulo": "Habitación 1411 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Sea / Ocean View",
+  "piso": 3,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Cama King Size",
+    "Vista al mar",
+    "Ducha doble tipo lluvia",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753920061/WhatsApp_Image_2025-07-27_at_12.19.18_PM_ixnwxn.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753920065/WhatsApp_Image_2025-07-27_at_12.19.19_PM_1_pt07se.jpg",
+      "etiqueta": "Centro"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753920058/WhatsApp_Image_2025-07-27_at_12.19.19_PM_po6v0t.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
+  "1412": {
+  "titulo": "Habitación 1412 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Sea / Ocean View",
+  "piso": 3,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha doble tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753919897/WhatsApp_Image_2025-07-27_at_12.14.25_PM_wg8cl3.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753919902/WhatsApp_Image_2025-07-27_at_12.14.26_PM_1_wnon08.jpg",
+      "etiqueta": "Centro"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753919921/WhatsApp_Image_2025-07-27_at_12.14.26_PM_lch2wr.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
+  "1414": {
+  "titulo": "Habitación 1414 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Sea / Ocean View",
+  "piso": 3,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha doble tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753919797/WhatsApp_Image_2025-07-27_at_12.13.17_PM_mli9sk.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753919779/WhatsApp_Image_2025-07-27_at_12.13.17_PM_2_pexgly.jpg",
+      "etiqueta": "Centro"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753919775/WhatsApp_Image_2025-07-27_at_12.13.17_PM_1_v3lm7e.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
+  "1415": {
+  "titulo": "Habitación 1415 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Sea / Ocean View",
+  "piso": 3,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha doble tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753919644/WhatsApp_Image_2025-07-27_at_12.11.47_PM_jq4t5y.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753919640/WhatsApp_Image_2025-07-27_at_12.11.47_PM_2_zv5zaq.jpg",
+      "etiqueta": "Centro"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753919637/WhatsApp_Image_2025-07-27_at_12.11.47_PM_1_u07afm.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
   "1417": {
   "titulo": "Habitación 1417 · C2V",
   "categoria": "Junior Suite - Garden View",
