@@ -1,4 +1,34 @@
 {
+  "2206": {
+  "titulo": "Habitación 2206 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Sea / Ocean View",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha doble"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753933887/WhatsApp_Image_2025-07-28_at_1.30.25_PM_1_mf21nv.jpg",
+      "etiqueta": "Lobby"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753933888/WhatsApp_Image_2025-07-28_at_1.30.25_PM_kmpmuk.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753933835/WhatsApp_Image_2025-07-28_at_1.30.24_PM_dlt2ss.jpg",
+      "etiqueta": "Mar"
+    }
+  ]
+},
   "2205": {
   "titulo": "Habitación 2205 · C2V",
   "categoria": "Junior Suite - Garden View",
