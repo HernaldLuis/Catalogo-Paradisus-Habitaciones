@@ -1081,6 +1081,11 @@ function cerrarPanelInferior() {
 }
 
 async function marcarHabitacionesDisponibles() {
+
+  const data = await response.json();
+  datosActuales = data; // Guardamos los datos para comparación futura
+
+
   try {
     const response = await fetch("habitaciones.json");
     const data = await response.json();
@@ -1119,6 +1124,8 @@ const sofaIcon = `
 
 // Ejecutar al cargar
 window.addEventListener("DOMContentLoaded", marcarHabitacionesDisponibles);
+
+    let datosActuales = {}; // Aquí guardaremos los datos iniciales para comparar más adelante
 
   document.addEventListener("DOMContentLoaded", () => {
   const botones = document.querySelectorAll(".habitacion-btn");
@@ -1160,7 +1167,44 @@ zona.addEventListener('mousemove', (e) => {
 });
 
   });
-});  
+});
+
+    async function actualizarHabitacionesSilenciosamente() {
+  try {
+    const response = await fetch("habitaciones.json");
+    const nuevosDatos = await response.json();
+    const botones = document.querySelectorAll(".habitacion-btn");
+
+    botones.forEach(boton => {
+      const num = boton.dataset.num || boton.textContent.trim();
+      const nuevaData = nuevosDatos[num];
+      const actualData = datosActuales[num];
+
+      if (nuevaData && JSON.stringify(nuevaData) !== JSON.stringify(actualData)) {
+        const tipoCama = nuevaData.tipo_cama === "K" ? "K" : "D";
+        const sofaIcon = `
+          ${nuevaData.sofa ? '<img src="https://res.cloudinary.com/dor6za85u/image/upload/v1753173371/sof%C3%A0_pzyjdc.png" style="height: 18px; vertical-align: middle;" />' : ''}
+          ${nuevaData.discapacidad ? '<span style="font-size: 1.2em;">♿</span>' : ''}
+        `;
+
+        boton.innerHTML = `
+          <div style="display: flex; flex-direction: column; align-items: center;">
+            <div>${num}</div>
+            <div style="font-size: 0.9em;">${tipoCama}${sofaIcon}</div>
+          </div>
+        `;
+
+        boton.classList.add("disponible");
+      }
+    });
+
+    datosActuales = nuevosDatos;
+
+  } catch (error) {
+    console.warn("No se pudo actualizar habitaciones en segundo plano:", error);
+  }
+}
+setInterval(actualizarHabitacionesSilenciosamente, 15000); // Se actualiza cada 15 segundos
 
   </script> 
 
