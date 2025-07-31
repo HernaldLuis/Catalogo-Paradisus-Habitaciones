@@ -1,4 +1,34 @@
 {
+  "2205": {
+  "titulo": "Habitación 2205 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Vista al jardín",
+    "Balcón",
+    "Ducha doble tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753933690/WhatsApp_Image_2025-07-28_at_1.29.25_PM_o2a91z.jpg",
+      "etiqueta": "Lobby"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753933683/WhatsApp_Image_2025-07-28_at_1.29.25_PM_2_gbvb9c.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753933681/WhatsApp_Image_2025-07-28_at_1.29.25_PM_1_rf6gby.jpg",
+      "etiqueta": "Mar"
+    }
+  ]
+},
   "2204": {
   "titulo": "Habitación 2204 · C2V",
   "categoria": "Junior Suite - Garden View",
