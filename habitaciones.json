@@ -1,4 +1,96 @@
 {
+  "2209": {
+  "titulo": "Habitación 2209 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Sea / Ocean View",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha doble",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753933996/WhatsApp_Image_2025-07-28_at_1.40.15_PM_1_qnzbea.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753934362/WhatsApp_Image_2025-07-28_at_1.40.15_PM_2_jss9rd.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753934481/WhatsApp_Image_2025-07-28_at_1.40.15_PM_ulqmp5.jpg",
+      "etiqueta": "Centrales"
+    }
+  ]
+},
+  "2210": {
+  "titulo": "Habitación 2210 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Sea / Ocean View",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha doble"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753933465/WhatsApp_Image_2025-07-28_at_1.47.27_PM_2_gkv15a.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753933500/WhatsApp_Image_2025-07-28_at_1.47.27_PM_zwocbj.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753933459/WhatsApp_Image_2025-07-28_at_1.47.27_PM_1_cxo0dc.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "2207": {
+  "titulo": "Habitación 2207 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Sea / Ocean View",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha doble",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753933892/WhatsApp_Image_2025-07-28_at_1.34.47_PM_2_q8swkh.jpg",
+      "etiqueta": "Lobby"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753933893/WhatsApp_Image_2025-07-28_at_1.34.47_PM_xwscbt.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753933890/WhatsApp_Image_2025-07-28_at_1.34.47_PM_1_y5yw39.jpg",
+      "etiqueta": "Mar"
+    }
+  ]
+},
   "2206": {
   "titulo": "Habitación 2206 · C2V",
   "categoria": "Junior Suite - Garden View",
