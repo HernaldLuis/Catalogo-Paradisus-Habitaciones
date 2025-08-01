@@ -1,4 +1,95 @@
 {
+  "2310": {
+  "titulo": "Habitación 2310 · C2W",
+  "categoria": "Junior Suite - Ocean View",
+  "vista": "Ocean View",
+  "piso": 3,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha doble tipo lluvia",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753933116/WhatsApp_Image_2025-07-28_at_2.12.31_PM_1_fbpu7l.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753933141/WhatsApp_Image_2025-07-28_at_2.12.32_PM_mlswqu.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753933115/WhatsApp_Image_2025-07-28_at_2.12.31_PM_lh86br.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "2311": {
+  "titulo": "Habitación 2311 · C2W",
+  "categoria": "Junior Suite - Ocean View",
+  "vista": "Ocean View",
+  "piso": 3,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha doble tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753933029/WhatsApp_Image_2025-07-28_at_2.16.35_PM_da8clm.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753933027/WhatsApp_Image_2025-07-28_at_2.16.35_PM_1_jp4uo0.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753933009/WhatsApp_Image_2025-07-28_at_2.16.35_PM_2_kevuhl.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "2312": {
+  "titulo": "Habitación 2312 · C2W",
+  "categoria": "Junior Suite - Ocean View",
+  "vista": "Ocean View",
+  "piso": 3,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha doble tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753932904/WhatsApp_Image_2025-07-28_at_2.18.10_PM_zj0bqt.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753932906/WhatsApp_Image_2025-07-28_at_2.18.10_PM_1_npd5a0.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1753932905/WhatsApp_Image_2025-07-28_at_2.18.11_PM_px4q06.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
   "2314": {
   "titulo": "Habitación 2314 · C2W",
   "categoria": "Junior Suite - Ocean View",
