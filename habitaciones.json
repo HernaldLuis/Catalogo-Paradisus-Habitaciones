@@ -1,4 +1,35 @@
 {
+  "2308": {
+  "titulo": "Habitación 2308 · S6E",
+  "categoria": "The Reserve Suite - Ocean View",
+  "vista": "Ocean View",
+  "piso": 3,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha de lluvia doble",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754169698/WhatsApp_Image_2025-08-02_at_2.15.35_PM_2_spdzgb.jpg",
+      "etiqueta": "Lobby"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754169701/WhatsApp_Image_2025-08-02_at_2.15.35_PM_ckdgwx.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754169695/WhatsApp_Image_2025-08-02_at_2.15.35_PM_1_zznsek.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
   "3026": {
   "titulo": "Habitación 3026 · SE1",
   "categoria": "The Reserve Suite - Swim Up",
