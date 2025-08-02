@@ -1,4 +1,67 @@
 {
+  "3024": {
+  "titulo": "Habitación 3024 · SE1",
+  "categoria": "The Reserve Suite - Swim Up",
+  "vista": "Swim Up",
+  "piso": 1,
+  "capacidad": "Máx. 2 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Acceso directo a la piscina",
+    "Ducha de lluvia doble",
+    "Tina",
+    "Sofá cama",
+    "Terraza"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754111344/WhatsApp_Image_2025-08-01_at_3.32.51_PM_i5oysr.jpg",
+      "etiqueta": "Derecha"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754111400/WhatsApp_Image_2025-08-01_at_3.32.52_PM_faslxe.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754111397/WhatsApp_Image_2025-08-01_at_3.32.51_PM_1_jmgffw.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
+  "3128": {
+  "titulo": "Habitación 3128 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 2,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha de lluvia doble",
+    "Vista al campo de golf"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754111194/WhatsApp_Image_2025-08-01_at_4.43.20_PM_beupyv.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754111198/WhatsApp_Image_2025-08-01_at_4.43.21_PM_v9cz2b.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754111196/WhatsApp_Image_2025-08-01_at_4.43.20_PM_1_u6apxy.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
   "3305": {
   "titulo": "Habitación 3305 · S6E",
   "categoria": "The Reserve Suite - Ocean View",
