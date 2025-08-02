@@ -1,4 +1,164 @@
 {
+  "2115": {
+  "titulo": "Habitación 2115 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 1,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Vista al jardín",
+    "Balcón",
+    "Ducha de lluvia doble"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754156421/WhatsApp_Image_2025-08-01_at_10.29.04_AM_fe1yvn.jpg",
+      "etiqueta": "Derecha"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754156418/WhatsApp_Image_2025-08-01_at_10.29.04_AM_2_agtm1v.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754156414/WhatsApp_Image_2025-08-01_at_10.29.04_AM_1_xh1cps.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
+  "3023": {
+  "titulo": "Habitación 3023 · SE1",
+  "categoria": "The Reserve Suite - Swim Up",
+  "vista": "Swim Up",
+  "piso": 1,
+  "capacidad": "Máx. 2 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Acceso directo a la piscina",
+    "Ducha de lluvia doble",
+    "Tina",
+    "Terraza",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754156266/WhatsApp_Image_2025-08-01_at_10.39.55_AM_ttliro.jpg",
+      "etiqueta": "Derecha"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754156283/WhatsApp_Image_2025-08-01_at_10.39.56_AM_vctiyz.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754156260/WhatsApp_Image_2025-08-01_at_10.39.55_AM_1_vsosod.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
+  "3015": {
+  "titulo": "Habitación 3015 · SE2",
+  "categoria": "The Reserve Suite - Ocean Front Swim Up",
+  "vista": "Ocean Front Swim Up",
+  "piso": 1,
+  "capacidad": "Máx. 2 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "3014",
+  "caracteristicas": [
+    "Acceso directo a la piscina",
+    "Ducha de lluvia doble",
+    "Tina",
+    "Terraza",
+    "Habitación conectada",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754156011/WhatsApp_Image_2025-08-01_at_10.42.10_AM_bjyyqv.jpg",
+      "etiqueta": "Derecha"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754156009/WhatsApp_Image_2025-08-01_at_10.42.11_AM_1_a9gz0m.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754156089/WhatsApp_Image_2025-08-01_at_10.42.11_AM_j0go1f.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
+  "3016": {
+  "titulo": "Habitación 3016 · SE2",
+  "categoria": "The Reserve Suite - Ocean Front Swim Up",
+  "vista": "Ocean Front Swim Up",
+  "piso": 1,
+  "capacidad": "Máx. 2 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Acceso directo a la piscina",
+    "Ducha de lluvia doble",
+    "Tina",
+    "Sofá cama",
+    "Terraza"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754155703/WhatsApp_Image_2025-08-01_at_10.44.10_AM_tfrmt0.jpg",
+      "etiqueta": "Derecha"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754155701/WhatsApp_Image_2025-08-01_at_10.44.11_AM_tjom21.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754155699/WhatsApp_Image_2025-08-01_at_10.44.10_AM_1_knisdh.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
+  "3111": {
+  "titulo": "Habitación 3111 · SE1",
+  "categoria": "The Reserve Suite - Swim Up",
+  "vista": "Swim Up",
+  "piso": 2,
+  "capacidad": "Máx. 2 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Acceso directo a la piscina",
+    "Ducha de lluvia doble",
+    "Tina",
+    "Sofá cama",
+    "Terraza"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754155431/WhatsApp_Image_2025-08-01_at_10.57.18_AM_jje1vn.jpg",
+      "etiqueta": "Derecha"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754155436/WhatsApp_Image_2025-08-01_at_10.57.19_AM_1_ycqhyh.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754155434/WhatsApp_Image_2025-08-01_at_10.57.19_AM_rsqii0.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
   "3112": {
   "titulo": "Habitación 3112 · SE1",
   "categoria": "The Reserve Suite - Swim Up",
