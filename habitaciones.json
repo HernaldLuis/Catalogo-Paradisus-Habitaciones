@@ -1,4 +1,158 @@
 {
+  "3108": {
+  "titulo": "Habitación 3108 · SE1",
+  "categoria": "The Reserve Suite - Swim Up",
+  "vista": "Swim Up",
+  "piso": 2,
+  "capacidad": "Máx. 2 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Acceso directo a la piscina",
+    "Ducha de lluvia doble",
+    "Tina",
+    "Sofá cama",
+    "Terraza"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754112510/WhatsApp_Image_2025-08-01_at_2.33.53_PM_1_h9f1yx.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754112514/WhatsApp_Image_2025-08-01_at_2.33.53_PM_2_ct2sym.jpg",
+      "etiqueta": "Centro"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754112506/WhatsApp_Image_2025-08-01_at_2.33.53_PM_umgt8z.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "3209": {
+  "titulo": "Habitación 3209 · S6E",
+  "categoria": "The Reserve Suite - Ocean View",
+  "vista": "Ocean View",
+  "piso": 3,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha de lluvia doble",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754112367/WhatsApp_Image_2025-08-01_at_2.37.01_PM_f3p53c.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754112370/WhatsApp_Image_2025-08-01_at_2.37.01_PM_2_tlbsec.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754112363/WhatsApp_Image_2025-08-01_at_2.37.01_PM_1_jejjig.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "2110": {
+  "titulo": "Habitación 2110 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 1,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Vista al jardín",
+    "Balcón",
+    "Ducha de lluvia doble"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754112199/WhatsApp_Image_2025-08-01_at_3.07.56_PM_onxl8f.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754112192/WhatsApp_Image_2025-08-01_at_3.07.57_PM_1_vpyeuf.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754112195/WhatsApp_Image_2025-08-01_at_3.07.57_PM_g5dscd.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "2109": {
+  "titulo": "Habitación 2109 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 1,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Vista al jardín",
+    "Balcón",
+    "Ducha de lluvia doble",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754112065/WhatsApp_Image_2025-08-01_at_3.08.21_PM_rfcco4.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754112063/WhatsApp_Image_2025-08-01_at_3.08.34_PM_mqiagi.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754112059/WhatsApp_Image_2025-08-01_at_3.08.33_PM_mays7m.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "3014": {
+  "titulo": "Habitación 3014 · SE8",
+  "categoria": "The Reserve Master Suite - Ocean Front Swim Up",
+  "vista": "Ocean Front Swim Up",
+  "piso": 1,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "3015",
+  "caracteristicas": [
+    "Habitación conectada",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754111881/WhatsApp_Image_2025-08-01_at_3.32.50_PM_uinzdi.jpg",
+      "etiqueta": "Derecha"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754111884/WhatsApp_Image_2025-08-01_at_3.32.50_PM_1_oiu7aa.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754111878/WhatsApp_Image_2025-08-01_at_3.32.51_PM_xdd1cs.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
   "3024": {
   "titulo": "Habitación 3024 · SE1",
   "categoria": "The Reserve Suite - Swim Up",
