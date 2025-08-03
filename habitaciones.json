@@ -1,4 +1,133 @@
 {
+  "4322": {
+  "titulo": "Habitación 4322 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Sea / Ocean View",
+  "piso": 3,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "4323",
+  "caracteristicas": [
+    "Balcón",
+    "Cama King Size",
+    "Vista al mar",
+    "Ducha doble tipo lluvia",
+    "Habitación conectada",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754250781/WhatsApp_Image_2025-07-18_at_10.59.59_AM_1_bdn3vo.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754250791/WhatsApp_Image_2025-07-18_at_10.59.59_AM_im4ttl.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754250786/WhatsApp_Image_2025-07-18_at_10.59.59_AM_2_nhig48.jpg",
+      "etiqueta": "Mar"
+    }
+  ]
+},
+  "4323": {
+  "titulo": "Habitación 4323 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Sea / Ocean View",
+  "piso": 3,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "4322",
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha doble tipo lluvia",
+    "Habitación conectada"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754250672/WhatsApp_Image_2025-07-20_at_3.01.18_PM_1_jx8xow.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754250682/WhatsApp_Image_2025-07-20_at_3.01.18_PM_2_s3ewck.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754250676/WhatsApp_Image_2025-07-20_at_3.01.18_PM_dyaduv.jpg",
+      "etiqueta": "Mar"
+    }
+  ]
+},
+  "4324": {
+  "titulo": "Habitación 4324 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Sea / Ocean View",
+  "piso": 3,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "4325",
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha doble tipo lluvia",
+    "Habitación conectada"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754250495/WhatsApp_Image_2025-07-20_at_2.55.18_PM_fco4we.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754250491/WhatsApp_Image_2025-07-20_at_2.55.17_PM_lqrl0n.jpg",
+      "etiqueta": "Centro"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754250486/WhatsApp_Image_2025-07-20_at_2.55.18_PM_1_ztrsp5.jpg",
+      "etiqueta": "Mar"
+    }
+  ]
+},
+  "4328": {
+  "titulo": "Habitación 4328 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 3,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": true,
+  "caracteristicas": [
+    "Vista al jardín",
+    "Accesible para personas con discapacidad",
+    "Balcón",
+    "Ducha doble tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754250315/WhatsApp_Image_2025-07-20_at_2.51.44_PM_m8vhgg.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754250275/WhatsApp_Image_2025-07-20_at_2.51.44_PM_1_mbssew.jpg",
+      "etiqueta": "Centro"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754250319/WhatsApp_Image_2025-07-20_at_2.51.47_PM_a1ok7t.jpg",
+      "etiqueta": "Mar"
+    }
+  ]
+},
   "4317": {
   "titulo": "Habitación 4317 · SE4",
   "categoria": "The Reserve Suite - Ocean Front",
