@@ -1,4 +1,249 @@
 {
+  "3216": {
+  "titulo": "Habitación 3216 · SE4",
+  "categoria": "The Reserve Suite - Ocean Front",
+  "vista": "Front Sea View",
+  "piso": 3,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Vista frontal al mar",
+    "Balcón",
+    "Cama King Size",
+    "Ducha doble tipo lluvia",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754189524/WhatsApp_Image_2025-07-27_at_2.36.38_PM_2_qqlnit.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754189555/WhatsApp_Image_2025-07-27_at_2.36.38_PM_lxlsqk.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754189522/WhatsApp_Image_2025-07-27_at_2.36.38_PM_1_axlo2p.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "3204": {
+  "titulo": "Habitación 3204 · S6E",
+  "categoria": "The Reserve Suite - Ocean View",
+  "vista": "Ocean View",
+  "piso": 3,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha doble tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754189406/WhatsApp_Image_2025-07-27_at_2.33.45_PM_2_nrc4ic.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754189408/WhatsApp_Image_2025-07-27_at_2.33.45_PM_ainq32.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754189403/WhatsApp_Image_2025-07-27_at_2.33.45_PM_1_gtx6k7.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "3021": {
+  "titulo": "Habitación 3021 · SE1",
+  "categoria": "The Reserve Suite - Swim Up",
+  "vista": "Swim Up",
+  "piso": 1,
+  "capacidad": "Máx. 2 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Acceso directo a la piscina",
+    "Ducha doble tipo lluvia",
+    "Tina",
+    "Terraza",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754189251/WhatsApp_Image_2025-07-27_at_2.06.57_PM_1_bpvqa5.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754189249/WhatsApp_Image_2025-07-27_at_2.06.57_PM_e1zq1s.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754189247/WhatsApp_Image_2025-07-27_at_2.06.57_PM_2_feoc3q.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "3116": {
+  "titulo": "Habitación 3116 · SE4",
+  "categoria": "The Reserve Suite - Ocean Front",
+  "vista": "Ocean Front",
+  "piso": 2,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Vista al mar",
+    "Balcón",
+    "Ducha doble tipo lluvia",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754188494/WhatsApp_Image_2025-08-02_at_4.12.27_PM_mlcfym.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754188496/WhatsApp_Image_2025-08-02_at_4.12.28_PM_dnouko.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754188493/WhatsApp_Image_2025-08-02_at_4.12.28_PM_1_p1hp8b.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "3114": {
+  "titulo": "Habitación 3114 · SE6",
+  "categoria": "The Reserve Master Suite - Ocean Front",
+  "vista": "Ocean Front",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "3115",
+  "caracteristicas": [
+    "Sofá cama",
+    "Habitación conectada"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754187643/WhatsApp_Image_2025-08-02_at_4.14.07_PM_2_xyhpns.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754187641/WhatsApp_Image_2025-08-02_at_4.14.07_PM_io8noc.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754187639/WhatsApp_Image_2025-08-02_at_4.14.07_PM_1_hfzz8n.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "3211": {
+  "titulo": "Habitación 3211 · S6E",
+  "categoria": "The Reserve Suite - Ocean View",
+  "vista": "Ocean View",
+  "piso": 3,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha de lluvia doble",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754187535/WhatsApp_Image_2025-08-02_at_4.14.44_PM_2_xmnabu.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754187532/WhatsApp_Image_2025-08-02_at_4.14.44_PM_1_te5dmk.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "3210": {
+  "titulo": "Habitación 3210 · S6E",
+  "categoria": "The Reserve Suite - Ocean View",
+  "vista": "Ocean View",
+  "piso": 3,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha de lluvia doble",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754187226/WhatsApp_Image_2025-08-02_at_4.14.54_PM_zkh04h.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754187222/WhatsApp_Image_2025-08-02_at_4.14.54_PM_1_cs1x9w.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754187224/WhatsApp_Image_2025-08-02_at_4.14.54_PM_2_apqigm.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},  
+  "3029": {
+  "titulo": "Habitación 3029 · SE1",
+  "categoria": "The Reserve Suite - Swim Up",
+  "vista": "Swim Up",
+  "piso": 1,
+  "capacidad": "Máx. 2 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Acceso directo a la piscina",
+    "Ducha de lluvia doble",
+    "Tina",
+    "Terraza",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754186962/WhatsApp_Image_2025-08-02_at_4.15.25_PM_2_lpju1f.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754186964/WhatsApp_Image_2025-08-02_at_4.15.25_PM_gvnwsi.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754186962/WhatsApp_Image_2025-08-02_at_4.15.25_PM_1_xfsssa.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
   "3106": {
   "titulo": "Habitación 3106 · SE1",
   "categoria": "The Reserve Suite - Swim Up",
