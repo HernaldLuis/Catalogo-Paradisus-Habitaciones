@@ -1,4 +1,99 @@
 {
+  "3123": {
+  "titulo": "Habitación 3123 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 2,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Vista al jardín",
+    "Balcón",
+    "1 cama king size",
+    "Ducha doble tipo lluvia",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754190772/WhatsApp_Image_2025-07-28_at_9.52.46_AM_z9m0kf.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754190851/WhatsApp_Image_2025-07-28_at_9.52.47_AM_1_j8zwnz.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754190804/WhatsApp_Image_2025-07-28_at_9.52.47_AM_prgfco.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "3220": {
+  "titulo": "Habitación 3220 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 3,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Vista al jardín",
+    "Balcón",
+    "1 cama king size",
+    "Ducha doble tipo lluvia",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754189790/WhatsApp_Image_2025-07-27_at_2.45.12_PM_2_oboohj.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754189809/WhatsApp_Image_2025-07-27_at_2.45.12_PM_1_apacyq.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754189811/WhatsApp_Image_2025-07-27_at_2.45.12_PM_opwgqu.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "3218": {
+  "titulo": "Habitación 3218 · SE4",
+  "categoria": "The Reserve Suite - Ocean Front",
+  "vista": "Front Sea View",
+  "piso": 3,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Vista frontal al mar",
+    "Balcón",
+    "2 camas dobles",
+    "Ducha doble tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754189677/WhatsApp_Image_2025-07-27_at_2.38.16_PM_cjbsbd.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754189654/WhatsApp_Image_2025-07-27_at_2.38.15_PM_p0ekrg.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754189652/WhatsApp_Image_2025-07-27_at_2.38.15_PM_1_xevt5c.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
   "3216": {
   "titulo": "Habitación 3216 · SE4",
   "categoria": "The Reserve Suite - Ocean Front",
