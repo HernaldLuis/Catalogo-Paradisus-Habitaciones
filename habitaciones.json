@@ -1,4 +1,246 @@
 {
+  "3311": {
+  "titulo": "Habitación 3311 · S6E",
+  "categoria": "The Reserve Suite - Ocean View",
+  "vista": "Ocean View",
+  "piso": 4,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha doble tipo lluvia",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754193975/WhatsApp_Image_2025-07-30_at_10.10.30_AM_1_kkrbaw.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754193951/WhatsApp_Image_2025-07-30_at_10.10.29_AM_gfx6ac.jpg",
+      "etiqueta": "Centro"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754193954/WhatsApp_Image_2025-07-30_at_10.10.30_AM_esujcg.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "3205": {
+  "titulo": "Habitación 3205 · S6E",
+  "categoria": "The Reserve Suite - Ocean View",
+  "vista": "Ocean View",
+  "piso": 3,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha doble tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754193850/WhatsApp_Image_2025-07-29_at_2.21.04_PM_1_mx9g8m.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754193853/WhatsApp_Image_2025-07-29_at_2.21.03_PM_xffpet.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754193852/WhatsApp_Image_2025-07-29_at_2.21.04_PM_vag7pg.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "3221": {
+  "titulo": "Habitación 3221 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 3,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha doble tipo lluvia",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754193756/WhatsApp_Image_2025-07-28_at_1.53.24_PM_wq5fju.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754193754/WhatsApp_Image_2025-07-28_at_1.53.24_PM_2_bumn9t.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754193752/WhatsApp_Image_2025-07-28_at_1.53.24_PM_1_swwrjn.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "3222": {
+  "titulo": "Habitación 3222 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 3,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha doble tipo lluvia",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754193672/WhatsApp_Image_2025-07-28_at_1.51.41_PM_e8nihb.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754193668/WhatsApp_Image_2025-07-28_at_1.51.40_PM_mg4jkr.jpg",
+      "etiqueta": "Frente"
+    }
+  ]
+},
+  "3223": {
+  "titulo": "Habitación 3223 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 3,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha doble tipo lluvia",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754193513/WhatsApp_Image_2025-07-28_at_1.51.41_PM_1_hgbeqv.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754193539/WhatsApp_Image_2025-07-28_at_1.51.41_PM_soki8t.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754193537/WhatsApp_Image_2025-07-28_at_1.51.39_PM_jl2f5k.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
+  "3208": {
+  "titulo": "Habitación 3208 · S6E",
+  "categoria": "The Reserve Suite - Ocean View",
+  "vista": "Ocean View",
+  "piso": 3,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha doble tipo lluvia",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754193324/WhatsApp_Image_2025-07-28_at_1.37.05_PM_gbvphs.jpg",
+      "etiqueta": "Lobby"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754193328/WhatsApp_Image_2025-07-28_at_1.37.06_PM_1_huvkjo.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754193326/WhatsApp_Image_2025-07-28_at_1.37.06_PM_lkoqqs.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "3306": {
+  "titulo": "Habitación 3306 · S6E",
+  "categoria": "The Reserve Suite - Ocean View",
+  "vista": "Ocean View",
+  "piso": 4,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha doble tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754168651/WhatsApp_Image_2025-07-31_at_2.10.50_PM_crkfpg.jpg",
+      "etiqueta": "Lobby"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754168654/WhatsApp_Image_2025-07-31_at_2.10.51_PM_oj0add.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754168650/WhatsApp_Image_2025-07-31_at_2.10.50_PM_1_mfvgn3.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "3330": {
+  "titulo": "Habitación 3330 · C2W",
+  "categoria": "Junior Suite - Ocean View",
+  "vista": "Ocean View",
+  "piso": 4,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha doble tipo lluvia",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754193038/WhatsApp_Image_2025-07-28_at_11.16.38_AM_wgpiiw.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754193039/WhatsApp_Image_2025-07-28_at_11.16.38_AM_2_xlexnm.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754193038/WhatsApp_Image_2025-07-28_at_11.16.38_AM_1_xbvvse.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
   "3224": {
   "titulo": "Habitación 3224 · C2V",
   "categoria": "Junior Suite - Garden View",
