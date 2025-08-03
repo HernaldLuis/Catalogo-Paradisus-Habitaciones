@@ -1,4 +1,98 @@
 {
+  "3217": {
+  "titulo": "Habitación 3217 · SE4",
+  "categoria": "The Reserve Suite - Ocean Front",
+  "vista": "Ocean Front",
+  "piso": 3,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Vista frontal al mar",
+    "Balcón",
+    "Cama king size",
+    "Ducha doble tipo lluvia",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754194653/WhatsApp_Image_2025-07-31_at_11.08.35_AM_kaxaks.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754194651/WhatsApp_Image_2025-07-31_at_11.08.35_AM_2_eitzgn.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754194648/WhatsApp_Image_2025-07-31_at_11.08.35_AM_1_ilzif1.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "3215": {
+  "titulo": "Habitación 3215 · SE4",
+  "categoria": "The Reserve Suite - Ocean Front",
+  "vista": "Ocean Front",
+  "piso": 3,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "3214",
+  "caracteristicas": [
+    "Vista frontal al mar",
+    "Balcón",
+    "Ducha doble tipo lluvia",
+    "Habitación conectada"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754194541/WhatsApp_Image_2025-07-31_at_11.08.25_AM_2_q6706h.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754194535/WhatsApp_Image_2025-07-31_at_11.08.25_AM_ptszpi.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754194538/WhatsApp_Image_2025-07-31_at_11.08.25_AM_1_f8f7cl.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "3206": {
+  "titulo": "Habitación 3206 · S6E",
+  "categoria": "The Reserve Suite - Ocean View",
+  "vista": "Ocean View",
+  "piso": 3,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha doble tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754194428/WhatsApp_Image_2025-07-31_at_10.58.15_AM_fvp8xq.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754194431/WhatsApp_Image_2025-07-31_at_10.58.16_AM_bz74su.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754194426/WhatsApp_Image_2025-07-31_at_10.58.15_AM_1_ahnoqw.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
   "3311": {
   "titulo": "Habitación 3311 · S6E",
   "categoria": "The Reserve Suite - Ocean View",
