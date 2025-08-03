@@ -1,4 +1,72 @@
 {
+  "4329": {
+  "titulo": "Habitación 4329 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 3,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Cama king size",
+    "Vista al jardín",
+    "Balcón",
+    "Ducha doble tipo lluvia",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754196000/WhatsApp_Image_2025-07-20_at_2.49.43_PM_vtmspe.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754195995/WhatsApp_Image_2025-07-20_at_2.49.43_PM_2_u4njms.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754196004/WhatsApp_Image_2025-07-20_at_2.49.43_PM_1_uh2wsr.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
+  "4309": {
+  "titulo": "Habitación 4309 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 3,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "4310",
+  "caracteristicas": [
+    "Cama king size",
+    "Vista al jardín",
+    "Balcón",
+    "Club Melia",
+    "Ducha doble tipo lluvia",
+    "Habitación conectada",
+    "Sofá cama",
+    "Cocineta"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754195765/WhatsApp_Image_2025-07-25_at_5.00.56_PM_trdag2.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754195769/WhatsApp_Image_2025-07-25_at_5.00.57_PM_zmjwvf.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754195760/WhatsApp_Image_2025-07-25_at_5.00.56_PM_1_jtbvll.jpg",
+      "etiqueta": "Lobby"
+    }
+  ]
+},
   "3018": {
   "titulo": "Habitación 3018 · SE2",
   "categoria": "The Reserve Suite - Ocean Front Swim Up",
