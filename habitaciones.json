@@ -1,4 +1,66 @@
 {
+  "3106": {
+  "titulo": "Habitación 3106 · SE1",
+  "categoria": "The Reserve Suite - Swim Up",
+  "vista": "Swim Up",
+  "piso": 2,
+  "capacidad": "Máx. 2 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Acceso directo a la piscina",
+    "Ducha de lluvia doble",
+    "Tina",
+    "Terraza",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754185579/WhatsApp_Image_2025-08-02_at_4.15.46_PM_udxsgr.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754185576/WhatsApp_Image_2025-08-02_at_4.15.45_PM_1_bzpwfw.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754185577/WhatsApp_Image_2025-08-02_at_4.15.45_PM_f2blyu.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "3303": {
+  "titulo": "Habitación 3303 · S6E",
+  "categoria": "The Reserve Suite - Ocean View",
+  "vista": "Ocean View",
+  "piso": 4,
+  "capacidad": "Máx. 3 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Vista al mar",
+    "Ducha de lluvia doble"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754185438/WhatsApp_Image_2025-08-02_at_4.22.14_PM_2_kvxmqf.jpg",
+      "etiqueta": "Lobby"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754185438/WhatsApp_Image_2025-08-02_at_4.22.14_PM_lcxao4.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754185443/WhatsApp_Image_2025-08-02_at_4.22.14_PM_1_gxnbge.jpg",
+      "etiqueta": "Mar"
+    }
+  ]
+},
   "3310": {
   "titulo": "Habitación 3310 · S6E",
   "categoria": "The Reserve Suite - Ocean View",
@@ -177,8 +239,11 @@
     {
       "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754184056/WhatsApp_Image_2025-08-02_at_5.02.41_PM_1_od6mue.jpg",
       "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754184059/WhatsApp_Image_2025-08-02_at_5.02.41_PM_jld9fq.jpg",
+      "etiqueta": "Derecha"
     }
-    // Falta imagen derecha
   ]
 },
   "3019": {
