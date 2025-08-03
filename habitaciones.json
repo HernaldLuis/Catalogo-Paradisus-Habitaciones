@@ -1,4 +1,37 @@
 {
+  "4321": {
+  "titulo": "Habitación 4321 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Sea / Ocean View",
+  "piso": 3,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": true,
+  "habitacion_conectada": "4320",
+  "caracteristicas": [
+    "Accesible para personas con discapacidad",
+    "Balcón",
+    "Vista al mar",
+    "Ducha doble tipo lluvia",
+    "Habitación conectada"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754253307/WhatsApp_Image_2025-07-18_at_10.45.57_AM_xvizbc.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754253312/WhatsApp_Image_2025-07-18_at_10.45.58_AM_praif0.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754253302/WhatsApp_Image_2025-07-18_at_10.45.57_AM_1_lkttjb.jpg",
+      "etiqueta": "Mar"
+    }
+  ]
+},
   "4322": {
   "titulo": "Habitación 4322 · C2V",
   "categoria": "Junior Suite - Garden View",
