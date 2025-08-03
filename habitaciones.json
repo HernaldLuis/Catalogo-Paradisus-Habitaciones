@@ -1,4 +1,66 @@
 {
+  "4303": {
+  "titulo": "Habitación 4303 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 3,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "1 cama king size",
+    "Sofá cama",
+    "Vista al jardín",
+    "Balcón",
+    "Club Meliá",
+    "Ducha doble tipo lluvia"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754197107/WhatsApp_Image_2025-07-22_at_2.39.41_PM_1_vdr1ig.jpg",
+      "etiqueta": "Lobby"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754197117/WhatsApp_Image_2025-07-22_at_2.39.42_PM_gqmce4.jpg",
+      "etiqueta": "Centrales"
+    }
+  ]
+},
+  "4308": {
+  "titulo": "Habitación 4308 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 3,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "2 camas individuales",
+    "Vista al jardín",
+    "Balcón",
+    "Club Meliá",
+    "Ducha doble tipo lluvia",
+    "Habitación conectada"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754196894/WhatsApp_Image_2025-07-22_at_2.38.23_PM_alu5wb.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754196970/WhatsApp_Image_2025-07-22_at_2.38.24_PM_1_uluqqn.jpg",
+      "etiqueta": "Centrales"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754196976/WhatsApp_Image_2025-07-22_at_2.38.24_PM_b2r4dh.jpg",
+      "etiqueta": "Izquierda"
+    }
+  ]
+},
   "4329": {
   "titulo": "Habitación 4329 · C2V",
   "categoria": "Junior Suite - Garden View",
