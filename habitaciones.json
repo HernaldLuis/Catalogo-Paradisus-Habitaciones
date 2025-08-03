@@ -1,4 +1,191 @@
 {
+  "4420": {
+  "titulo": "Habitación 4420 · C2W",
+  "categoria": "Junior Suite - Ocean View",
+  "vista": "Sea / Ocean View",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "4419",
+  "caracteristicas": [
+    "Balcón",
+    "Club Meliá",
+    "Vista al mar",
+    "Ducha doble tipo lluvia",
+    "Habitación conectada",
+    "Actualmente utilizada como SPA"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754261800/ChatGPT_Image_Aug_3_2025_03_55_45_PM_hzg2hj.png",
+      "etiqueta": "SPA"
+    }
+  ]
+},
+  "4424": {
+  "titulo": "Habitación 4424 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Sea / Ocean View",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "4423",
+  "caracteristicas": [
+    "Balcón",
+    "Club Meliá",
+    "Vista al mar",
+    "Ducha doble tipo lluvia",
+    "Habitación conectada",
+    "Cocina",
+    "Actualmente utilizada como SPA"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754261800/ChatGPT_Image_Aug_3_2025_03_55_45_PM_hzg2hj.png",
+      "etiqueta": "SPA"
+    }
+  ]
+},
+  "4425": {
+  "titulo": "Habitación 4425 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Sea / Ocean View",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "4426",
+  "caracteristicas": [
+    "Balcón",
+    "Cama King Size",
+    "Club Meliá",
+    "Vista al mar",
+    "Ducha doble tipo lluvia",
+    "Cocina",
+    "Habitación conectada",
+    "Sofá cama",
+    "Actualmente utilizada como SPA"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754261800/ChatGPT_Image_Aug_3_2025_03_55_45_PM_hzg2hj.png",
+      "etiqueta": "SPA"
+    }
+  ]
+},
+  "4426": {
+  "titulo": "Habitación 4426 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Sea / Ocean View",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "4425",
+  "caracteristicas": [
+    "Balcón",
+    "Club Meliá",
+    "Vista al mar",
+    "Ducha doble tipo lluvia",
+    "Habitación conectada",
+    "Actualmente utilizada como SPA"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754261800/ChatGPT_Image_Aug_3_2025_03_55_45_PM_hzg2hj.png",
+      "etiqueta": "SPA"
+    }
+  ]
+},
+  "4427": {
+  "titulo": "Habitación 4427 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Vista al jardín",
+    "Balcón",
+    "Club Meliá",
+    "Ducha doble tipo lluvia",
+    "Habitación conectada",
+    "Actualmente utilizada como SPA"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754261800/ChatGPT_Image_Aug_3_2025_03_55_45_PM_hzg2hj.png",
+      "etiqueta": "SPA"
+    }
+  ]
+},
+  "4428": {
+  "titulo": "Habitación 4428 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "4429",
+  "caracteristicas": [
+    "Vista al jardín",
+    "Balcón",
+    "Cama King Size",
+    "Club Meliá",
+    "Ducha doble tipo lluvia",
+    "Habitación conectada",
+    "Sofá cama",
+    "Actualmente utilizada como SPA"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754261800/ChatGPT_Image_Aug_3_2025_03_55_45_PM_hzg2hj.png",
+      "etiqueta": "SPA"
+    }
+  ]
+},
+  "4429": {
+  "titulo": "Habitación 4429 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 4,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "habitacion_conectada": "4428",
+  "caracteristicas": [
+    "Vista al jardín",
+    "Balcón",
+    "Club Meliá",
+    "Ducha doble tipo lluvia",
+    "Habitación conectada",
+    "Actualmente utilizada como SPA"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754261800/ChatGPT_Image_Aug_3_2025_03_55_45_PM_hzg2hj.png",
+      "etiqueta": "SPA"
+    }
+  ]
+},
   "4318": {
   "titulo": "Habitación 4318 · C2V",
   "categoria": "Junior Suite - Garden View",
