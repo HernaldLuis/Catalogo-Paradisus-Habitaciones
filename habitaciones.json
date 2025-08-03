@@ -1,4 +1,71 @@
 {
+  "4317": {
+  "titulo": "Habitación 4317 · SE4",
+  "categoria": "The Reserve Suite - Ocean Front",
+  "vista": "Front Sea View",
+  "piso": 3,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "habitacion_conectada": "4316",
+  "caracteristicas": [
+    "Vista frontal al mar",
+    "Balcón",
+    "Cama King Size",
+    "Ducha doble tipo lluvia",
+    "Habitación conectada",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754245745/WhatsApp_Image_2025-07-22_at_11.54.59_AM_xdfkqb.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754245735/WhatsApp_Image_2025-07-22_at_11.54.58_AM_1_jm9hck.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754245740/WhatsApp_Image_2025-07-22_at_11.54.58_AM_jvoqzk.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
+  "4301": {
+  "titulo": "Habitación 4301 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 3,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "K",
+  "sofa": true,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Vista al jardín",
+    "Balcón",
+    "Cama King Size",
+    "Club Meliá",
+    "Ducha doble tipo lluvia",
+    "Sofá cama"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754245503/WhatsApp_Image_2025-07-18_at_10.27.59_AM_bqcdqs.jpg",
+      "etiqueta": "Mar"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754245499/WhatsApp_Image_2025-07-18_at_10.27.58_AM_np6v54.jpg",
+      "etiqueta": "Centro"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754245532/WhatsApp_Image_2025-07-18_at_10.28.00_AM_ynz5zc.jpg",
+      "etiqueta": "Lobby"
+    }
+  ]
+},
   "4303": {
   "titulo": "Habitación 4303 · C2V",
   "categoria": "Junior Suite - Garden View",
