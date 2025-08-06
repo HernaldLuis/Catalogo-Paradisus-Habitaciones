@@ -1,4 +1,32 @@
 {
+  "titulo": "Habitación 2215 · C2V",
+  "categoria": "Junior Suite - Garden View",
+  "vista": "Garden View",
+  "piso": 2,
+  "capacidad": "Máx. 4 personas",
+  "fumadores": false,
+  "tipo_cama": "D",
+  "sofa": false,
+  "discapacidad": false,
+  "caracteristicas": [
+    "Balcón",
+    "Ducha de lluvia doble"
+  ],
+  "imagenes": [
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754437813/WhatsApp_Image_2025-08-05_at_11.20.59_AM_1_wjpubh.jpg",
+      "etiqueta": "Izquierda"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754437813/WhatsApp_Image_2025-08-05_at_11.20.58_AM_wcazdw.jpg",
+      "etiqueta": "Frente"
+    },
+    {
+      "src": "https://res.cloudinary.com/dor6za85u/image/upload/v1754437813/WhatsApp_Image_2025-08-05_at_11.20.59_AM_zidn3t.jpg",
+      "etiqueta": "Derecha"
+    }
+  ]
+},
   "3307": {
   "titulo": "Habitación 3307 · S6E",
   "categoria": "The Reserve Suite - Ocean View",
