@@ -8,17 +8,63 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-image: url('https://github.com/HernaldLuis/Catalogo-Paradisus-Habitaciones/blob/main/Portada.jpeg?raw=true');
+  background-image: url('https://raw.githubusercontent.com/HernaldLuis/Catalogo-Paradisus-Habitaciones/main/Portada.jpeg');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   background-color: #f0f0f0; /* fallback si la imagen no carga */
-  
+ } 
     h1 {
       text-align: center;
       padding: 20px;
     }
+.titulo-catalogo {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centra texto y logo */
+  gap: 0.75rem;
+  flex-wrap: wrap; /* Para que en móvil no se corte raro */
+  
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #111;
+  text-align: center;
+  margin: 1rem 0 1.5rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+  position: relative;
+}
 
+.titulo-catalogo span {
+  display: inline-block;
+}
+
+.titulo-catalogo::after {
+  content: '';
+  display: block;
+  width: 90px;
+  height: 3px;
+  margin: 0.5rem auto 0;
+  background: #111;
+  border-radius: 2px;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo-catalogo {
+  height: 90px; /* un poco más grande */
+  width: auto;
+}
+
+
+@media (max-width: 600px) {
+  .logo-catalogo {
+    height: 62px; /* sigue siendo más grande que el texto pero no exagerado */
+  }
+}
+  
   .zona-desplazable,
 .zona-desplazable * {
   user-select: none;
@@ -357,8 +403,179 @@ border-bottom: none;
   opacity: 0.85;
 }
 
+/* ==== Panel de Filtro Categorías - Estilo Premium ==== */
+/* === PANEL DE FILTRO POR CATEGORÍA - ULTRA PREMIUM === */
+.panel-filtro-categoria {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.9rem 1.5rem;
+  
+  background: rgba(255, 255, 255, 0.8);
+  background: linear-gradient(135deg, rgba(255,255,255,0.85), rgba(245,245,245,0.85));
+  backdrop-filter: blur(10px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0 0 18px 18px;
+  
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
 
+/* Etiqueta */
+.panel-filtro-categoria label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #333;
+  letter-spacing: 0.5px;
+}
 
+/* Select elegante */
+.panel-filtro-categoria select {
+  padding: 0.45rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+.panel-filtro-categoria select:hover {
+  border-color: #00aaff;
+  box-shadow: 0 0 8px rgba(0,170,255,0.3);
+}
+.panel-filtro-categoria select:focus {
+  outline: none;
+  border-color: #0077cc;
+  box-shadow: 0 0 12px rgba(0,119,204,0.4);
+}
+
+/* Botón Limpiar */
+.panel-filtro-categoria button {
+  padding: 0.45rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #00aaff, #0077cc);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.panel-filtro-categoria button:hover {
+  background: linear-gradient(135deg, #0099dd, #0066aa);
+  box-shadow: 0 4px 12px rgba(0,170,255,0.4);
+}
+
+/* Contador */
+.panel-filtro-categoria .contador-categoria {
+  margin-left: auto;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #444;
+}
+.panel-filtro-categoria .contador-categoria strong {
+  color: #0077cc;
+}
+
+/* Animación de habitaciones activas */
+.habitacion-btn.filtro-activo {
+  animation: boomCategoria .35s ease, latidoHabitacion 1.4s ease-in-out .35s infinite;
+  will-change: transform, box-shadow;
+  border-radius: 8px;
+}
+.habitacion-btn.filtro-inactivo {
+  opacity: 0.28;
+  filter: grayscale(.2) brightness(0.8);
+}
+@keyframes boomCategoria {
+  0% { transform: scale(1); }
+  60% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+@keyframes latidoHabitacion {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(0,170,255,0);
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 0 16px rgba(0,170,255,0.45);
+  }
+}
+/* Fondo oscuro */
+.modal-mejoras {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Activo */
+.modal-mejoras.activo {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Caja del modal */
+.modal-contenido {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  text-align: left;
+  animation: aparecerModal 0.4s ease;
+}
+
+/* Título */
+.modal-contenido h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+/* Lista */
+.modal-contenido ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.modal-contenido li {
+  margin-bottom: 0.5rem;
+}
+
+/* Botón */
+.modal-contenido button {
+  background: linear-gradient(135deg, #00aaff, #0077cc);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.modal-contenido button:hover {
+  background: linear-gradient(135deg, #0099dd, #0066aa);
+}
+
+/* Animación */
+@keyframes aparecerModal {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
 
   /* (ESTO CORRESPNDE AL PANEL DE LAS IMAGENES DE COSULTa */
 
@@ -366,14 +583,34 @@ border-bottom: none;
 </head>
 <body>
 
-  <h1>Catálogo de Habitaciones</h1>
+  <h1 class="titulo-catalogo">
+  <span>Paradisus · Colección Exclusiva de Habitaciones & Suites</span>
+  <img src="https://res.cloudinary.com/dor6za85u/image/upload/v1754887647/ChatGPT_Image_10_ago_2025_09_47_11_p.m._btrjfp.png" 
+       alt="Paradisus by Meliá" 
+       class="logo-catalogo">
+</h1>
+
+
 
   <div class="habitacion-info-panel" id="panelHabitacion">
   <div class="habitacion-detalle" id="contenidoHabitacion">
     <!-- Aquí se insertará el contenido dinámico -->
   </div>
 
+<!-- Panel de filtro por categoría -->
+<div class="panel-filtro-categoria">
+  <label for="filtro-categoria">Categoría:</label>
+  <select id="filtro-categoria">
+    <option value="">Todas</option>
+  </select>
 
+  <button id="btn-limpiar-filtro" type="button">Limpiar</button>
+
+  <span class="contador-categoria">
+    Coincidencias: <strong id="total-coincidencias-categoria">0</strong>
+  </span>
+</div>
+    
   <div class="zona-desplazable">
     
     <!-- Torre 1 -->
@@ -1097,18 +1334,13 @@ function cerrarPanelInferior() {
 }
 
 async function marcarHabitacionesDisponibles() {
-
-  const data = await response.json();
-  datosActuales = data; // Guardamos los datos para comparación futura
-
-
   try {
     const response = await fetch("habitaciones.json");
     const data = await response.json();
     const botones = document.querySelectorAll(".habitacion-btn");
 
     botones.forEach(boton => {
-      const num = boton.textContent.trim();
+const num = boton.dataset.num || boton.textContent.trim();
       const habitacion = data[num];
 
       if (habitacion) {
@@ -1143,19 +1375,19 @@ window.addEventListener("DOMContentLoaded", marcarHabitacionesDisponibles);
 
     let datosActuales = {}; // Aquí guardaremos los datos iniciales para comparar más adelante
 
-  document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const botones = document.querySelectorAll(".habitacion-btn");
   botones.forEach(boton => {
     boton.addEventListener("click", () => {
       const num = boton.dataset.num;
       mostrarInfo(num);
     });
+  });
+});
 
-    // Habilitar desplazamiento tipo mapa con el mouse (drag-scroll)
+// Drag-scroll solo una vez
 const zona = document.querySelector('.zona-desplazable');
-let isDown = false;
-let startX;
-let scrollLeft;
+let isDown = false, startX, scrollLeft;
 
 zona.addEventListener('mousedown', (e) => {
   isDown = true;
@@ -1163,26 +1395,13 @@ zona.addEventListener('mousedown', (e) => {
   startX = e.pageX - zona.offsetLeft;
   scrollLeft = zona.scrollLeft;
 });
-
-zona.addEventListener('mouseleave', () => {
-  isDown = false;
-  zona.classList.remove('arrastrando');
-});
-
-zona.addEventListener('mouseup', () => {
-  isDown = false;
-  zona.classList.remove('arrastrando');
-});
-
+zona.addEventListener('mouseleave', () => { isDown = false; zona.classList.remove('arrastrando'); });
+zona.addEventListener('mouseup', () => { isDown = false; zona.classList.remove('arrastrando'); });
 zona.addEventListener('mousemove', (e) => {
   if (!isDown) return;
   e.preventDefault();
   const x = e.pageX - zona.offsetLeft;
-  const walk = (x - startX) * 1; // Velocidad del scroll
-  zona.scrollLeft = scrollLeft - walk;
-});
-
-  });
+  zona.scrollLeft = scrollLeft - (x - startX);
 });
 
     async function actualizarHabitacionesSilenciosamente() {
@@ -1222,17 +1441,109 @@ zona.addEventListener('mousemove', (e) => {
 }
 setInterval(actualizarHabitacionesSilenciosamente, 5000); // Se actualiza cada 5 segundos
 
-  </script> 
+document.addEventListener('DOMContentLoaded', async () => {
+  const sel = document.getElementById('filtro-categoria');
+  const btnClear = document.getElementById('btn-limpiar-filtro');
+  const totalEl = document.getElementById('total-coincidencias-categoria');
+
+  let habitacionesData = null;
+
+  // Cargar JSON de habitaciones
+  async function cargarHabitaciones() {
+    if (!habitacionesData) {
+      const resp = await fetch('habitaciones.json');
+      habitacionesData = await resp.json();
+    }
+    return habitacionesData;
+  }
+
+  // Llenar select con categorías
+  async function initCategorias() {
+    const data = await cargarHabitaciones();
+    const categorias = new Set(Object.values(data).map(h => h.categoria).filter(Boolean));
+    [...categorias].sort().forEach(cat => {
+      const opt = document.createElement('option');
+      opt.value = cat;
+      opt.textContent = cat;
+      sel.appendChild(opt);
+    });
+  }
+
+  // Aplicar filtro visual
+  async function aplicarFiltro(categoria) {
+  const data = await cargarHabitaciones();
+  let count = 0;
+
+  // Quitamos espacios y normalizamos
+  const catSel = (categoria || '').trim();
+
+  document.querySelectorAll('.habitacion-btn').forEach(btn => {
+    const num = btn.dataset.num || btn.textContent.trim();
+    const habitacion = data[num];
+    const catHab = ((habitacion && habitacion.categoria) || '').trim();
+
+    if (catSel) {
+      // Si hay una categoría seleccionada, comparar
+      const coincide = catHab.toLowerCase() === catSel.toLowerCase();
+      btn.classList.toggle('filtro-activo', coincide);
+      btn.classList.toggle('filtro-inactivo', !coincide);
+      if (coincide) count++;
+    } else {
+      // Si está en "Todas", limpiar clases
+      btn.classList.remove('filtro-activo', 'filtro-inactivo');
+      count++;
+    }
+  });
+
+  totalEl.textContent = count;
+}
+
+  // Eventos
+  sel.addEventListener('change', e => aplicarFiltro(e.target.value));
+  btnClear.addEventListener('click', () => {
+    sel.value = '';
+    aplicarFiltro('');
+  });
+
+  // Inicializar
+  await initCategorias();
+  aplicarFiltro('');
+});
+    </script>  <!-- ✅ Cierra aquí tu script principal -->
+
+<div id="modal-mejoras" class="modal-mejoras">
+  <div class="modal-contenido">
+    <h2>🆕BIENVENID@ - Novedades del Catálogo</h2>
+    <ul>
+      <li>✨ Panel de filtrado de categorías mejorado.</li>
+      <li>💓 Animación de latido para habitaciones filtradas.</li>
+      <li>🌗 Oscurecido de habitaciones no coincidentes.</li>
+      <li>🏷️ Nuevo título elegante con logo de Paradisus.</li>
+      <li> 👌 Gracias por ser parte de la Mejora😊.</li>
+    </ul>
+    <button id="cerrar-modal">Cerrar</button>
+  </div>
+</div>
+
+<!-- Script del modal -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('modal-mejoras');
+  const btnCerrar = document.getElementById('cerrar-modal');
+
+  modal.classList.add('activo');
+
+  btnCerrar.addEventListener('click', () => {
+    modal.classList.remove('activo');
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('activo');
+    }
+  });
+});
+</script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
