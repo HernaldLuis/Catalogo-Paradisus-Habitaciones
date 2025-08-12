@@ -16,7 +16,32 @@ body {
     h1 {
       text-align: center;
       padding: 20px;
-    }
+ }
+
+.btn-volver {
+  display: inline-block;
+  padding: 8px 14px;
+  background: linear-gradient(135deg, #6b4226, #a47148); /* Tonos tierra */
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.btn-volver:hover {
+  background: linear-gradient(135deg, #a47148, #6b4226);
+  transform: scale(1.05);
+}
+
+.btn-volver:active {
+  transform: scale(0.97);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
 .titulo-catalogo {
   display: flex;
   align-items: center;
@@ -224,7 +249,7 @@ border-bottom: none;
   background-color: rgba(0, 0, 0, 0.7);
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 11000;
 }
 
 #zoom-overlay img {
@@ -318,25 +343,25 @@ border-bottom: none;
       margin: 12px 0;
     }     
 
-.jardin-simulada {
-  display: flex;                   /* 🔥 Activa Flexbox */
-  justify-content: center;        /* 🔄 Centra horizontalmente */
-  align-items: center;            /* 🔼 Centra verticalmente */
-  width: 100%;                    /* ✅ Ocupa el mismo ancho que la fila */
-  background: linear-gradient(to right, #e8ffe8, #e0f7ff);
-  color: #2e7d32;
+/* Estilo unificado para los bloques de “jardín / pasillo” */
+.jardin-simulada,
+.jardin-ficticio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: linear-gradient(to right, #d2b48c, #deb887, #f5deb3); /* Tonos arena */
+  color: #5c3a21; /* Marrón oscuro para contraste */
   font-weight: bold;
-  padding: 10px;
-  border: 2px dashed #81c784;
+  border: 2px dashed #c2a476; /* Arena más oscura */
   border-radius: 8px;
   margin-bottom: 8px;
   font-size: 14px;
-  box-shadow: inset 0 0 5px #b2dfdb;
-  box-sizing: border-box;         /* ✅ Evita que el padding agregue más ancho */
-  white-space: nowrap;            /* 🧠 Evita que el texto brinque de línea */
-  overflow: hidden;               /* 🙅‍♂️ Oculta cualquier exceso visual */
-  text-overflow: ellipsis;        /* (opcional) Muestra "..." si se pasa */
+  box-shadow: inset 0 0 5px rgba(92, 58, 33, 0.3), /* Sombras internas */
+              0 2px 6px rgba(0, 0, 0, 0.15);       /* Sombras externas suaves */
+  padding: 10px;
 }
+
 
       /* (PANTALLA FLOTANTE) */
 .mensaje-flotante {
@@ -540,12 +565,36 @@ border-bottom: none;
   text-align: left;
   animation: aparecerModal 0.4s ease;
 }
+.modal-contenido {
+  box-sizing: border-box;
+  max-width: min(92vw, 520px);  /* limita el ancho del cuadro */
+  width: calc(100% - 2rem);     /* respeta márgenes laterales */
+  padding: 1.25rem;
+  overflow-wrap: anywhere;      /* por si hay listas con texto largo */
+  word-break: break-word;
+  white-space: normal;          /* permite saltos de línea */
+}
+.modal-contenido ul { margin: 0 0 .5rem; padding-left: 1.1rem; }
+.modal-contenido li { margin-bottom: .35rem; }
+
+@media (max-width: 480px) {
+  .modal-contenido {
+    font-size: 0.9rem;   /* Texto más pequeño */
+    padding: 1rem;       /* Menos espacio interno */
+  }
+}
 
 /* Título */
 .modal-contenido h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif; /* si la quieres, si no, quítala */
   font-size: 1.4rem;
   margin-bottom: 1rem;
+
+  /* 👉 añade: */
+  line-height: 1.3;
+  text-align: center;
+  overflow-wrap: anywhere;   /* evita desborde por palabras/largos */
+  word-break: break-word;    /* respaldo para navegadores viejos */
 }
 
 /* Lista */
@@ -1240,6 +1289,7 @@ border-bottom: none;
 <button class="habitacion-btn" data-num="4112">4112</button>
     <div class="conector-conectadas">⇄</div>  <!-- Flecha de doble punta -->
 <button class="habitacion-btn" data-num="4111">4111</button>
+  </div>
 </div>
 
 
@@ -1254,10 +1304,6 @@ border-bottom: none;
 <div id="zoom-overlay" class="visor-oculto" onclick="cerrarZoom(event)">
   <span id="zoom-close" onclick="cerrarZoom(event)" style="position: absolute; top: 20px; right: 30px; font-size: 30px; cursor: pointer; color: white;">❌</span>
   <img id="zoom-img" src="" alt="Zoom" />
-</div>
-
-
-  </div>
 </div>
 
   <script>
@@ -1544,6 +1590,32 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 </script>
+    <script>
+function hacerZoom(src) {
+  const overlay = document.getElementById('zoom-overlay');
+  const img = document.getElementById('zoom-img');
+  img.src = src;
+  overlay.style.display = 'flex';        // mostrar
+  overlay.classList.remove('visor-oculto');
+  overlay.setAttribute('aria-hidden', 'false');
+}  
+function cerrarZoom(event) {
+  const overlay = document.getElementById('zoom-overlay');
+  // Cerrar si: no hay evento, o se hace clic en el fondo, o en el botón de cerrar
+  if (!event || event.target === overlay || event.target.id === 'zoom-close') {
+    overlay.style.display = 'none';      // ocultar
+    overlay.classList.add('visor-oculto');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.getElementById('zoom-img').src = '';
+  }
+}
+
+// Cerrar con tecla ESC
+document.addEventListener('keydown', (ev) => {
+  if (ev.key === 'Escape') cerrarZoom();
+});
+</script>
+
 
 </body>
 </html>
