@@ -48,7 +48,7 @@ body {
   justify-content: center; /* Centra texto y logo */
   gap: 0.75rem;
   flex-wrap: wrap; /* Para que en móvil no se corte raro */
-  
+
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
   font-weight: 700;
@@ -89,7 +89,7 @@ body {
     height: 62px; /* sigue siendo más grande que el texto pero no exagerado */
   }
 }
-  
+
   .zona-desplazable,
 .zona-desplazable * {
   user-select: none;
@@ -105,7 +105,7 @@ body {
   cursor: grabbing;
 }
 
-  
+
 .mensaje-inicial {
   text-align: center;
   font-weight: bold;
@@ -222,7 +222,7 @@ border-bottom: none;
   flex-wrap: wrap; /* esto permite que salten a otra fila */
   margin-top: 20px;
 }
-  
+
 .bloque-imagen {
   text-align: center;
 }
@@ -303,7 +303,7 @@ border-bottom: none;
   cursor: zoom-out;
 }
 
-    
+
 
 .piso {
   display: flex;
@@ -337,6 +337,19 @@ border-bottom: none;
   background-color: #0056b3;
 }
 
+    /* Tipo K - King */
+.habitacion-btn.tipo-k {
+  background-color: #6b9ac4;  /* Azul suave */
+  border: 2px solid #3e5e8c;
+}
+
+/* Tipo D - Doble */
+.habitacion-btn.tipo-d {
+  background-color: #f4a261;  /* Naranja suave */
+  border: 2px solid #b76b3d;
+}
+
+
     .pasillo {
       width: 100%;
       border-top: 2px dashed #aaa;
@@ -349,19 +362,21 @@ border-bottom: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  background: linear-gradient(to right, #d2b48c, #deb887, #f5deb3); /* Tonos arena */
-  color: #5c3a21; /* Marrón oscuro para contraste */
+  min-width: 380px;
+  width: max-content;
+  box-sizing: border-box;
+
+  background: linear-gradient(to right, #d2b48c, #deb887, #f5deb3);
+  color: #5c3a21;
   font-weight: bold;
-  border: 2px dashed #c2a476; /* Arena más oscura */
+  border: 2px dashed #c2a476;
   border-radius: 8px;
   margin-bottom: 8px;
   font-size: 14px;
-  box-shadow: inset 0 0 5px rgba(92, 58, 33, 0.3), /* Sombras internas */
-              0 2px 6px rgba(0, 0, 0, 0.15);       /* Sombras externas suaves */
-  padding: 10px;
+  box-shadow: inset 0 0 5px rgba(92, 58, 33, 0.3),
+              0 2px 6px rgba(0, 0, 0, 0.15);
+  padding: 10px 40px 10px 10px; /* extra espacio en la derecha */
 }
-
 
       /* (PANTALLA FLOTANTE) */
 .mensaje-flotante {
@@ -383,7 +398,7 @@ border-bottom: none;
   from { opacity: 0; transform: translateX(-50%) translateY(20px); }
   to { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
-  
+
 .contenido-inferior {
   max-width: 100%;
   overflow-wrap: break-word; /* fuerza salto de línea si es necesario */
@@ -399,7 +414,7 @@ border-bottom: none;
   word-break: break-word;
 }
 
-  
+
 .conector-conectadas {
   display: inline-block;
   color: white;            /* Color blanco */
@@ -439,13 +454,13 @@ border-bottom: none;
   align-items: center;
   flex-wrap: wrap;
   padding: 0.9rem 1.5rem;
-  
+
   background: rgba(255, 255, 255, 0.8);
   background: linear-gradient(135deg, rgba(255,255,255,0.85), rgba(245,245,245,0.85));
   backdrop-filter: blur(10px) saturate(180%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 0 0 18px 18px;
-  
+
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
@@ -659,9 +674,9 @@ border-bottom: none;
     Coincidencias: <strong id="total-coincidencias-categoria">0</strong>
   </span>
 </div>
-    
+
   <div class="zona-desplazable">
-    
+
     <!-- Torre 1 -->
     <div class="torre">
       <h2>Torre 1</h2>
@@ -771,7 +786,7 @@ border-bottom: none;
 </div>
 
       <div class="pasillo"></div>
-      
+
       <div class="piso">
 <button class="habitacion-btn" data-num="1222">1222</button>
         <div class="conector-conectadas">⇄</div>  <!-- Flecha de doble punta -->
@@ -808,7 +823,7 @@ border-bottom: none;
 <button class="habitacion-btn" data-num="2408">2408</button>
 
     </div>
-    
+
     <div class="pasillo"></div>
 
     <!-- Piso 4 - Vista Externa -->
@@ -841,7 +856,7 @@ border-bottom: none;
     </div>
 
   <div class="pasillo"></div>
-  
+
   <!-- Piso 3 - Vista Externa -->
   <div class="piso">
 <button class="habitacion-btn" data-num="2318">2318</button>
@@ -930,7 +945,7 @@ border-bottom: none;
       </div>
 
        <div class="pasillo"></div>
-      
+
 <div class="fila-base">
 <button class="habitacion-btn" data-num="3330">3330</button>
 <button class="habitacion-btn" data-num="3329">3329</button>
@@ -1041,7 +1056,7 @@ border-bottom: none;
 
 
        <div class="pasillo"></div>
-      
+
 <div class="columna-derecha">
 <button class="habitacion-btn" data-num="3014">3014</button>
   <div class="conector-conectadas">⇄</div>  <!-- Flecha de doble punta -->
@@ -1052,11 +1067,11 @@ border-bottom: none;
   <div class="conector-conectadas">⇄</div>  <!-- Flecha de doble punta -->
 
 </div>
-
+<div class="pasillo"></div>
             <div class="fila-base jardin-ficticio">
     🌵 JARDÍN DE CACTUS 🌵
               </div>
-        
+<div class="pasillo"></div>        
       <div class="fila-base">
 <button class="habitacion-btn" data-num="3030">3030</button>
 <button class="habitacion-btn" data-num="3029">3029</button>
@@ -1073,7 +1088,7 @@ border-bottom: none;
         <div class="conector-conectadas">⇄</div>  <!-- Flecha de doble punta -->
 
 </div>
-      
+
     </div>
 
     <!-- Torre 4 -->
@@ -1095,7 +1110,7 @@ border-bottom: none;
 <button class="habitacion-btn" data-num="4518">4518</button>
 
 </div>
-  
+
   <div class="fila-base">
 <button class="habitacion-btn" data-num="4517">4517</button>
     <div class="conector-conectadas">⇄</div>  <!-- Flecha de doble punta -->
@@ -1395,6 +1410,14 @@ const num = boton.dataset.num || boton.textContent.trim();
         // Determinar tipo de cama
         const tipoCama = habitacion.tipo_cama === "K" ? "K" : "D";
 
+        if (habitacion.tipo_cama === "K") {
+  boton.classList.add("tipo-k");
+} else if (habitacion.tipo_cama === "D") {
+  boton.classList.add("tipo-d");
+
+
+}
+
 
         // Verificar si tiene sofá cama
 const sofaIcon = `
@@ -1463,6 +1486,13 @@ zona.addEventListener('mousemove', (e) => {
 
       if (nuevaData && JSON.stringify(nuevaData) !== JSON.stringify(actualData)) {
         const tipoCama = nuevaData.tipo_cama === "K" ? "K" : "D";
+
+if (nuevaData.tipo_cama === "K") {
+  boton.classList.add("tipo-k");
+} else if (nuevaData.tipo_cama === "D") {
+  boton.classList.add("tipo-d");
+}
+
         const sofaIcon = `
           ${nuevaData.sofa ? '<img src="https://res.cloudinary.com/dor6za85u/image/upload/v1753173371/sof%C3%A0_pzyjdc.png" style="height: 18px; vertical-align: middle;" />' : ''}
           ${nuevaData.discapacidad ? '<span style="font-size: 1.2em;">♿</span>' : ''}
