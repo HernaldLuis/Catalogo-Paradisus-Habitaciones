@@ -643,7 +643,43 @@ border-bottom: none;
 
   /* (ESTO CORRESPNDE AL PANEL DE LAS IMAGENES DE COSULTa */
 
-  </style>
+  
+/* === Anexos (no altera tu estilo base) === */
+.panel-filtro-categoria .chk {
+  display: inline-flex; align-items: center; gap: .35rem;
+  padding: 4px 6px; border-radius: 8px; background: rgba(255,255,255,0.6);
+}
+.totales-tabla table{
+  width: 100%; border-collapse: collapse; background: rgba(255,255,255,0.88);
+  border-radius: 12px; overflow: hidden; box-shadow: 0 4px 14px rgba(0,0,0,.08);
+}
+.totales-tabla th, .totales-tabla td{
+  padding: .5rem .7rem; border-bottom: 1px solid rgba(0,0,0,.06); text-align: center;
+}
+.totales-tabla thead th{ background: linear-gradient(135deg, #00aaff22, #0077cc22); font-weight: 700; }
+.totales-tabla tbody tr:last-child td{ border-bottom: 0; }
+
+/* Botón de reporte PDF */
+.btn-reporte{
+  display:inline-block; padding:.45rem .8rem; border-radius:10px;
+  background:#0ea5e9; color:#fff; text-decoration:none; font-weight:600;
+  box-shadow:0 2px 8px rgba(0,0,0,.12); margin-left:.5rem;
+}
+.btn-reporte:hover{ filter:brightness(.95); }
+
+/* Intro dentro del modal */
+.intro-creditos{ color:#444; font-size:.9rem; opacity:.85; margin-top:.35rem; }
+.intro-actions{ display:flex; gap:.6rem; align-items:center; margin-top:.6rem; flex-wrap:wrap; }
+.intro-nomostrar{ display:flex; align-items:center; gap:.4rem; color:#333; font-size:.95rem; }
+
+/* Modal de bienvenida (simple) */
+#modal-mejoras{ display:none; position:fixed; inset:0; background:rgba(0,0,0,.35); z-index:9999; }
+#modal-mejoras.activo{ display:block; }
+#modal-mejoras .modal-contenido{
+  background:#fff; margin:40px auto; width:min(520px, 92%); padding:18px 20px;
+  border-radius:14px; box-shadow:0 18px 60px rgba(0,0,0,.25);
+}
+</style>
 </head>
 <body>
 
@@ -668,12 +704,37 @@ border-bottom: none;
     <option value="">Todas</option>
   </select>
 
-  <button id="btn-limpiar-filtro" type="button">Limpiar</button>
+  
+  <label for="filtro-cama">Cama:</label>
+  <select id="filtro-cama">
+    <option value="">Todas</option>
+    <option value="K">K</option>
+    <option value="D">D</option>
+  </select>
+
+  <label for="filtro-prefijo">Recepción:</label>
+  <select id="filtro-prefijo" title="Recepción">
+    <option value="">Todas</option>
+    <option value="C">PLC - Paradisus</option>
+    <option value="S">THR - The Reserve</option>
+  </select>
+
+  <label class="chk"><input type="checkbox" id="filtro-handicap"> Handicap ♿</label>
+  <label class="chk"><input type="checkbox" id="filtro-cocineta"> Cocineta</label>
+
+  <span id="totales-resumen" class="contador-categoria">
+    K: 0 · D: 0 · Total: 0 — Reserve: 0 · ♿: 0 · Cocineta: 0
+  </span>
+  <a href="introduccion_paradisus_2025.pdf.pdf" download class="btn-reporte" title="Descargar reporte PDF" id="btn-descargar-pdf">📄 Descargar PDF</a>
+
+<button id="btn-limpiar-filtro" type="button">Limpiar</button>
 
   <span class="contador-categoria">
     Coincidencias: <strong id="total-coincidencias-categoria">0</strong>
   </span>
 </div>
+<div id="totales-tabla" class="totales-tabla" style="padding: 10px 16px;"></div>
+
 
   <div class="zona-desplazable">
 
@@ -1589,37 +1650,29 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 <div id="modal-mejoras" class="modal-mejoras">
   <div class="modal-contenido">
-    <h2>🆕BIENVENID@ - Novedades del Catálogo</h2>
-    <ul>
-      <li>✨ Panel de filtrado de categorías mejorado.</li>
-      <li>💓 Animación de latido para habitaciones filtradas.</li>
-      <li>🌗 Oscurecido de habitaciones no coincidentes.</li>
-      <li>🏷️ Nuevo título elegante con logo de Paradisus.</li>
-      <li> 👌 Gracias por ser parte de la Mejora😊.</li>
-    </ul>
-    <button id="cerrar-modal">Cerrar</button>
-  </div>
+<h2>🆕 BIENVENID@ - Novedades del Catálogo</h2>
+<ul>
+  <li>🛏️ Filtro por <strong>Cama</strong> (K / D).</li>
+  <li>🏷️ Filtro de <strong>Recepción</strong> (PLC - Paradisus / THR - The Reserve).</li>
+  <li>♿ y 🍳 Checks de <strong>Handicap</strong> y <strong>Cocineta</strong>.</li>
+  <li>📊 <strong>Resumen</strong> en la barra: K, D, Total — THR, ♿, Cocineta.</li>
+  <li>🏢 <strong>Totales por Torre</strong> (1–4) debajo del panel de filtros.</li>
+  <li>🧹 <strong>Limpiar</strong> reinicia Categoría, Cama, Recepción, ♿ y Cocineta.</li>
+  <li>📄 <strong>Descargar PDF</strong> desde el panel de interacción.</li>
+  <li>✨ Animación de latido y oscurecido de no coincidentes.</li>
+  <li>🖼️ Nuevo título elegante con logo de Paradisus.</li>
+  <li>🙌 ¡Gracias por ser parte de la mejora!</li>
+</ul>
+<button id="cerrar-modal">Cerrar</button>
+</div>
 </div>
 
-<!-- Script del modal -->
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const modal = document.getElementById('modal-mejoras');
-  const btnCerrar = document.getElementById('cerrar-modal');
 
-  modal.classList.add('activo');
 
-  btnCerrar.addEventListener('click', () => {
-    modal.classList.remove('activo');
-  });
 
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.classList.remove('activo');
-    }
-  });
-});
-</script>
+</div>
+
+
     <script>
 function hacerZoom(src) {
   const overlay = document.getElementById('zoom-overlay');
@@ -1647,5 +1700,181 @@ document.addEventListener('keydown', (ev) => {
 </script>
 
 
+
+<script>
+// ===== Carga JSON (tal cual) =====
+window.habitacionesData = window.habitacionesData || null;
+async function ensureHabitacionesData(){
+  if(!window.habitacionesData){
+    const resp = await fetch('habitaciones.json', {cache:'no-store'});
+    window.habitacionesData = await resp.json();
+  }
+  return window.habitacionesData;
+}
+
+// ===== Utilidades específicas a tu JSON =====
+function getTipoCama(h){
+  // En tu JSON viene como "K" o "D" (campo tipo_cama)
+  const v = (h.tipo_cama || '').toString().toUpperCase();
+  if (v === 'K' || v === 'D') return v;
+  // Fallback por si un día viene texto
+  const txt = [h.titulo||'', h.descripcion||'', ...(h.caracteristicas||[])].join(' ').toUpperCase();
+  if (/\bKING\b|KING SIZE|\bKS\b/.test(txt)) return 'K';
+  if (/\bDOUBLE\b|\bDOBLE\b|\bMATRIMONIAL\b|\bMATRI\b|2\s*DBL/.test(txt)) return 'D';
+  return '';
+}
+
+function prefijoRecepcion(h){
+  // Deriva C/S del código en el título (C2V, C2W, S6E, SE1, SE2, SE4, ...)
+  const t = (h.titulo || '').toUpperCase();
+  const m = t.match(/\b([CS](?:E)?\d*[A-Z]?)\b/); // S6E, SE1, C2V, C2W...
+  if (m && m[1]) return m[1].startsWith('S') ? 'S' : 'C';
+  // Fallback: por categoría
+  const cat = (h.categoria||'').toLowerCase();
+  return cat.includes('the reserve') ? 'S' : 'C';
+}
+
+function esHandicap(h){
+  // Tu JSON trae booleano 'discapacidad'
+  return h.discapacidad === true;
+}
+
+function tieneCocineta(h){
+  if (h.cocineta === true) return true;
+  const list = (h.caracteristicas || []).map(x => String(x).toLowerCase());
+  return list.some(x => /\bcocineta\b|kitchenette|\bcocina\b/.test(x));
+}
+
+function torreDe(numStr){
+  const s = String(numStr).trim();
+  const t = parseInt(s[0], 10);
+  return [1,2,3,4].includes(t) ? t : 0;
+}
+
+// ===== Refs =====
+const selCategoria = document.getElementById('filtro-categoria');
+const selCama      = document.getElementById('filtro-cama');
+const selPrefijo   = document.getElementById('filtro-prefijo');
+const cbHandicap   = document.getElementById('filtro-handicap');
+const cbCocineta   = document.getElementById('filtro-cocineta');
+const coincidenciasEl = document.getElementById('total-coincidencias-categoria');
+const resumenEl    = document.getElementById('totales-resumen');
+const tablaEl      = document.getElementById('totales-tabla');
+
+function renderTabla(stats){
+  if(!tablaEl) return;
+  const t = stats.towers;
+  tablaEl.innerHTML = `
+    <table>
+      <thead><tr><th>Torre</th><th>K</th><th>D</th><th>Total</th></tr></thead>
+      <tbody>
+        ${[1,2,3,4].map(i => `
+          <tr><td>${i}</td><td>${t[i].K}</td><td>${t[i].D}</td><td><strong>${t[i].total}</strong></td></tr>
+        `).join('')}
+      </tbody>
+    </table>`;
+}
+
+async function aplicarFiltrosBoss(){
+  const data = await ensureHabitacionesData();
+  const categoria = (selCategoria?.value || '').trim().toLowerCase();
+  const cama      = (selCama?.value || '').toUpperCase();   // "" | K | D
+  const prefijo   = (selPrefijo?.value || '').toUpperCase(); // "" | C | S
+  const fHC       = !!cbHandicap?.checked;
+  const fCoc      = !!cbCocineta?.checked;
+
+  let matches = 0;
+  const stats = {
+    overall:{K:0,D:0,total:0},
+    towers:{1:{K:0,D:0,total:0},2:{K:0,D:0,total:0},3:{K:0,D:0,total:0},4:{K:0,D:0,total:0}},
+    flags:{reserve:0, handicap:0, cocineta:0}
+  };
+
+  // Recorremos cada botón de habitación
+  document.querySelectorAll('.habitacion-btn').forEach(btn => {
+    const num = btn.dataset.num || btn.textContent.trim();
+    const h = data[num];
+    if(!h){ btn.classList.add('filtro-inactivo'); btn.classList.remove('filtro-activo'); return; }
+
+    let ok = true;
+    if(categoria){ ok = ok && ((h.categoria||'').toLowerCase() === categoria); }
+    if(cama){
+      const tc = getTipoCama(h);
+      ok = ok && (tc === cama);
+    }
+    if(prefijo){
+      const p = prefijoRecepcion(h);
+      ok = ok && (p === prefijo);
+    }
+    if(fHC){ ok = ok && esHandicap(h); }
+    if(fCoc){ ok = ok && tieneCocineta(h); }
+
+    btn.classList.toggle('filtro-inactivo', !ok);
+    btn.classList.toggle('filtro-activo', ok);
+
+    if(ok){
+      matches++;
+      const kd = (getTipoCama(h) === 'K') ? 'K' : 'D';
+      stats.overall[kd]++; stats.overall.total++;
+      const t = torreDe(num);
+      if(t){ stats.towers[t][kd]++; stats.towers[t].total++; }
+      if (prefijoRecepcion(h) === 'S') stats.flags.reserve++;
+      if (esHandicap(h)) stats.flags.handicap++;
+      if (tieneCocineta(h)) stats.flags.cocineta++;
+    }
+  });
+
+  if(coincidenciasEl) coincidenciasEl.textContent = matches;
+  if(resumenEl) resumenEl.textContent =
+    `K: ${stats.overall.K} · D: ${stats.overall.D} · Total: ${stats.overall.total} — `+
+    `Reserve: ${stats.flags.reserve} · ♿: ${stats.flags.handicap} · Cocineta: ${stats.flags.cocineta}`;
+  renderTabla(stats);
+}
+
+// Eventos
+[selCategoria, selCama, selPrefijo, cbHandicap, cbCocineta].forEach(el => {
+  if(el) el.addEventListener('change', aplicarFiltrosBoss);
+});
+document.getElementById('btn-limpiar-filtro')?.addEventListener('click', () => {
+  if(selCategoria) selCategoria.value = '';
+  if(selCama) selCama.value = '';
+  if(selPrefijo) selPrefijo.value = '';
+  if(cbHandicap) cbHandicap.checked = false;
+  if(cbCocineta) cbCocineta.checked = false;
+  aplicarFiltrosBoss();
+});
+
+document.addEventListener('DOMContentLoaded', aplicarFiltrosBoss);
+</script>
+
+
+
+<!-- Script del modal -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const VERSION = '2025.08.16-novedades-simples-v3'; // fuerza mostrar de nuevo
+  const KEY = 'modal_mejoras_version';
+
+  const modal  = document.getElementById('modal-mejoras');
+  const cerrar = document.getElementById('cerrar-modal');
+
+  if (modal && localStorage.getItem(KEY) !== VERSION) {
+    modal.removeAttribute('hidden');
+    modal.classList.add('activo');
+  }
+
+  function closeModal(){
+    modal?.classList.remove('activo');
+    modal?.setAttribute('hidden','');
+    localStorage.setItem(KEY, VERSION);
+  }
+
+  cerrar?.addEventListener('click', closeModal);
+  modal?.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+
+  // Abrir manualmente desde fuera (si se necesita)
+  window.abrirNovedades = () => { modal?.removeAttribute('hidden'); modal?.classList.add('activo'); };
+});
+</script>
 </body>
 </html>
