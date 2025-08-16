@@ -659,6 +659,26 @@ border-bottom: none;
 .totales-tabla thead th{ background: linear-gradient(135deg, #00aaff22, #0077cc22); font-weight: 700; }
 .totales-tabla tbody tr:last-child td{ border-bottom: 0; }
 
+/* --- Video en detalle de habitación (handicap) --- */
+.video-habitacion{ position:absolute; top:16px; right:16px; width:520px; max-width:44%; background:#fff; border-radius:12px; box-shadow:0 12px 30px rgba(0,0,0,.18); overflow:hidden; }
+.video-ratio{ position:relative; padding-top: var(--video-padding, 56.25%); background:#000; } /* 16:9 */
+.video-ratio iframe, .video-ratio video{ position:absolute; inset:0; width:100%; height:100%; border:0; object-fit:contain; }
+.video-ratio video{ object-fit:cover; background:#000; }
+.contenido-inferior{ position:relative; } /* tarjeta blanca del detalle */
+@media (max-width: 900px){
+  .video-habitacion{ position:static; width:100%; max-width:100%; margin-bottom:12px; }
+}
+
+
+/* === Zoom de video === */
+.video-zoom-overlay{
+  display:none; position:fixed; inset:0; z-index:10000;
+  background:rgba(0,0,0,.85); align-items:center; justify-content:center;
+}
+.video-zoom-overlay.activo{ display:flex; }
+#zoom-video{ max-width:96vw; max-height:92vh; border-radius:12px; background:#000; outline:0; }
+
+
 /* Botón de reporte PDF */
 .btn-reporte{
   display:inline-block; padding:.45rem .8rem; border-radius:10px;
@@ -666,19 +686,6 @@ border-bottom: none;
   box-shadow:0 2px 8px rgba(0,0,0,.12); margin-left:.5rem;
 }
 .btn-reporte:hover{ filter:brightness(.95); }
-
-/* Intro dentro del modal */
-.intro-creditos{ color:#444; font-size:.9rem; opacity:.85; margin-top:.35rem; }
-.intro-actions{ display:flex; gap:.6rem; align-items:center; margin-top:.6rem; flex-wrap:wrap; }
-.intro-nomostrar{ display:flex; align-items:center; gap:.4rem; color:#333; font-size:.95rem; }
-
-/* Modal de bienvenida (simple) */
-#modal-mejoras{ display:none; position:fixed; inset:0; background:rgba(0,0,0,.35); z-index:9999; }
-#modal-mejoras.activo{ display:block; }
-#modal-mejoras .modal-contenido{
-  background:#fff; margin:40px auto; width:min(520px, 92%); padding:18px 20px;
-  border-radius:14px; box-shadow:0 18px 60px rgba(0,0,0,.25);
-}
 </style>
 </head>
 <body>
@@ -725,7 +732,7 @@ border-bottom: none;
   <span id="totales-resumen" class="contador-categoria">
     K: 0 · D: 0 · Total: 0 — Reserve: 0 · ♿: 0 · Cocineta: 0
   </span>
-  <a href="introduccion_paradisus_2025.pdf.pdf" download class="btn-reporte" title="Descargar reporte PDF" id="btn-descargar-pdf">📄 Descargar PDF</a>
+  <a href="introduccion_paradisus_2025.pdf" download class="btn-reporte" title="Descargar reporte PDF" target="_blank">📄 Descargar PDF</a>
 
 <button id="btn-limpiar-filtro" type="button">Limpiar</button>
 
@@ -1408,7 +1415,7 @@ async function mostrarInfo(num) {
       galeriaHTML += '</div>';
 
 panel.innerHTML = `
-  <div class="contenido-inferior">
+  <div class="contenido-inferior">\n<aside id="video-habitacion" class="video-habitacion" hidden>\n  <div class="video-ratio">\n    <iframe id="video-embed" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen hidden></iframe>\n    <video id="video-mp4" controls playsinline hidden></video>\n  </div>\n</aside>\n
     <h3>${habitacion.titulo}</h3>
     <p><strong>Categoría:</strong> ${habitacion.categoria} · ${habitacion.vista}</p>
     <p><strong>Habitación conectada:</strong> ${habitacion.habitacion_conectada ? habitacion.habitacion_conectada : 'No aplica'}</p>
@@ -1422,7 +1429,17 @@ panel.innerHTML = `
     <button class="btn-volver" onclick="cerrarPanelInferior()">Cerrar</button>
   </div>
 `;
-    } else {
+    
+    // --- Video handicap (arriba-derecha) ---
+    try{
+      if (habitacion && (habitacion.discapacidad === true)) {
+        const v = (window.VIDEOS_HAB && window.VIDEOS_HAB[num]) || window.HANDICAP_VIDEO_URL || "";
+        setVideoHabitacion(v);
+      } else {
+        stopVideoHabitacion(); setVideoHabitacion(""); // oculta
+      }
+    }catch(e){}
+} else {
       panel.innerHTML = `
         <div class="contenido-inferior">
           <p>🔍 Información no disponible para la habitación ${num}.</p>
@@ -1650,29 +1667,37 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 <div id="modal-mejoras" class="modal-mejoras">
   <div class="modal-contenido">
-<h2>🆕 BIENVENID@ - Novedades del Catálogo</h2>
-<ul>
-  <li>🛏️ Filtro por <strong>Cama</strong> (K / D).</li>
-  <li>🏷️ Filtro de <strong>Recepción</strong> (PLC - Paradisus / THR - The Reserve).</li>
-  <li>♿ y 🍳 Checks de <strong>Handicap</strong> y <strong>Cocineta</strong>.</li>
-  <li>📊 <strong>Resumen</strong> en la barra: K, D, Total — THR, ♿, Cocineta.</li>
-  <li>🏢 <strong>Totales por Torre</strong> (1–4) debajo del panel de filtros.</li>
-  <li>🧹 <strong>Limpiar</strong> reinicia Categoría, Cama, Recepción, ♿ y Cocineta.</li>
-  <li>📄 <strong>Descargar PDF</strong> desde el panel de interacción.</li>
-  <li>✨ Animación de latido y oscurecido de no coincidentes.</li>
-  <li>🖼️ Nuevo título elegante con logo de Paradisus.</li>
-  <li>🙌 ¡Gracias por ser parte de la mejora!</li>
-</ul>
-<button id="cerrar-modal">Cerrar</button>
-</div>
+    <h2>🆕BIENVENID@ - Novedades del Catálogo</h2>
+    <ul>
+      <li>✨ Panel de filtrado de categorías mejorado.</li>
+      <li>💓 Animación de latido para habitaciones filtradas.</li>
+      <li>🌗 Oscurecido de habitaciones no coincidentes.</li>
+      <li>🏷️ Nuevo título elegante con logo de Paradisus.</li>
+      <li> 👌 Gracias por ser parte de la Mejora😊.</li>
+    </ul>
+    <button id="cerrar-modal">Cerrar</button>
+  </div>
 </div>
 
+<!-- Script del modal -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('modal-mejoras');
+  const btnCerrar = document.getElementById('cerrar-modal');
 
+  modal.classList.add('activo');
 
+  btnCerrar.addEventListener('click', () => {
+    modal.classList.remove('activo');
+  });
 
-</div>
-
-
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('activo');
+    }
+  });
+});
+</script>
     <script>
 function hacerZoom(src) {
   const overlay = document.getElementById('zoom-overlay');
@@ -1845,36 +1870,146 @@ document.getElementById('btn-limpiar-filtro')?.addEventListener('click', () => {
 });
 
 document.addEventListener('DOMContentLoaded', aplicarFiltrosBoss);
+
+// === Video helpers (handicap) ===
+function stopVideoHabitacion(){
+  try{
+    const iframe = document.getElementById('video-embed');
+    const mp4 = document.getElementById('video-mp4');
+    if (mp4){ mp4.pause?.(); mp4.removeAttribute('src'); mp4.load?.(); }
+    if (iframe){ iframe.src = ''; }
+  }catch(e){}
+}
+function normalizarEmbed(u){
+  try{
+    if(u.includes('youtu.be/')){ const id = u.split('/').pop().split(/[?&#]/)[0]; return `https://www.youtube.com/embed/${id}`; }
+    if(u.includes('watch?v=')){ const id = new URL(u).searchParams.get('v'); return `https://www.youtube.com/embed/${id}`; }
+    if(u.includes('youtube.com/embed/')) return u;
+    if(u.includes('vimeo.com/')){ const id = u.split('/').pop().split(/[?&#]/)[0]; return `https://player.vimeo.com/video/${id}`; }
+  }catch(e){}
+  return u;
+}
+
+function setVideoHabitacion(url){
+  const box = document.getElementById('video-habitacion');
+  const iframe = document.getElementById('video-embed');
+  const mp4 = document.getElementById('video-mp4');
+  if(!box || !iframe || !mp4) return;
+
+  // Reset
+  box.hidden = true;
+  iframe.hidden = true; iframe.src = "";
+  mp4.hidden = true; mp4.removeAttribute('src'); mp4.load?.();
+
+  if(!url) return;
+
+  const u = String(url).trim();
+  if(/youtu\.be|youtube\.com|vimeo\.com/i.test(u)){
+    iframe.src = normalizarEmbed(u);
+    iframe.hidden = false;
+    box.hidden = false;
+    return;
+  }
+  if(/\.(mp4)(\?|#|$)/i.test(u)){
+    mp4.src = u;
+    mp4.hidden = false;
+    box.hidden = false;
+
+    // Click abre zoom como las imágenes
+    try{ mp4.onclick = (ev)=>{ ev.stopPropagation(); abrirZoomVideo(mp4.currentSrc || mp4.src); }; }catch(_e){}
+    return;
+  }
+}
+
+// Mapa de videos por habitación (handicap)
+window.VIDEOS_HAB = window.VIDEOS_HAB || {
+  "4318": "https://res.cloudinary.com/dor6za85u/video/upload/v1754942483/Ba%C3%B1o_Handicap_i1r6cg.mp4", // pega aquí el enlace del video
+  "4321": "https://res.cloudinary.com/dor6za85u/video/upload/v1754942483/Ba%C3%B1o_Handicap_i1r6cg.mp4", // pega aquí el enlace del video
+  "4325": "https://res.cloudinary.com/dor6za85u/video/upload/v1754942483/Ba%C3%B1o_Handicap_i1r6cg.mp4", // pega aquí el enlace del video
+  "4328": ""  // pega aquí el enlace del video
+};
+// URL por defecto si quieres usar 1 solo video para las 4
+window.HANDICAP_VIDEO_URL = "https://res.cloudinary.com/dor6za85u/video/upload/v1754942483/Ba%C3%B1o_Handicap_i1r6cg.mp4"; // <-- opcional: pega aquí un enlace (YouTube/Vimeo o .mp4)
+
+
+// === Zoom de Video ===
+function abrirZoomVideo(src){
+  const overlay = document.getElementById('video-zoom-overlay');
+  const zv = document.getElementById('zoom-video');
+  if(!overlay || !zv) return;
+  // reset
+  zv.pause?.(); zv.removeAttribute('src'); zv.load?.();
+  zv.setAttribute('playsinline','');
+  zv.setAttribute('muted',''); // autoplay seguro; usuario puede activar sonido
+  zv.setAttribute('autoplay','');
+  zv.muted = true;
+  zv.src = src;
+  overlay.classList.add('activo');
+  overlay.setAttribute('aria-hidden','false');
+  const p = zv.play?.(); if (p && typeof p.catch==='function') p.catch(()=>{});
+}
+function cerrarZoomVideo(){
+  const overlay = document.getElementById('video-zoom-overlay');
+  const zv = document.getElementById('zoom-video');
+  if(!overlay || !zv) return;
+  zv.pause?.(); zv.removeAttribute('src'); zv.load?.();
+  overlay.classList.remove('activo');
+  overlay.setAttribute('aria-hidden','true');
+}
+// cerrar por click fuera o ESC
+document.addEventListener('DOMContentLoaded', () => {
+  const overlay = document.getElementById('video-zoom-overlay');
+  overlay?.addEventListener('click', (e)=>{ if(e.target===overlay) cerrarZoomVideo(); });
+  document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') cerrarZoomVideo(); });
+});
+
 </script>
 
+<!-- Overlay de ZOOM para video -->
+<div id="video-zoom-overlay" class="video-zoom-overlay" aria-hidden="true">
+  <video id="zoom-video" controls playsinline muted></video>
+</div>
 
 
-<!-- Script del modal -->
+<!-- Fallback inteligente para descargar el PDF en GitHub Pages -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  const VERSION = '2025.08.16-novedades-simples-v3'; // fuerza mostrar de nuevo
-  const KEY = 'modal_mejoras_version';
+  const btn = document.getElementById('btn-descargar-pdf');
+  if (!btn) return;
 
-  const modal  = document.getElementById('modal-mejoras');
-  const cerrar = document.getElementById('cerrar-modal');
+  const base = new URL('.', location.href).href;
 
-  if (modal && localStorage.getItem(KEY) !== VERSION) {
-    modal.removeAttribute('hidden');
-    modal.classList.add('activo');
+  const candidates = [
+    'introduccion_paradisus_2025.pdf',
+    'Introducción Proyecto Catálogo de Habitaciones · Paradisus desarrollado por Luis Hernaldo 2025.pdf',
+    'Introduccion Proyecto Catalogo de Habitaciones - Paradisus desarrollado por Luis Hernaldo 2025.pdf',
+    'assets/introduccion_paradisus_2025.pdf',
+    'pdf/introduccion_paradisus_2025.pdf'
+  ];
+
+  async function headOk(url){
+    try{
+      const res = await fetch(url, { method:'HEAD', cache:'no-store' });
+      return res.ok;
+    }catch(_){ return false; }
   }
 
-  function closeModal(){
-    modal?.classList.remove('activo');
-    modal?.setAttribute('hidden','');
-    localStorage.setItem(KEY, VERSION);
-  }
+  btn.addEventListener('click', async (e) => {
+    // Permite ctrl/cmd click normal
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    e.preventDefault();
 
-  cerrar?.addEventListener('click', closeModal);
-  modal?.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
-
-  // Abrir manualmente desde fuera (si se necesita)
-  window.abrirNovedades = () => { modal?.removeAttribute('hidden'); modal?.classList.add('activo'); };
+    for (const c of candidates){
+      const url = new URL(encodeURI(c), base).href;
+      if (await headOk(url)){
+        window.open(url, '_blank', 'noopener');
+        return;
+      }
+    }
+    alert('No se encontró el PDF. Sube una copia llamada "introduccion_paradisus_2025.pdf" en el mismo folder del index o usa la carpeta assets/pdf indicada.');
+  });
 });
 </script>
+
 </body>
 </html>
