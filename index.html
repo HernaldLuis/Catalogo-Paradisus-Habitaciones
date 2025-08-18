@@ -661,11 +661,13 @@ border-bottom: none;
 
 /* --- Video en detalle de habitación (handicap) --- */
 .video-habitacion{ position:absolute; top:16px; right:16px; width:520px; max-width:44%; background:#fff; border-radius:12px; box-shadow:0 12px 30px rgba(0,0,0,.18); overflow:hidden; }
-.video-ratio{ position:relative; padding-top: var(--video-padding, 56.25%); background:#000; } /* 16:9 */
+O7.77%); background:#000; } /* 16:9 */
 .video-ratio iframe, .video-ratio video{ position:absolute; inset:0; width:100%; height:100%; border:0; object-fit:contain; }
-.video-ratio video{ object-fit:cover; background:#000; }
-.contenido-inferior{ position:relative; } /* tarjeta blanca del detalle */
+.video-ratio video{ object-fit: contain; background:#000; }
+.contenido-inferior{ position:relative; }
+.contenido-inferior.con-video{ padding-right: calc(var(--video-width, 360px) + 24px); transition: padding-right .2s ease; } /* tarjeta blanca del detalle */
 @media (max-width: 900px){
+  .contenido-inferior.con-video{ padding-right:0; }
   .video-habitacion{ position:static; width:100%; max-width:100%; margin-bottom:12px; }
 }
 
@@ -687,6 +689,26 @@ border-bottom: none;
 }
 .btn-reporte:hover{ filter:brightness(.95); }
 </style>
+
+<style>
+.modal-contenido video {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transform: scale(0.85); /* escala ajustable */
+    transform-origin: top right;
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+.modal-contenido video.zoomed {
+    transform: scale(1.6); /* zoom al hacer clic */
+    cursor: zoom-out;
+}
+</style>
+
 </head>
 <body>
 
@@ -1431,14 +1453,30 @@ panel.innerHTML = `
 `;
     
     // --- Video handicap (arriba-derecha) ---
-    try{
-      if (habitacion && (habitacion.discapacidad === true)) {
-        const v = (window.VIDEOS_HAB && window.VIDEOS_HAB[num]) || window.HANDICAP_VIDEO_URL || "";
-        setVideoHabitacion(v);
-      } else {
-        stopVideoHabitacion(); setVideoHabitacion(""); // oculta
-      }
-    }catch(e){}
+    try {
+  if (habitacion && (habitacion.discapacidad === true)) {
+    const v = (window.VIDEOS_HAB && window.VIDEOS_HAB[num]) || window.HANDICAP_VIDEO_URL || "";
+    setVideoHabitacion(v);
+
+    // 🟢 Autoplay + mute aquí
+    const video = document.querySelector("#video-mp4");
+    if(video){
+      video.muted = true;        // 🔇 requerido en móviles
+      video.setAttribute("muted","");
+      video.playsInline = true;  // evita fullscreen en iOS
+      video.autoplay = true;     // autoplay
+      video.loop = true;         // 🔁 se repite al terminar
+      video.currentTime = 0;
+
+      const p = video.play();
+      if(p && typeof p.catch === "function") p.catch(()=>{});
+    }
+
+  } else {
+    stopVideoHabitacion();
+    setVideoHabitacion(""); // oculta
+  }
+}catch(e){}
 } else {
       panel.innerHTML = `
         <div class="contenido-inferior">
@@ -2008,6 +2046,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     alert('No se encontró el PDF. Sube una copia llamada "introduccion_paradisus_2025.pdf" en el mismo folder del index o usa la carpeta assets/pdf indicada.');
   });
+});
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const videos = document.querySelectorAll(".modal-contenido video");
+    videos.forEach(video => {
+        video.addEventListener("click", () => {
+            video.classList.toggle("zoomed");
+        });
+    });
 });
 </script>
 
