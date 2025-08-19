@@ -661,7 +661,7 @@ border-bottom: none;
 
 /* --- Video en detalle de habitación (handicap) --- */
 .video-habitacion{ position:absolute; top:16px; right:16px; width:520px; max-width:44%; background:#fff; border-radius:12px; box-shadow:0 12px 30px rgba(0,0,0,.18); overflow:hidden; }
-O7.77%); background:#000; } /* 16:9 */
+07.77%); background:#000; } /* 16:9 */
 .video-ratio iframe, .video-ratio video{ position:absolute; inset:0; width:100%; height:100%; border:0; object-fit:contain; }
 .video-ratio video{ object-fit: contain; background:#000; }
 .contenido-inferior{ position:relative; }
@@ -688,6 +688,112 @@ O7.77%); background:#000; } /* 16:9 */
   box-shadow:0 2px 8px rgba(0,0,0,.12); margin-left:.5rem;
 }
 .btn-reporte:hover{ filter:brightness(.95); }
+
+/* === Ajuste puntual: reducir 25% el video Handicap anclado arriba-derecha === */
+#video-habitacion, .video-habitacion{
+  transform: scale(0.65);
+  transform-origin: top right;
+}
+/* (Opcional) Si se necesita diferente escala por viewport, ajustar aquí con media queries */
+
+
+/* === Ajustes de texto y flujo bajo el video === */
+.contenido-inferior p,
+.contenido-inferior h3 { 
+  text-align: left;
+}
+
+/* Reservar espacio a la derecha para que el texto no quede debajo del video */
+.contenido-inferior {
+  padding-right: 364px; /* ≈ 520px * 0.65 + holgura */
+}
+
+/* Opcional: en pantallas estrechas, reducir el padding para no comer demasiado ancho */
+@media (max-width: 600px){
+  .contenido-inferior { padding-right: 40vw; }
+}
+
+
+/* === Fix desbordamiento de tercera imagen en la galería === */
+.galeria-habitacion {
+  justify-content: flex-start; /* alinear a la izquierda */
+}
+
+/* Garantizar que las imágenes nunca excedan su bloque */
+.bloque-imagen {
+  flex: 0 0 auto;
+}
+.bloque-imagen img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Si el ancho fijo de 280px genera corte, permite reducir levemente en pantallas medias */
+@media (max-width: 1024px){
+  .bloque-imagen img { width: 260px; }
+}
+@media (max-width: 800px){
+  .bloque-imagen img { width: 220px; }
+}
+
+
+/* === Ajuste: reservar espacio solo para los primeros textos; galería a ancho completo === */
+/* Quita el padding-right global previo en el contenedor */
+.contenido-inferior { padding-right: 0 !important; }
+
+/* Aplica el espacio a la derecha SOLO al título y a los primeros 8 <p> (hasta "Características") */
+.contenido-inferior > h3,
+.contenido-inferior > p:nth-of-type(-n+8){
+  padding-right: 364px; /* ≈ ancho del video escalado */
+}
+@media (max-width: 600px){
+  .contenido-inferior > h3,
+  .contenido-inferior > p:nth-of-type(-n+8){
+    padding-right: 40vw;
+  }
+}
+
+/* Galería responsive: que ninguna imagen se desborde */
+.galeria-habitacion { justify-content: flex-start; }
+.bloque-imagen { width: min(100%, 360px); }
+.bloque-imagen img { width: 100%; height: auto; display: block; }
+
+
+/* === Galería: 3 imágenes corridas y alineadas en una fila === */
+.galeria-habitacion{
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  align-items: start;
+  justify-items: center;
+  width: 100%;
+}
+
+.bloque-imagen{ 
+  width: 100% !important; 
+  max-width: none !important;
+}
+
+.bloque-imagen img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Si el viewport se vuelve muy estrecho, mantenemos 3 columnas con scroll horizontal
+   (solo si fuera necesario). Descomenta si quieres forzar 3 en móvil también.
+@media (max-width: 720px){
+  .galeria-habitacion{ 
+    display: grid !important;
+    grid-auto-flow: column;
+    grid-auto-columns: 80vw;
+    overflow-x: auto;
+    grid-template-columns: none;
+  }
+}
+*/
+
 </style>
 
 <style>
@@ -754,7 +860,7 @@ O7.77%); background:#000; } /* 16:9 */
   <span id="totales-resumen" class="contador-categoria">
     K: 0 · D: 0 · Total: 0 — Reserve: 0 · ♿: 0 · Cocineta: 0
   </span>
-  <a href="introduccion_paradisus_2025.pdf" download class="btn-reporte" title="Descargar reporte PDF" target="_blank">📄 Descargar PDF</a>
+  <a id="btn-descargar-pdf" href="introduccion_paradisus_2025.pdf" download class="btn-reporte" title="Descargar reporte PDF" target="_blank">📄 Descargar PDF</a>
 
 <button id="btn-limpiar-filtro" type="button">Limpiar</button>
 
@@ -1703,7 +1809,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
     </script>  <!-- ✅ Cierra aquí tu script principal -->
 
-<div id="modal-mejoras" class="modal-mejoras">
+<div id="modal-mejoras" class="modal-mejoras" role="dialog" aria-modal="true" aria-labelledby="titulo-novedades">
   <div class="modal-contenido">
     <h2>🆕BIENVENID@ - Novedades del Catálogo</h2>
     <ul>
@@ -2059,6 +2165,29 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+</script>
+
+
+<script>
+(function() {
+  try {
+    var modal = document.getElementById('modal-mejoras');
+    var btnCerrar = document.getElementById('cerrar-modal');
+    if (modal && btnCerrar) {
+      var observer = new MutationObserver(function(muts){
+        for (var i=0; i<muts.length; i++) {
+          if (muts[i].attributeName === 'class') {
+            var c = modal.className || '';
+            if (c.indexOf('abierto') !== -1) {
+              setTimeout(function(){ try { btnCerrar.focus(); } catch(e){} }, 0);
+            }
+          }
+        }
+      });
+      observer.observe(modal, { attributes: true });
+    }
+  } catch(e) {}
+})();
 </script>
 
 </body>
