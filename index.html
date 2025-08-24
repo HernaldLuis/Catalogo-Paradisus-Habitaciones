@@ -99,6 +99,9 @@ body {
 
 .zona-desplazable {
   cursor: grab;
+
+  touch-action: pan-x pinch-zoom;
+  -webkit-overflow-scrolling: touch;
 }
 
 .zona-desplazable.arrastrando {
@@ -570,33 +573,26 @@ border-bottom: none;
 }
 
 /* Caja del modal */
-.modal-contenido {
+.modal-contenido{
+  box-sizing: border-box;
   background: #fff;
-  padding: 2rem;
+  padding: 1.25rem;
   border-radius: 12px;
-  max-width: 400px;
-  width: 90%;
+  max-width: min(92vw, 520px);
+  width: calc(100% - 2rem);
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
   text-align: left;
-  animation: aparecerModal 0.4s ease;
-}
-.modal-contenido {
-  box-sizing: border-box;
-  max-width: min(92vw, 520px);  /* limita el ancho del cuadro */
-  width: calc(100% - 2rem);     /* respeta márgenes laterales */
-  padding: 1.25rem;
-  overflow-wrap: anywhere;      /* por si hay listas con texto largo */
+  overflow-wrap: anywhere;
   word-break: break-word;
-  white-space: normal;          /* permite saltos de línea */
+  white-space: normal;
+  animation: aparecerModal .4s ease;
 }
+
 .modal-contenido ul { margin: 0 0 .5rem; padding-left: 1.1rem; }
 .modal-contenido li { margin-bottom: .35rem; }
 
 @media (max-width: 480px) {
-  .modal-contenido {
-    font-size: 0.9rem;   /* Texto más pequeño */
-    padding: 1rem;       /* Menos espacio interno */
-  }
+  
 }
 
 /* Título */
@@ -661,7 +657,6 @@ border-bottom: none;
 
 /* --- Video en detalle de habitación (handicap) --- */
 .video-habitacion{ position:absolute; top:16px; right:16px; width:520px; max-width:44%; background:#fff; border-radius:12px; box-shadow:0 12px 30px rgba(0,0,0,.18); overflow:hidden; }
-07.77%); background:#000; } /* 16:9 */
 .video-ratio iframe, .video-ratio video{ position:absolute; inset:0; width:100%; height:100%; border:0; object-fit:contain; }
 .video-ratio video{ object-fit: contain; background:#000; }
 .contenido-inferior{ position:relative; }
@@ -794,6 +789,167 @@ border-bottom: none;
 }
 */
 
+
+/* === HK Inventario: botones + modal login + inventario principal === */
+.btn-inventario{
+  position:absolute; top:10px; right:10px;
+  display:inline-flex; align-items:center; gap:.35rem;
+  padding:8px 16px; border-radius:999px; border:none;
+  background:linear-gradient(135deg,#c9a14a,#8a5a2b);
+  color:#fff; font-weight:800; cursor:pointer;
+  box-shadow:0 8px 18px rgba(0,0,0,.25);
+}
+.btn-inventario:hover{ filter:brightness(.97); }
+
+.btn-logout{
+  position:fixed; top:10px; right:12px; z-index:10050;
+  padding:6px 12px; border-radius:999px; border:none;
+  background:#0ea5e9; color:#fff; font-weight:700; cursor:pointer;
+  box-shadow:0 6px 14px rgba(0,0,0,.18);
+}
+.btn-logout:hover{ filter:brightness(.95); }
+
+/* Modal visual del PIN (hkpin2) */
+.hkpin-overlay{
+  position: fixed; inset:0; display:none; align-items:center; justify-content:center;
+  background: rgba(0,0,0,.35); backdrop-filter: blur(4px); z-index: 10060;
+}
+.hkpin-overlay.activo{ display:flex; }
+.hkpin-modal{
+  width: min(420px, 92vw); background:#fff; border-radius: 16px; padding: 20px 18px;
+  box-shadow: 0 30px 60px rgba(0,0,0,.25);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+.hkpin-modal h3{ margin: 0 0 4px; font-size: 18px; font-weight: 800; }
+.hkpin-sub{ margin: 0 0 12px; color:#444; font-size: 13px; }
+.hkpin-field{ display:flex; align-items:center; gap:6px; border:1px solid rgba(0,0,0,.12); padding:6px 8px; border-radius:10px; }
+.hkpin-field input{ flex:1; font-size:16px; border:none; outline:none; padding:6px 4px; }
+.hkpin-icon{ border:none; background:transparent; cursor:pointer; font-size:16px; }
+.hkpin-error{ color:#b91c1c; font-weight:600; font-size:12px; margin-top:8px; display:none; }
+.hkpin-actions{ display:flex; gap:8px; justify-content:center; margin-top:16px; }
+.btn-ok{ background:#6d5ef6; color:#fff; border:none; padding:8px 14px; border-radius:999px; font-weight:700; cursor:pointer; }
+.btn-cancel{ background:#eee; color:#333; border:none; padding:8px 14px; border-radius:999px; font-weight:700; cursor:pointer; }
+.btn-ok:hover{ filter:brightness(.97); } .btn-cancel:hover{ filter:brightness(.97); }
+
+/* Inventario principal */
+.invp-wrap{ max-width: 420px; margin: 0 auto; }
+.invp-head{ display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.invp-hist{ background:#f7f7f7; border:1px dashed #ccc; color:#666; padding:6px 8px; border-radius:8px; font-size:12px; }
+.invp-row{ display:flex; align-items:center; gap:8px; margin:6px 0; }
+.invp-row label{ flex: 1 1 auto; font-size:13px; }
+.invp-row input, .invp-row select{ flex: 0 0 120px; padding:6px 8px; border:1px solid #ddd; border-radius:8px; font-size:14px; }
+.invp-section{ margin:10px 0 6px; font-weight:800; }
+.invp-box{ border:1px solid #eee; padding:8px; border-radius:10px; margin-bottom:10px; background:#fff; }
+.invp-note{ color:#666; font-size:12px; margin:4px 0 0; }
+.invp-actions{ display:flex; justify-content:flex-end; gap:8px; margin-top:10px; }
+.invp-counter{ display:flex; align-items:center; gap:6px; }
+.invp-counter button{ width:28px; height:28px; border:none; border-radius:8px; background:#eee; cursor:pointer; }
+.invp-textarea{ width:100%; min-height:80px; border:1px solid #ddd; border-radius:10px; padding:8px; }
+.modal-contenido h2{ margin-top:0; }
+/* === FIN estilos HK === */
+
+
+/* --- Prioridad máxima para Inventario --- */
+#inventarioOverlay{ z-index: 10100 !important; }
+body.hk-modal-open{ overflow: hidden; }
+/* ---------------------------------------- */
+
+
+/* --- Modal de éxito Inventario --- */
+.hk-success-overlay{
+  position:fixed; inset:0; display:none; align-items:center; justify-content:center;
+  background: rgba(0,0,0,.35); backdrop-filter: blur(3px);
+  z-index: 10200;
+}
+.hk-success-overlay.activo{ display:flex; }
+.hk-success-card{
+  width:min(440px,92vw); background:#fff; border-radius:16px; padding:22px 22px 18px;
+  box-shadow:0 30px 60px rgba(0,0,0,.28); text-align:center;
+  animation: hkPop .18s ease-out;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+.hk-success-icon{
+  width:72px; height:72px; border-radius:999px; margin:4px auto 10px;
+  display:grid; place-items:center; font-size:36px; color:#10b981;
+  background: radial-gradient(circle at 30% 30%, #ecfdf5, #d1fae5);
+  border: 1px solid #bbf7d0;
+}
+.hk-success-title{ font-size:18px; font-weight:800; margin:6px 0 4px; color:#111827; }
+.hk-success-msg{ font-size:14px; color:#374151; margin:0 0 12px; }
+.hk-success-actions{ display:flex; justify-content:center; gap:8px; margin-top:8px; }
+.hk-btn-primary{
+  background:#10b981; color:#fff; border:none; border-radius:999px; padding:8px 16px; font-weight:700; cursor:pointer;
+  box-shadow:0 10px 20px rgba(16,185,129,.25);
+}
+.hk-btn-primary:hover{ filter:brightness(.97); }
+@keyframes hkPop{ from{ transform:scale(.98); opacity:0 } to{ transform:scale(1); opacity:1 } }
+/* --- fin éxito --- */
+
+
+/* === HK: video en primera columna de galería === */
+.bloque-imagen video{
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+  border-radius: 10px;
+  cursor: zoom-in; /* se mantiene el hint visual */
+}
+
+
+/* ===== Concentrado (scoped) ===== */
+#concentradoOverlay{position:fixed;inset:0;background:rgba(17,24,39,.45);backdrop-filter:blur(3px);z-index:10040;display:none;align-items:center;justify-content:center}
+#concentradoOverlay.activo{display:flex}
+#concentradoOverlay .modal-contenido{width:clamp(720px,96vw,1500px);max-height:90vh;background:#fff;border-radius:18px;box-shadow:0 20px 45px rgba(0,0,0,.3);overflow:hidden;display:flex;flex-direction:column}
+#concentradoOverlay h2{margin:0;padding:14px 18px;font-size:18px;text-align:center;background:linear-gradient(135deg,#0ea5e9,#6366f1);color:#fff;letter-spacing:.3px}
+#concentradoOverlay .conc-toolbar{display:flex;gap:10px;align-items:center;justify-content:space-between;padding:10px 14px;background:#fafafa;border-bottom:1px solid #e5e7eb;flex-wrap:wrap}
+#concentradoOverlay .conc-toolbar .left{display:flex;gap:10px;align-items:center;flex:1 1 auto;min-width:280px}
+#concentradoOverlay .conc-toolbar input[type="search"]{padding:8px 10px;border:1px solid #d1d5db;border-radius:12px;min-width:260px;max-width:420px;width:100%}
+#concentradoOverlay .conc-stats{font-size:12px;color:#374151;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:45vw}
+#concentradoOverlay .table-wrap{padding:0 14px 12px 14px;overflow:auto;max-height:100%}
+#concentradoOverlay .conc-table{width:100%;border-collapse:separate;border-spacing:0}
+#concentradoOverlay .conc-table thead th{position:sticky;top:0;z-index:1;background:#f8fafc;border-bottom:1px solid #e5e7eb;cursor:pointer;user-select:none}
+#concentradoOverlay .conc-table th,#concentradoOverlay .conc-table td{padding:8px 10px;border-right:1px solid #eef2f7;border-bottom:1px solid #eef2f7;font-size:12px;white-space:nowrap;max-width:320px;overflow:hidden;text-overflow:ellipsis}
+#concentradoOverlay .conc-table tr:nth-child(even) td{background:#fcfdff}
+#concentradoOverlay .conc-table tr:hover td{background:#f1f5ff}
+#concentradoOverlay .conc-actions{padding:10px 14px;border-top:1px solid #e5e7eb;background:#fafafa;display:flex;gap:.5rem;justify-content:flex-end}
+#concentradoOverlay .btn{border:none;padding:8px 12px;border-radius:10px;cursor:pointer}
+#concentradoOverlay .btn.ok{background:#10b981;color:#fff}
+#concentradoOverlay .btn.primary{background:#3b82f6;color:#fff}
+#concentradoOverlay .btn.danger{background:#ef4444;color:#fff}
+#concentradoOverlay .spinner{width:16px;height:16px;border:2px solid #fff;border-top-color:transparent;border-radius:50%;display:inline-block;animation:concspin 0.8s linear infinite;margin-left:6px}
+@keyframes concspin{to{transform:rotate(360deg)}}
+#hk-badge{position:fixed;top:10px;right:10px;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:600;z-index:10060;background:#ef4444;color:#fff;box-shadow:0 4px 10px rgba(0,0,0,.15)}
+#hk-badge.ok{background:#10b981}
+
+
+/* === INV-Scroll minimal (solo estética modal inventario) === */
+#inventarioOverlay{ align-items:flex-start; overflow:auto; overscroll-behavior:contain; padding:16px 8px; }
+#inventarioOverlay .modal-contenido{ width:clamp(720px,96vw,1200px); max-height:calc(100vh - 32px); overflow:auto; -webkit-overflow-scrolling:touch; touch-action:pan-y; }
+#inventarioOverlay .invp-actions{ position:sticky; bottom:0; background:#fff; padding-top:8px; z-index:1; }
+@media (max-height:700px){ #inventarioOverlay .modal-contenido{ max-height:calc(100vh - 16px); } }
+
+/* === CONC-FS-002: Pantalla completa robusta === */
+#concentradoOverlay.fullscreen{ z-index: 9999; }
+#concentradoOverlay.fullscreen .modal-contenido{
+  width: 98vw !important;
+  max-width: none !important;
+  max-height: 94vh !important;
+  height: 94vh !important;
+}
+#concentradoOverlay.fullscreen .table-wrap{ height: calc(94vh - 120px) !important; }
+body.hk-no-scroll{ overflow: hidden !important; }
+
+/* === CONC-TOOLBAR-FIX: centrar y evitar desbordes === */
+#concentradoOverlay .conc-toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;}
+#concentradoOverlay .conc-toolbar .right{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;margin-left:auto;}
+#concentradoOverlay .conc-toolbar .right .btn{white-space:nowrap;}
+#concentradoOverlay .conc-toolbar .btn{padding:6px 10px;border-radius:10px;font-weight:700;font-size:13px;}
+@media (max-width:1100px){
+  #concentradoOverlay .conc-toolbar{flex-direction:column;align-items:stretch;}
+  #concentradoOverlay .conc-toolbar .right{justify-content:center;width:100%;}
+}
+#concentradoOverlay .conc-toolbar .right #conc-cerrar{order:99;}
+
 </style>
 
 <style>
@@ -817,10 +973,44 @@ border-bottom: none;
 
 </head>
 <body>
+  <!-- Modal de Éxito Inventario -->
+  <div id="hkSuccessModal" class="hk-success-overlay" aria-hidden="true">
+    <div class="hk-success-card" role="dialog" aria-modal="true" aria-labelledby="hk-success-title">
+      <div class="hk-success-icon">✔</div>
+      <h3 id="hk-success-title" class="hk-success-title">¡Inventario guardado!</h3>
+      <p id="hk-success-msg" class="hk-success-msg">Tu registro se guardó correctamente.</p>
+      <div class="hk-success-actions">
+        <button id="hk-success-ok" class="hk-btn-primary">Listo</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Acceso Housekeeping Modal -->
+  <div id="hkpin2" class="hkpin-overlay" aria-hidden="true">
+    <div class="hkpin-modal" role="dialog" aria-modal="true" aria-labelledby="hkpin2-title">
+      <h3 id="hkpin2-title">Acceso Housekeeping</h3>
+      <p class="hkpin-sub">Ingresa tu matrícula para abrir el inventario.</p>
+      <div class="hkpin-field">
+        <input id="hkpin2-input" type="password" inputmode="numeric" pattern="[0-9]*" placeholder="Matrícula" autocomplete="one-time-code" />
+        <button id="hkpin2-toggle" type="button" class="hkpin-icon" aria-label="Mostrar/Ocultar PIN">👁️</button>
+        <button id="hkpin2-clear" type="button" class="hkpin-icon" aria-label="Borrar">⦿</button>
+      </div>
+      <div id="hkpin2-error" class="hkpin-error">Matrícula inválida</div>
+      <div class="hkpin-actions">
+        <button id="hkpin2-cancel" class="btn-cancel">Cancelar</button>
+        <button id="hkpin2-ok" class="btn-ok">Ingresar</button>
+      </div>
+    </div>
+  </div>
+
+  <button id="btn-logout" class="btn-logout" onclick="hkLogout()" style="display:none">Cerrar sesión</button>
+<a id="btn-concentrado" class="btn-reporte" style="display:none" href="javascript:void(0)">📊 Concentrado</a>
+<span id="hk-badge" style="display:none"></span>
+
 
   <h1 class="titulo-catalogo">
   <span>Paradisus · Colección Exclusiva de Habitaciones & Suites</span>
-  <img src="https://res.cloudinary.com/dor6za85u/image/upload/v1754887647/ChatGPT_Image_10_ago_2025_09_47_11_p.m._btrjfp.png" 
+  <img loading="lazy" src="https://res.cloudinary.com/dor6za85u/image/upload/v1754887647/ChatGPT_Image_10_ago_2025_09_47_11_p.m._btrjfp.png" 
        alt="Paradisus by Meliá" 
        class="logo-catalogo">
 </h1>
@@ -1514,7 +1704,7 @@ border-bottom: none;
   <!-- Lightbox de imagen -->
 <div id="zoom-overlay" class="visor-oculto" onclick="cerrarZoom(event)">
   <span id="zoom-close" onclick="cerrarZoom(event)" style="position: absolute; top: 20px; right: 30px; font-size: 30px; cursor: pointer; color: white;">❌</span>
-  <img id="zoom-img" src="" alt="Zoom" />
+  <img loading="lazy" id="zoom-img" src="" alt="Zoom" />
 </div>
 
   <script>
@@ -1535,7 +1725,7 @@ async function mostrarInfo(num) {
       habitacion.imagenes.forEach((imagen) => {
         galeriaHTML += `
           <div class="bloque-imagen">
-            <img src="${imagen.src}" alt="${imagen.etiqueta}" onclick="hacerZoom(this.src)" />
+            <img loading="lazy" src="${imagen.src}" alt="${imagen.etiqueta}" onclick="hacerZoom(this.src)" />
             <p><strong>${imagen.etiqueta}</strong></p>
           </div>
         `;
@@ -1545,6 +1735,8 @@ async function mostrarInfo(num) {
 panel.innerHTML = `
   <div class="contenido-inferior">\n<aside id="video-habitacion" class="video-habitacion" hidden>\n  <div class="video-ratio">\n    <iframe id="video-embed" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen hidden></iframe>\n    <video id="video-mp4" controls playsinline hidden></video>\n  </div>\n</aside>\n
     <h3>${habitacion.titulo}</h3>
+    <button class="btn-inventario" onclick="(hkHasSession()? abrirInventarioPrincipal(${num}) : hkLogin(()=>abrirInventarioPrincipal(${num})))">📋 Inventario</button>
+
     <p><strong>Categoría:</strong> ${habitacion.categoria} · ${habitacion.vista}</p>
     <p><strong>Habitación conectada:</strong> ${habitacion.habitacion_conectada ? habitacion.habitacion_conectada : 'No aplica'}</p>
     <p><strong>Piso:</strong> ${habitacion.piso}</p>
@@ -1558,6 +1750,62 @@ panel.innerHTML = `
   </div>
 `;
     
+    
+    // === Sustituir imagen izquierda por VIDEO (si hay fuente) ===
+    try{
+      const gal = panel.querySelector('.galeria-habitacion');
+      if(gal){
+        // Resolver URL del video
+        const esHandicap = !!(habitacion && (
+          habitacion.discapacidad === true ||
+          habitacion.handicap === true ||
+          habitacion.discapacidad === 'Adaptada' ||
+          habitacion.discapacidad === 'Sí' ||
+          (habitacion.categoria && /handicap|adaptad/i.test(habitacion.categoria)) ||
+          (Array.isArray(habitacion.tags) && habitacion.tags.some(t=>/handicap/i.test(t)))
+        ));
+
+        let vsrc = '';
+        if(esHandicap && typeof window !== 'undefined' && typeof window.HANDICAP_VIDEO_URL !== 'undefined'){
+          vsrc = window.HANDICAP_VIDEO_URL || '';
+        }else{
+          vsrc = (habitacion && (habitacion.video || habitacion.video_url)) || '';
+          if(!vsrc && typeof window !== 'undefined' && window.VIDEOS_HAB && typeof num !== 'undefined'){
+            vsrc = window.VIDEOS_HAB[num] || '';
+          }
+        }
+
+        if(vsrc){
+          // Crear tile <div class="bloque-imagen"> con <video>
+          const tile = document.createElement('div');
+          tile.className = 'bloque-imagen';
+          const vid = document.createElement('video');
+          vid.setAttribute('muted',''); vid.muted = true;
+          vid.setAttribute('playsinline',''); vid.playsInline = true;
+          vid.setAttribute('autoplay',''); vid.autoplay = true;
+          vid.setAttribute('loop',''); vid.loop = true;
+          const src = document.createElement('source'); src.src = vsrc; src.type='video/mp4';
+          vid.appendChild(src);
+          tile.appendChild(vid);
+
+          // Reemplazar el PRIMER bloque de imagen por el video
+          const first = gal.querySelector('.bloque-imagen');
+          if(first){
+            gal.replaceChild(tile, first);
+          }else{
+            gal.insertBefore(tile, gal.firstChild);
+          }
+
+          // Intentar reproducir
+          try{ vid.load(); }catch(_e){}
+          try{ const p = vid.play(); if(p && p.then) p.catch(()=>{}); }catch(_e){}
+
+          // Click: alternar controles, sin overlay
+          vid.addEventListener('click', ()=>{ vid.controls = !vid.controls; }, {passive:true});
+        }
+      }
+    }catch(_e){ /* silencioso */ }
+    // === fin sustitución de imagen por video ===
     // --- Video handicap (arriba-derecha) ---
     try {
   if (habitacion && (habitacion.discapacidad === true)) {
@@ -1643,7 +1891,7 @@ const num = boton.dataset.num || boton.textContent.trim();
 
         // Verificar si tiene sofá cama
 const sofaIcon = `
-  ${habitacion.sofa ? '<img src="https://res.cloudinary.com/dor6za85u/image/upload/v1753173371/sof%C3%A0_pzyjdc.png" style="height: 18px; vertical-align: middle;" />' : ''}
+  ${habitacion.sofa ? '<img loading="lazy" src="https://res.cloudinary.com/dor6za85u/image/upload/v1753173371/sof%C3%A0_pzyjdc.png" style="height: 18px; vertical-align: middle;" />' : ''}
   ${habitacion.discapacidad ? '<span style="font-size: 1.2em;">♿</span>' : ''}
 `;
 
@@ -1716,7 +1964,7 @@ if (nuevaData.tipo_cama === "K") {
 }
 
         const sofaIcon = `
-          ${nuevaData.sofa ? '<img src="https://res.cloudinary.com/dor6za85u/image/upload/v1753173371/sof%C3%A0_pzyjdc.png" style="height: 18px; vertical-align: middle;" />' : ''}
+          ${nuevaData.sofa ? '<img loading="lazy" src="https://res.cloudinary.com/dor6za85u/image/upload/v1753173371/sof%C3%A0_pzyjdc.png" style="height: 18px; vertical-align: middle;" />' : ''}
           ${nuevaData.discapacidad ? '<span style="font-size: 1.2em;">♿</span>' : ''}
         `;
 
@@ -2190,5 +2438,727 @@ document.addEventListener("DOMContentLoaded", function() {
 })();
 </script>
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.habitacion-btn').forEach(btn => {
+    const n = btn.getAttribute('data-num') || btn.textContent.trim();
+    if(n && !btn.hasAttribute('onclick')){
+      btn.setAttribute('onclick', `mostrarInfo('${n}')`);
+    }
+  });
+  // ESC to close zoom if function exists
+  document.addEventListener('keydown', e=>{
+    if(e.key === 'Escape' && typeof cerrarZoom === 'function'){ cerrarZoom(e); }
+  });
+});
+</script>
+
+<script>
+/* === HK Sesión e Inventario (5h) === */
+(function(){
+  const SESSION_KEY = 'hk_inv_session';
+  const TTL = 5*60*60*1000; // 5 horas
+  const MATRICULAS = {
+    '3068694':'Dolores',
+    '3071925':'Itzel',
+    '3075393':'Marisela',
+    '3077512':'Ximena',
+    '3072167':'Luis',
+    '3062148':'Silvia',
+    '3067888':'Manuel'
+  };
+  function now(){ return Date.now(); }
+  function hasSession(){
+    const t = +sessionStorage.getItem(SESSION_KEY) || 0;
+    return (now() - t) < TTL;
+  }
+  function setSession(){ sessionStorage.setItem(SESSION_KEY, String(now())); updateSessionUI(); }
+  function clearSession(){ sessionStorage.removeItem(SESSION_KEY); updateSessionUI(); }
+
+  window.hkHasSession = hasSession;
+  window.updateSessionUI = function(){
+    const btnLogout = document.getElementById('btn-logout');
+    if(btnLogout) btnLogout.style.display = hasSession() ? 'inline-flex' : 'none';
+  };
+
+  // Modal visual del PIN
+  function pedirPINModal(){
+    return new Promise((resolve)=>{
+      const OV  = document.getElementById('hkpin2');
+      const INP = document.getElementById('hkpin2-input');
+      const OK  = document.getElementById('hkpin2-ok');
+      const CAN = document.getElementById('hkpin2-cancel');
+      const TOG = document.getElementById('hkpin2-toggle');
+      const CLR = document.getElementById('hkpin2-clear');
+      const ERR = document.getElementById('hkpin2-error');
+      function open(){ OV.classList.add('activo'); OV.setAttribute('aria-hidden','false'); ERR.style.display='none'; INP.value=''; INP.type='password'; INP.focus(); document.addEventListener('keydown', onkey); }
+      function close(){ OV.classList.remove('activo'); OV.setAttribute('aria-hidden','true'); document.removeEventListener('keydown', onkey); }
+      function onkey(e){ if(e.key==='Escape'){ close(); resolve(null); } if(e.key==='Enter'){ OK.click(); } }
+      function onok(){ const v=(INP.value||'').trim(); if(!v){ ERR.style.display='block'; return; } close(); resolve(v); }
+      function oncancel(){ close(); resolve(null); }
+      function ontoggle(){ INP.type = (INP.type==='password' ? 'text' : 'password'); }
+      function onclear(){ INP.value=''; INP.focus(); }
+      OK.addEventListener('click', onok, {once:true});
+      CAN.addEventListener('click', oncancel, {once:true});
+      TOG.addEventListener('click', ontoggle);
+      CLR.addEventListener('click', onclear);
+      open();
+    });
+  }
+
+  window.hkLogin = async function(next){
+    if(hasSession()){ if(typeof next==='function') next(); return; }
+    const pin = await pedirPINModal();
+    if(!pin) return;
+    const id = String(pin).trim();
+    const name = MATRICULAS[id] || null;
+    if(name){
+      try{ sessionStorage.setItem('HK_MAT', id); sessionStorage.setItem('HK_NAME', name); }catch(e){}
+      setSession();
+      if(typeof next==='function') next();
+    }else{
+      const ERR = document.getElementById('hkpin2-error'); if(ERR){ ERR.style.display='block'; }
+    }
+  };
+
+  window.hkLogout = function(){
+    clearSession();
+    try{ sessionStorage.removeItem('HK_MAT'); sessionStorage.removeItem('HK_NAME'); }catch(e){}
+    const inv = document.getElementById('inventarioOverlay'); if(inv) inv.classList.remove('activo');
+  };
+
+  // Inventario principal (overlay)
+  window.abrirInventarioPrincipal = function(habitacionNum){
+    let ov = document.getElementById('inventarioOverlay');
+    if(!ov){
+      ov = document.createElement('div');
+      ov.id = 'inventarioOverlay';
+      ov.className = 'modal-mejoras'; // reutiliza estilo de overlay existente
+      ov.innerHTML = '<div class="modal-contenido"><h2 id="inv-titulo"></h2><div id="inv-body"></div></div>';
+      document.body.appendChild(ov);
+    }
+    const titulo = ov.querySelector('#inv-titulo');
+    const body = ov.querySelector('#inv-body');
+    if(titulo) titulo.textContent = 'Inventario · ' + habitacionNum;
+
+    // Construir formulario largo
+    const name = sessionStorage.getItem('HK_NAME') || 'equipo';
+    body.innerHTML = `
+      <div class="invp-wrap">
+        <div class="invp-head">
+          <div>Hola, <strong>${name}</strong> — ¿qué registramos hoy?</div>
+          <label style="display:flex;align-items:center;gap:6px;font-size:12px;">
+            <input id="invp-hide-hist" type="checkbox"> Ocultar historial
+          </label>
+        </div>
+        <div id="invp-histbox" class="invp-hist">No hay historial aún.</div>
+
+        <div class="invp-section">Cantidad de sillas</div>
+        <div class="invp-row">
+          <div class="invp-counter">
+            <button type="button" id="sillas-menos">−</button>
+            <input id="sillas-cant" type="number" value="0" min="0">
+            <button type="button" id="sillas-mas">+</button>
+          </div>
+        </div>
+
+        <div class="invp-section">🛏️ Cama</div>
+        <div class="invp-box">
+          <div class="invp-row">
+            <label for="tipo-cama">Tipo de cama</label>
+            <select id="tipo-cama">
+              <option value="K" selected>K — 1 cama king</option>
+              <option value="D">D — 2 camas</option>
+            </select>
+          </div>
+          <div class="invp-row"><label>Protector</label><input id="cama-protector" type="number" value="1" min="0"></div>
+          <div class="invp-row"><label>Sábanas</label><input id="cama-sabanas" type="number" value="1" min="0"></div>
+          <div class="invp-row"><label>Almohadas</label><input id="cama-almohadas" type="number" value="2" min="0"></div>
+          <div class="invp-row"><label>Fundas</label><input id="cama-fundas" type="number" value="2" min="0"></div>
+          <div class="invp-row"><label>Protector de almohadas</label><input id="cama-prot-alm" type="number" value="2" min="0"></div>
+          <div class="invp-row"><label>Inserto (dúvet)</label><input id="cama-inserto" type="number" value="1" min="0"></div>
+          <div class="invp-row"><label>Cubre dúvet</label><input id="cama-cubre" type="number" value="1" min="0"></div>
+          <div class="invp-row">
+            <label>Color (cubre dúvet)</label>
+            <select id="cama-color">
+              <option value="Blanco" selected>Blanco</option>
+              <option value="Café">Café</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="invp-section">🧳 Clóset</div>
+        <div class="invp-box">
+          <div class="invp-row"><label>Cobertor</label><input id="clo-cobertor" type="number" value="1" min="0"></div>
+          <div class="invp-row"><label>Almohada matrimonial</label><input id="clo-alm-mat" type="number" value="1" min="0"></div>
+          <div class="invp-row"><label>Funda matrimonial</label><input id="clo-funda-mat" type="number" value="1" min="0"></div>
+          <div class="invp-row"><label>Protector matrimonial</label><input id="clo-prot-mat" type="number" value="1" min="0"></div>
+          <div class="invp-row"><label>Bolsa de tela</label><input id="clo-bolsa" type="number" value="1" min="0"></div>
+        </div>
+
+        <div class="invp-section">🚿 Baño</div>
+        <div class="invp-box">
+          <div class="invp-row">
+            <label for="ban-categoria">Categoría</label>
+            <select id="ban-categoria">
+              <option value="Normal" selected>Normal</option>
+              <option value="Swing Up">Swing Up</option>
+              <option value="Master Suite">Master Suite</option>
+            </select>
+          </div>
+          <div class="invp-row"><label>Toallas de baño</label><input id="ban-bano" type="number" value="4" min="0"></div>
+          <div class="invp-row"><label>Toallas de mano</label><input id="ban-mano" type="number" value="4" min="0"></div>
+          <div class="invp-row"><label>Toallas faciales</label><input id="ban-facial" type="number" value="2" min="0"></div>
+          <div class="invp-row"><label>Tapetes</label><input id="ban-tapete" type="number" value="1" min="0"></div>
+          <div class="invp-row"><label>Toallas verdes de alberca</label><input id="ban-verdes" type="number" value="0" min="0"></div>
+          <div class="invp-row">
+            <label>Color (toallas/tapetes)</label>
+            <select id="ban-color">
+              <option value="Blanco" selected>Blanco</option>
+              <option value="Café">Café</option>
+            </select>
+          </div>
+          <div class="invp-note">Normal: sin verdes. Swing/Master: cafés y 2 verdes en bolsa de playa.</div>
+        </div>
+
+        <div class="invp-section">Notas</div>
+        <textarea id="invp-notas" class="invp-textarea" placeholder="Observaciones (opcional)"></textarea>
+
+        <div class="invp-actions">
+          <button type="button" class="btn-cancel" onclick="document.getElementById('inventarioOverlay').classList.remove('activo')">Cancelar</button>
+          <button id="invp-guardar" type="button" class="btn-ok">Guardar</button>
+        </div>
+      </div>
+    `;
+
+    // Inicializar controles
+    (function invpInit(hnum){
+      const minus = document.getElementById('sillas-menos');
+      const plus  = document.getElementById('sillas-mas');
+      const input = document.getElementById('sillas-cant');
+      if(minus && input){ minus.onclick = ()=>{ input.stepDown(); }; }
+      if(plus  && input){ plus.onclick  = ()=>{ input.stepUp();  }; }
+      const hide = document.getElementById('invp-hide-hist');
+      const hist = document.getElementById('invp-histbox');
+      if(hide && hist){ hide.onchange = ()=>{ hist.style.display = hide.checked ? 'none':'block'; }; }
+      const save = document.getElementById('invp-guardar');
+      if(save){
+        save.onclick = ()=>{
+          showSuccessModal('Inventario de la habitación ' + hnum + ' guardado con éxito.', function(){
+          const ov = document.getElementById('inventarioOverlay');
+          if(ov) ov.classList.remove('activo');
+          try{ document.body.classList.remove('hk-modal-open'); }catch(e){}
+        });
+        };
+      }
+    })(habitacionNum);
+
+    
+    // asegurar que el overlay esté al final del body (top del stack)
+    try{ document.body.appendChild(ov); }catch(e){}
+    // bloquear cierre por clic fuera (mantener modal hasta Guardar/Cancelar)
+    try{
+      ov.addEventListener('click', function(e){
+        if(e.target === ov){ e.stopPropagation(); e.stopImmediatePropagation(); /* opcional: animación */ }
+      }, {capture:true});
+    }catch(e){}
+    // bloquear scroll de fondo mientras esté abierto
+    try{ document.body.classList.add('hk-modal-open'); }catch(e){}
+
+    ov.classList.add('activo');
+  };
+
+  // Al cargar, actualiza UI de sesión
+  document.addEventListener('DOMContentLoaded', updateSessionUI);
+})();
+</script>
+
+
+<script>
+// Utilidad para mostrar el modal de éxito
+(function(){
+  window.showSuccessModal = function(message, onClose){
+    const ov  = document.getElementById('hkSuccessModal');
+    const msg = document.getElementById('hk-success-msg');
+    const ok  = document.getElementById('hk-success-ok');
+    if(!ov || !msg || !ok){ return alert(message||'Guardado.'); }
+    if(message) msg.textContent = message;
+    function close(){
+      ov.classList.remove('activo'); ov.setAttribute('aria-hidden','true');
+      document.removeEventListener('keydown', onkey);
+      if(typeof onClose === 'function') onClose();
+    }
+    function onkey(e){ if(e.key==='Escape' || e.key==='Enter' || e.key===' '){ close(); } }
+    ok.onclick = close;
+    ov.classList.add('activo'); ov.setAttribute('aria-hidden','false');
+    document.addEventListener('keydown', onkey);
+  };
+})();
+</script>
+
+
+<script>
+(function(){ if (window.__hk_concentrado_done) return; window.__hk_concentrado_done = true;
+
+  const API_URL   = "https://script.google.com/macros/s/AKfycbz3bAcBcbSyF3VlIjrXNzoqhR7DMOEAdYU3GFvTAP7MsU18VbQJVzVQbv3VhfLwP2n1nA/exec";
+  const API_TOKEN = "PARADISUS_INV_2025_xX7$K9";
+
+  const ADMIN_IDS = { "3072167":"Luis", "3067888":"Manuel" };
+  const SUP_IDS   = { "3077512":"Ximena", "3062148":"Silvia", "3071925":"Itzel", "3068694":"Dolores", "3075393":"Marisela" };
+
+  function getRole(){ try{ const id=(sessionStorage.getItem('HK_MAT')||'').trim(); if(ADMIN_IDS[id]) return 'admin'; if(SUP_IDS[id]) return 'supervisor'; }catch(_){} return 'none'; }
+  function el(sel,root){ return (root||document).querySelector(sel); }
+  function els(sel,root){ return Array.from((root||document).querySelectorAll(sel)); }
+  function h(elm,ev,fn){ elm && elm.addEventListener(ev,fn); }
+
+  function hdr(){ return {'Content-Type':'text/plain'}; }
+  async function apiList(){
+    const r = await fetch(API_URL + '?action=list&token=' + encodeURIComponent(API_TOKEN));
+    const j = await r.json(); if(!r.ok || !j || j.status!=='ok') throw new Error((j&&j.error)||'list failed'); return j.rows||[];
+  }
+  async function apiAppend(entry){
+    const r = await fetch(API_URL, { method:'POST', headers: hdr(), body: JSON.stringify({action:'append', token: API_TOKEN, entry}) });
+    const j = await r.json(); if(!r.ok || !j || j.status!=='ok') throw new Error((j&&j.error)||'append failed'); return j;
+  }
+
+  const QK='HK_INV_QUEUE';
+  const qLoad=()=>{ try{return JSON.parse(localStorage.getItem(QK)||'[]');}catch(_){return[];} };
+  const qSave=a=>{ try{localStorage.setItem(QK,JSON.stringify(a));}catch(_){} };
+  const qPush=x=>{ const a=qLoad(); a.push(x); qSave(a); };
+  async function flushQueue(){ const a=qLoad(); if(!a.length) return 0; let keep=[]; for(const it of a){ try{ await apiAppend(it); }catch(_){ keep.push(it); } } qSave(keep); return a.length-keep.length; }
+
+  function collect(hnum){
+    function val(id){ const e=el('#'+id); return e?(e.type==='checkbox'? e.checked : e.value):''; }
+    return {
+      fecha: new Date().toISOString(),
+      habitacion: String(hnum||''),
+      usuario: sessionStorage.getItem('HK_NAME')||'',
+      matricula: sessionStorage.getItem('HK_MAT')||'',
+      sillas: val('sillas-cant'),
+      cama: {
+        tipo:'',
+        protector: val('cama-protector'),
+        sabana: val('cama-sabanas'),
+        almohadas: val('cama-almohadas'),
+        fundas: val('cama-fundas'),
+        protAlm: val('cama-prot-alm'),
+        duvet: val('cama-inserto'),
+        fundaDuvet: val('cama-cubre'),
+        colorDuvet: val('cama-color')
+      },
+      closet: { toallasPlaya:'', bolsas:'', ganchos:'', albornoz:'' },
+      bano: {
+        categoria: val('ban-categoria'), bano: val('ban-bano'), mano: val('ban-mano'),
+        facial: val('ban-facial'), tapete: val('ban-tapete'), verdes: val('ban-verdes'), color: val('ban-color')
+      },
+      notas: val('invp-notas')
+    };
+  }
+
+  function ensureOverlay(){
+    let ov = el('#concentradoOverlay');
+    if(!ov){
+      ov = document.createElement('div');
+      ov.id='concentradoOverlay';
+      ov.innerHTML = '\
+        <div class="modal-contenido" role="dialog" aria-modal="true">\
+          <h2>Concentrado de Inventarios</h2>\
+          <div class="conc-toolbar">\
+            <div class="left">\
+              <input id="conc-search" type="search" placeholder="Buscar habitacion/usuario/nota..." />\
+              <div class="conc-stats" id="conc-stats"></div>\
+            </div>\
+            <div class="right" style="display:flex;gap:8px;align-items:center;flex-shrink:0">\
+              <button id="exp-excel" class="btn primary">Exportar Excel</button>\
+              <button id="exp-pdf" class="btn primary">Exportar PDF</button>\
+              <button id="conc-cerrar" class="btn danger">Cerrar</button>\
+            </div>\
+          </div>\
+          <div class="table-wrap"><div id="conc-body">Cargando...</div></div>\
+          <div class="conc-actions" style="display:none"></div>\
+        </div>';
+      document.body.appendChild(ov);
+    }
+    return ov;
+  }
+
+  function renderTable(rows){
+    if(!rows || !rows.length) return '<p>No hay registros todavia.</p>';
+    const prefer=['fecha','habitacion','usuario','matricula','estado','anomalias','created_at','updated_at','fecha_servidor','fecha_dia'];
+    const keys=Array.from(rows.reduce((s,o)=> (Object.keys(o).forEach(k=>s.add(k)),s), new Set()));
+    const headers=prefer.filter(k=>keys.includes(k)).concat(keys.filter(k=>!prefer.includes(k)).sort());
+    let th = headers.map(h=>'<th data-key="'+h+'">'+h+'</th>').join('');
+    let body = rows.map(r=>'<tr>'+headers.map(h=>'<td>'+(r[h]??'')+'</td>').join('')+'</tr>').join('');
+    return '<table class="conc-table"><thead><tr>'+th+'</tr></thead><tbody>'+body+'</tbody></table>';
+  }
+
+  function sortByKey(rows, key, dir){
+    const m = dir==='desc'?-1:1;
+    rows.sort((a,b)=>{ const av=(a[key]??'').toString(); const bv=(b[key]??'').toString(); return av.localeCompare(bv, undefined, {numeric:true})*m; });
+  }
+
+  function exportCSV(){
+    const ov=el('#concentradoOverlay'); const table=el('.conc-table', ov); let csv='';
+    if(table){
+      const rows=els('tr', table);
+      const cell=td=> (td.innerText||'').replace(/\r?\n/g,' ').trim();
+      csv = rows.map(tr => els(':scope > *', tr).map(td => JSON.stringify(cell(td))).join(',')).join('\n');
+    } else if (ov && ov.__data){
+      const rows = ov.__data||[]; if(!rows.length) return alert('No hay datos.');
+      const prefer=['fecha','habitacion','usuario','matricula','estado','anomalias','created_at','updated_at','fecha_servidor','fecha_dia'];
+      const set=new Set(); rows.forEach(r=>Object.keys(r).forEach(k=>set.add(k)));
+      const headers=prefer.filter(k=>set.has(k)).concat(Array.from(set).filter(k=>!prefer.includes(k)).sort());
+      csv = headers.join(',')+'\n'+rows.map(r=>headers.map(h=>JSON.stringify(r[h]??'')).join(',')).join('\n');
+    } else return alert('No hay datos.');
+    const blob=new Blob(['\ufeff', csv],{type:'text/csv;charset=utf-8;'}); const url=URL.createObjectURL(blob);
+    const a=document.createElement('a'); a.href=url; a.download='concentrado_inventario.csv'; a.click(); setTimeout(()=>URL.revokeObjectURL(url),1000);
+  }
+
+  function exportPDF(){
+    const ov=el('#concentradoOverlay'); const wrap=el('.table-wrap', ov); const html=wrap?wrap.innerHTML:'<p>Sin datos</p>';
+    const w=window.open('', '_blank'); if(!w) return alert('Permite ventanas emergentes para exportar a PDF.');
+    const css='<style>body{font-family:Arial,sans-serif;padding:16px}h1{font-size:18px;margin:0 0 10px}table{width:100%;border-collapse:collapse}th,td{border:1px solid #ddd;padding:6px;font-size:12px;white-space:nowrap}th{background:#f3f4f6;position:sticky;top:0}tr:nth-child(even) td{background:#fcfdff}</style>';
+    w.document.write('<html><head><meta charset="utf-8"><title>Concentrado</title>'+css+'</head><body><h1>Concentrado de Inventarios</h1>'+html+'</body></html>');
+    w.document.close(); w.focus(); w.print();
+  }
+
+  async function openConcentrado(){
+    if(getRole()!=='admin') return alert('Solo administradores pueden ver el concentrado.');
+    const ov=ensureOverlay(); el('#conc-body', ov).innerHTML='<div style="padding:18px">Cargando<span class="spinner"></span></div>';
+    ov.classList.add('activo'); ov.setAttribute('aria-hidden','false');
+    try{
+      const data = await apiList();
+      ov.__data = data.slice();
+      el('#conc-body', ov).innerHTML = renderTable(ov.__data);
+      refreshStats(ov); wireSort(ov);
+    }catch(e){
+      console.error(e);
+      let data=[]; try{ data = JSON.parse(localStorage.getItem('HK_INV_DATA')||'[]'); }catch(_){}
+      ov.__data = data;
+      el('#conc-body', ov).innerHTML = renderTable(ov.__data);
+      refreshStats(ov); wireSort(ov);
+    }
+  }
+
+  function refreshStats(ov){
+    const s = el('#conc-stats', ov);
+    const n = (ov.__data||[]).length;
+    const last = n? (ov.__data[ov.__data.length-1].fecha_servidor || ov.__data[ov.__data.length-1].created_at || '') : '';
+    s.textContent = n + ' registros' + (last ? (' • ultimo: ' + last) : '');
+  }
+
+  function wireSort(ov){
+    const table = el('.conc-table', ov); if(!table) return;
+    const headers = els('th', table);
+    headers.forEach(th => {
+      let dir = 'asc';
+      h(th,'click',()=>{ const key=th.getAttribute('data-key'); if(!key) return; sortByKey(ov.__data, key, dir); dir = dir==='asc'?'desc':'asc'; el('#conc-body', ov).innerHTML=renderTable(ov.__data); wireSort(ov); });
+    });
+  }
+
+  document.addEventListener('input', function(e){
+    if(e.target && e.target.id==='conc-search'){
+      const term = e.target.value.toLowerCase().trim();
+      const ov = el('#concentradoOverlay'); if(!ov || !ov.__data) return;
+      const base = ov.__data_all || (ov.__data_all = ov.__data.slice());
+      if(!term) ov.__data = base.slice();
+      else ov.__data = base.filter(r => JSON.stringify(r).toLowerCase().includes(term));
+      el('#conc-body', ov).innerHTML = renderTable(ov.__data);
+      wireSort(ov); refreshStats(ov);
+    }
+  });
+
+  document.addEventListener('click', function(e){
+    if(e.target && e.target.id==='btn-concentrado') openConcentrado();
+    if(e.target && e.target.id==='conc-cerrar'){ const ov=el('#concentradoOverlay'); if(ov){ ov.classList.remove('activo'); ov.setAttribute('aria-hidden','true'); } }
+    if(e.target && e.target.id==='exp-excel') exportCSV();
+    if(e.target && e.target.id==='exp-pdf') exportPDF();
+  });
+
+  if (typeof window.abrirInventarioPrincipal === 'function'){
+    const _open = window.abrirInventarioPrincipal;
+    window.abrirInventarioPrincipal = function(hnum){
+      _open(hnum);
+      setTimeout(function(){
+        const save = document.getElementById('invp-guardar');
+        if(save && !save.__wired){
+          save.__wired = true;
+          save.addEventListener('click', async function(){
+            try{ const entry = collect(hnum); try{ await apiAppend(entry); }catch(_e){ qPush(entry); } try{ await flushQueue(); }catch(_e){} }catch(err){ console.error(err); }
+          }, {capture:true});
+        }
+      }, 0);
+    };
+  }
+
+  async function badgeCheck(){
+    const bd = document.getElementById('hk-badge'); if(!bd) return;
+    bd.style.display = 'inline-block'; bd.textContent = 'Comprobando...';
+    try{ await apiList(); bd.textContent='Central'; bd.classList.add('ok'); }
+    catch(_e){ bd.textContent='Local'; bd.classList.remove('ok'); }
+    if(getRole()!=='admin') bd.style.display='none';
+  }
+
+  document.addEventListener('DOMContentLoaded', async function(){
+    const btn = document.getElementById('btn-concentrado');
+    if(btn) btn.style.display = (getRole()==='admin' ? 'inline-flex' : 'none');
+    try{ await flushQueue(); }catch(_){}
+    badgeCheck();
+  });
+
+})();</script>
+
+
+<script>
+(()=>{
+  if(window.__hkRestoreGuardWired) return; window.__hkRestoreGuardWired = true;
+  const DEPURACION_MAT = "3072167";                    // matrícula autorizada
+  const DEPURACION_PASS = "JRPNLS96050220H500";        // clave de depuración
+
+  window.__hkRestoreWithConfirm = function(num, applyFn){
+    try{
+      if(!confirm("¿Restaurar valores sugeridos para esta habitación?")) return;
+      if(!confirm("Esta acción sobrescribirá los campos visibles. ¿Confirmas?")) return;
+      const mat = (sessionStorage.getItem('matricula')||'').trim();
+      if(mat !== DEPURACION_MAT){ alert("Matrícula no autorizada."); return; }
+      const pass = prompt("Clave de depuración:");
+      if(pass !== DEPURACION_PASS){ alert("Clave incorrecta."); return; }
+      if(typeof applyFn === 'function') applyFn(num);
+    }catch(e){ console.error(e); alert("No se pudo restaurar los sugeridos."); }
+  };
+})();
+</script>
+
+<script>
+(()=>{
+  if (window.__hkSugeridosWired) return;
+  window.__hkSugeridosWired = true;
+  const MASTERS = [3014, 3114, 3214, 4111, 4211, 4311, 4411, 4511];
+  const SWING_UP = [3014, 3015, 3016, 3017, 3018, 3019, 3020, 3021, 3022, 3023, 3024, 3025, 3026, 3027, 3028, 3029, 3030, 3101, 3102, 3103, 3104, 3105, 3106, 3107, 3108, 3109, 3110, 3111, 3112];
+  const esMaster = n => MASTERS.includes(Number(n));
+  const esSwingUp = n => SWING_UP.includes(Number(n)) && !esMaster(n);
+  const categoriaDe = n => esMaster(n) ? 'Master Suite' : (esSwingUp(n) ? 'Swing Up' : 'Normal');
+
+  async function getHabitacion(num){
+    try{
+      if (typeof window.ensureHabitacionesData === 'function'){
+        const map = await window.ensureHabitacionesData();
+        return map?.[num] || null;
+      }
+      const data = await fetch('habitaciones.json').then(r=>r.json());
+      return data?.[num] || null;
+    }catch(_){ return null; }
+  }
+  function tipoCamaDesdeJson(h){
+    if (!h) return '';
+    if (typeof window.getTipoCama === 'function') return window.getTipoCama(h);
+    const v = (h.tipo_cama||'').toString().toUpperCase();
+    if (v==='K' || v==='D') return v;
+    const txt = [h.titulo||'', h.descripcion||'', ...(h.caracteristicas||[])].join(' ').toUpperCase();
+    if (/\bKING\b|KING SIZE|\bKS\b/.test(txt)) return 'K';
+    if (/\bDOUBLE\b|\bDOBLE\b|\bMATRIMONIAL\b|\bMATRI\b|2\s*DBL/.test(txt)) return 'D';
+    return '';
+  }
+  function sugeridos(categoria, tipoCamaNorm='K'){
+    const camaK = { protector:1, sabanas:2, almohadas:4, fundas:4, protAlm:4, inserto:1, cubre:1 };
+    const camaD = { protector:camaK.protector*2, sabanas:camaK.sabanas*2, almohadas:camaK.almohadas*2, fundas:camaK.fundas*2, protAlm:camaK.protAlm*2, inserto:camaK.inserto*2, cubre:camaK.cubre*2 };
+    if (categoria==='Swing Up'){
+      return { ban:{bano:6,mano:6,facial:2,tapete:2,verdes:2,color:'Café',lockColor:true},
+               cama:{...camaK,color:'Café',tipo:'K',lockTipo:true,lockColor:true} };
+    }
+    if (categoria==='Master Suite'){
+      return { ban:{bano:6,mano:7,facial:2,tapete:4,verdes:2,color:'Café',lockColor:true},
+               cama:{...camaK,color:'Café',tipo:'K',lockTipo:true,lockColor:true} };
+    }
+    const isD = (tipoCamaNorm==='D');
+    return { ban:{bano:4,mano:4,facial:2,tapete:1,verdes:0,color:'Blanco',lockColor:false},
+             cama:{...(isD?camaD:camaK),color:'Blanco',tipo:(isD?'D':'K'),lockTipo:true,lockColor:false} };
+  }
+  function setVal(id,v){ const el=document.getElementById(id); if(el) el.value=String(v); }
+  function setSel(id,v,lock=false){ const el=document.getElementById(id); if(!el) return; const has=[...el.options].some(o=>o.value==v); el.value=has?v:(el.options[0]?.value||''); lock?el.setAttribute('disabled','disabled'):el.removeAttribute('disabled'); }
+  function pintarChip(cat,cama){
+    try{
+      const head=document.querySelector('#inventarioOverlay .invp-head')||document.querySelector('#inventarioOverlay .modal-contenido h2');
+      if(!head) return;
+      let chip=document.getElementById('hk-sugeridos-chip');
+      if(!chip){
+        chip=document.createElement('div'); chip.id='hk-sugeridos-chip'; chip.style.cssText='margin:.5rem 0 0;display:flex;gap:8px;align-items:center;flex-wrap:wrap';
+        const badge=document.createElement('span'); badge.id='hk-sugeridos-badge'; badge.style.cssText='display:inline-block;background:#0ea5e9;color:#fff;font-weight:700;border-radius:999px;padding:4px 10px;font-size:12px';
+        const btn=document.createElement('button'); btn.type='button'; btn.id='hk-sugeridos-restore'; btn.textContent='Restaurar sugeridos'; btn.style.cssText='border:none;background:#e5e7eb;border-radius:8px;padding:4px 8px;font-size:12px;cursor:pointer';
+        chip.appendChild(badge); chip.appendChild(btn); head.parentNode.insertBefore(chip, head.nextSibling);
+      }
+      const badge=document.getElementById('hk-sugeridos-badge'); if(badge) badge.textContent=`Sugeridos: ${cat} • ${cama}`;
+    }catch(_){}
+  }
+  async function aplicarSugeridos(num){
+    const h=await getHabitacion(num);
+    const cat=categoriaDe(num);
+    const tipo=(cat==='Normal')?(tipoCamaDesdeJson(h)||'K'):'K';
+    const sug=sugeridos(cat,tipo);
+    setVal('ban-bano',sug.ban.bano); setVal('ban-mano',sug.ban.mano); setVal('ban-facial',sug.ban.facial); setVal('ban-tapete',sug.ban.tapete); setVal('ban-verdes',sug.ban.verdes); setSel('ban-color',sug.ban.color,sug.ban.lockColor); setSel('ban-categoria',cat,true);
+    setSel('tipo-cama',sug.cama.tipo,sug.cama.lockTipo); setVal('cama-protector',sug.cama.protector); setVal('cama-sabanas',sug.cama.sabanas); setVal('cama-almohadas',sug.cama.almohadas); setVal('cama-fundas',sug.cama.fundas); setVal('cama-prot-alm',sug.cama.protAlm); setVal('cama-inserto',sug.cama.inserto); setVal('cama-cubre',sug.cama.cubre); setSel('cama-color',sug.cama.color,sug.cama.lockColor);
+    pintarChip(cat,(cat==='Normal'?tipo:'K'));
+    const btn=document.getElementById('hk-sugeridos-restore'); if(btn){ btn.onclick=()=> window.__hkRestoreWithConfirm(num, aplicarSugeridos); }
+  }
+  function tryWire(){
+    if(typeof window.abrirInventarioPrincipal!=='function') return;
+    if(window.__hkSugeridosHooked) return; window.__hkSugeridosHooked=true;
+    const _open=window.abrirInventarioPrincipal;
+    window.abrirInventarioPrincipal=function(num){ _open(num); setTimeout(()=>{ aplicarSugeridos(num); },0); };
+  }
+  tryWire(); document.addEventListener('DOMContentLoaded', tryWire);
+})();
+</script>
+
+<script>
+(()=>{
+  if(window.__hkConcFsWired) return; window.__hkConcFsWired = true;
+
+  function placeBtn(ov){
+    const toolbar = ov.querySelector('.conc-toolbar .right') || ov.querySelector('.conc-toolbar') || ov;
+    if(!toolbar) return false;
+    if(document.getElementById('conc-fullscreen-btn')) return true;
+
+    const btn = document.createElement('button');
+    btn.id = 'conc-fullscreen-btn';
+    btn.type = 'button';
+    btn.textContent = 'Expandir';
+    btn.className = 'btn success';
+    btn.style.cssText = 'margin-left:8px;background:#10b981;color:#fff;border:none;border-radius:10px;padding:8px 12px;font-weight:700;cursor:pointer;';
+    btn.onclick = () => {
+      const on = ov.classList.toggle('fullscreen');
+      document.body.classList.toggle('hk-no-scroll', on);
+      btn.textContent = on ? 'Salir de pantalla completa' : 'Expandir';
+    };
+
+    const closeBtn = ov.querySelector('#conc-cerrar');
+    if(closeBtn && closeBtn.parentNode){
+      closeBtn.parentNode.insertBefore(btn, closeBtn);
+    }else{
+      toolbar.appendChild(btn);
+    }
+    return true;
+  }
+
+  function ensureFsButton(){
+    const ov = document.getElementById('concentradoOverlay');
+    if(!ov) return;
+    placeBtn(ov);
+  }
+
+  function hookOpen(){
+    if(typeof window.openConcentrado!=='function') return;
+    if(window.__hkConcFsHooked) return; window.__hkConcFsHooked = true;
+    const _open = window.openConcentrado;
+    window.openConcentrado = async function(){
+      const r = await _open.apply(this, arguments);
+      setTimeout(ensureFsButton, 0);
+      return r;
+    };
+  }
+
+  const mo = new MutationObserver(()=> ensureFsButton());
+  mo.observe(document.documentElement, { childList:true, subtree:true });
+
+  hookOpen();
+  document.addEventListener('DOMContentLoaded', hookOpen);
+  ensureFsButton();
+})();
+</script>
+
+<script>
+(()=>{
+  if(window.__hkConcPurgeWired) return; window.__hkConcPurgeWired = true;
+  const DEPURACION_MAT = "3072167";
+  const DEPURACION_PASS = "JRPNLS96050220H500";
+
+  function purgeUI(){
+    try{
+      const ov = document.getElementById('concentradoOverlay');
+      const tbody = ov && ov.querySelector('table tbody');
+      if(!tbody) return false;
+      tbody.innerHTML = "";
+      const counter = ov.querySelector('.conc-count');
+      if(counter) counter.textContent = "0 registros";
+      return true;
+    }catch(e){ console.error(e); return false; }
+  }
+
+  async function purgeBackendMaybe(){
+    try{
+      if (typeof window.apiPurge === 'function'){
+        const ok = await window.apiPurge();
+        return !!ok;
+      }
+      if (window.__conc_api_base){
+        const url = window.__conc_api_base + "?mode=purge";
+        const r = await fetch(url, {method:"POST"});
+        const j = await r.json().catch(()=>null);
+        return j && j.status === "ok";
+      }
+    }catch(e){ console.warn("purgeBackendMaybe:", e); }
+    return false;
+  }
+
+  window.__hkPurgeWithConfirm = async function(){
+    try{
+      if(!confirm("¿Eliminar/depurar el historial mostrado en Concentrado?")) return;
+      if(!confirm("Esta acción no se puede deshacer. ¿Confirmas?")) return;
+      const mat = (sessionStorage.getItem('matricula')||'').trim();
+      if(mat !== DEPURACION_MAT){ alert("Matrícula no autorizada."); return; }
+      const pass = prompt("Clave de depuración:");
+      if(pass !== DEPURACION_PASS){ alert("Clave incorrecta."); return; }
+      let done = await purgeBackendMaybe();
+      const uiDone = purgeUI();
+      if(done || uiDone){
+        alert(done ? "Historial eliminado (servidor) y limpiado en la vista." : "Historial limpiado en la vista (solo UI).");
+      }else{
+        alert("No se pudo depurar el historial.");
+      }
+    }catch(e){ console.error(e); alert("No se pudo depurar el historial."); }
+  };
+
+  function placeBtn(){
+    const ov = document.getElementById('concentradoOverlay');
+    if(!ov) return;
+    const toolbar = ov.querySelector('.conc-toolbar .right') || ov.querySelector('.conc-toolbar') || ov;
+    if(!toolbar) return;
+    if(document.getElementById('conc-purge-btn')) return;
+
+    const btn = document.createElement('button');
+    btn.id = 'conc-purge-btn';
+    btn.type = 'button';
+    btn.textContent = 'Depurar';
+    btn.className = 'btn danger';
+    btn.style.cssText = 'background:#ef4444;color:#fff;border:none;border-radius:10px;padding:8px 12px;font-weight:700;cursor:pointer;';
+    btn.onclick = ()=> window.__hkPurgeWithConfirm();
+
+    const closeBtn = toolbar.querySelector('#conc-cerrar');
+    if (closeBtn && closeBtn.parentNode === toolbar){
+      toolbar.insertBefore(btn, closeBtn);
+    }else{
+      toolbar.appendChild(btn);
+    }
+  }
+
+  function hookOpen(){
+    if(typeof window.openConcentrado!=='function') return;
+    if(window.__hkConcPurgeHooked) return; window.__hkConcPurgeHooked = true;
+    const _open = window.openConcentrado;
+    window.openConcentrado = async function(){
+      const r = await _open.apply(this, arguments);
+      setTimeout(placeBtn, 0);
+      return r;
+    };
+  }
+
+  const mo = new MutationObserver(()=> placeBtn());
+  mo.observe(document.documentElement, { childList:true, subtree:true });
+
+  document.addEventListener('DOMContentLoaded', hookOpen);
+  hookOpen();
+  placeBtn();
+})();
+</script>
 </body>
 </html>
