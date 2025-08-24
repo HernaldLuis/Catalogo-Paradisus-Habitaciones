@@ -939,7 +939,13 @@ body.hk-modal-open{ overflow: hidden; }
 #concentradoOverlay.fullscreen .table-wrap{ height: calc(94vh - 120px) !important; }
 body.hk-no-scroll{ overflow: hidden !important; }
 
-/* === CONC-TOOLBAR-FIX: centrar y evitar desbordes === */
+
+/* === CONC-PURGE-001 (UI only) === */
+#conc-purge-btn{ background:#ef4444!important;color:#fff!important;border:none;border-radius:10px;padding:8px 12px;font-weight:700;cursor:pointer; }
+#conc-purge-btn:hover{ filter:brightness(0.95); }
+
+
+/* === CONC-TOOLBAR-FIX v2 === */
 #concentradoOverlay .conc-toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;}
 #concentradoOverlay .conc-toolbar .right{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;margin-left:auto;}
 #concentradoOverlay .conc-toolbar .right .btn{white-space:nowrap;}
@@ -949,6 +955,35 @@ body.hk-no-scroll{ overflow: hidden !important; }
   #concentradoOverlay .conc-toolbar .right{justify-content:center;width:100%;}
 }
 #concentradoOverlay .conc-toolbar .right #conc-cerrar{order:99;}
+
+
+/* === CONC-PURGE-MODAL ZUP === */
+.hk-purge-mask{
+  position:fixed; inset:0; background:rgba(0,0,0,.45);
+  display:flex; align-items:center; justify-content:center;
+  z-index: 2147483647;
+}
+.hk-purge-dialog{
+  width:min(560px, 96vw); background:#fff; border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,.2); padding:18px 18px 14px;
+  font-family:inherit;
+}
+.hk-purge-dialog h3{ margin:0 0 6px; font-size:18px; font-weight:800; color:#111827; }
+.hk-purge-dialog p.desc{ margin:0 0 10px; color:#374151; font-size:14px; }
+.hk-purge-dialog .warn{ background:#FEF3C7; color:#92400E; padding:8px 10px; border-radius:10px; font-size:13px; margin-bottom:10px; }
+.hk-purge-dialog .row{ display:flex; gap:10px; margin:8px 0; }
+.hk-purge-dialog label{ font-size:12px; font-weight:700; color:#374151; display:block; margin-bottom:4px; }
+.hk-purge-dialog input[type="text"], .hk-purge-dialog input[type="password"]{
+  width:100%; border:1px solid #cbd5e1; border-radius:10px; padding:8px 10px; font-size:14px;
+}
+.hk-purge-dialog .confirm{ display:flex; gap:8px; align-items:center; font-size:13px; margin:6px 0 10px; }
+.hk-purge-dialog .error{ color:#b91c1c; font-size:12px; min-height:16px; }
+.hk-purge-dialog .actions{ display:flex; gap:10px; justify-content:flex-end; margin-top:8px; }
+.hk-purge-dialog button{ border:none; border-radius:10px; padding:8px 12px; font-weight:800; cursor:pointer; }
+.hk-purge-dialog .btn-cancel{ background:#e5e7eb; color:#111827; }
+.hk-purge-dialog .btn-go{ background:#ef4444; color:#fff; }
+.hk-purge-dialog .btn-go[disabled]{ opacity:.6; cursor:not-allowed; }
+body.hk-no-scroll{ overflow:hidden !important; }
 
 </style>
 
@@ -2912,19 +2947,29 @@ document.addEventListener('DOMContentLoaded', () => {
 <script>
 (()=>{
   if(window.__hkRestoreGuardWired) return; window.__hkRestoreGuardWired = true;
-  const DEPURACION_MAT = "3072167";                    // matrícula autorizada
-  const DEPURACION_PASS = "JRPNLS96050220H500";        // clave de depuración
+  const DEPURACION_MAT = "3072167";
+  const DEPURACION_PASS = "JRPNLS96050220H500";
 
   window.__hkRestoreWithConfirm = function(num, applyFn){
     try{
       if(!confirm("¿Restaurar valores sugeridos para esta habitación?")) return;
       if(!confirm("Esta acción sobrescribirá los campos visibles. ¿Confirmas?")) return;
+
       const mat = (sessionStorage.getItem('matricula')||'').trim();
-      if(mat !== DEPURACION_MAT){ alert("Matrícula no autorizada."); return; }
+      if(mat !== DEPURACION_MAT){
+        alert("Matrícula no autorizada para esta acción.");
+        return;
+      }
       const pass = prompt("Clave de depuración:");
-      if(pass !== DEPURACION_PASS){ alert("Clave incorrecta."); return; }
+      if(pass !== DEPURACION_PASS){
+        alert("Clave incorrecta.");
+        return;
+      }
       if(typeof applyFn === 'function') applyFn(num);
-    }catch(e){ console.error(e); alert("No se pudo restaurar los sugeridos."); }
+    }catch(e){
+      console.error(e);
+      alert("No se pudo restaurar los sugeridos.");
+    }
   };
 })();
 </script>
@@ -2938,7 +2983,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const esMaster = n => MASTERS.includes(Number(n));
   const esSwingUp = n => SWING_UP.includes(Number(n)) && !esMaster(n);
   const categoriaDe = n => esMaster(n) ? 'Master Suite' : (esSwingUp(n) ? 'Swing Up' : 'Normal');
-
   async function getHabitacion(num){
     try{
       if (typeof window.ensureHabitacionesData === 'function'){
@@ -2963,16 +3007,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const camaK = { protector:1, sabanas:2, almohadas:4, fundas:4, protAlm:4, inserto:1, cubre:1 };
     const camaD = { protector:camaK.protector*2, sabanas:camaK.sabanas*2, almohadas:camaK.almohadas*2, fundas:camaK.fundas*2, protAlm:camaK.protAlm*2, inserto:camaK.inserto*2, cubre:camaK.cubre*2 };
     if (categoria==='Swing Up'){
-      return { ban:{bano:6,mano:6,facial:2,tapete:2,verdes:2,color:'Café',lockColor:true},
-               cama:{...camaK,color:'Café',tipo:'K',lockTipo:true,lockColor:true} };
+      return { ban:{bano:6,mano:6,facial:2,tapete:2,verdes:2,color:'Café',lockColor:true}, cama:{...camaK,color:'Café',tipo:'K',lockTipo:true,lockColor:true} };
     }
     if (categoria==='Master Suite'){
-      return { ban:{bano:6,mano:7,facial:2,tapete:4,verdes:2,color:'Café',lockColor:true},
-               cama:{...camaK,color:'Café',tipo:'K',lockTipo:true,lockColor:true} };
+      return { ban:{bano:6,mano:7,facial:2,tapete:4,verdes:2,color:'Café',lockColor:true}, cama:{...camaK,color:'Café',tipo:'K',lockTipo:true,lockColor:true} };
     }
     const isD = (tipoCamaNorm==='D');
-    return { ban:{bano:4,mano:4,facial:2,tapete:1,verdes:0,color:'Blanco',lockColor:false},
-             cama:{...(isD?camaD:camaK),color:'Blanco',tipo:(isD?'D':'K'),lockTipo:true,lockColor:false} };
+    return { ban:{bano:4,mano:4,facial:2,tapete:1,verdes:0,color:'Blanco',lockColor:false}, cama:{...(isD?camaD:camaK),color:'Blanco',tipo:(isD?'D':'K'),lockTipo:true,lockColor:false} };
   }
   function setVal(id,v){ const el=document.getElementById(id); if(el) el.value=String(v); }
   function setSel(id,v,lock=false){ const el=document.getElementById(id); if(!el) return; const has=[...el.options].some(o=>o.value==v); el.value=has?v:(el.options[0]?.value||''); lock?el.setAttribute('disabled','disabled'):el.removeAttribute('disabled'); }
@@ -3077,7 +3118,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const ov = document.getElementById('concentradoOverlay');
       const tbody = ov && ov.querySelector('table tbody');
       if(!tbody) return false;
+      // deja el header, limpia filas
       tbody.innerHTML = "";
+      // contador
       const counter = ov.querySelector('.conc-count');
       if(counter) counter.textContent = "0 registros";
       return true;
@@ -3085,11 +3128,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   async function purgeBackendMaybe(){
+    // opcional: si en el index existe window.apiPurge, úsalo
     try{
       if (typeof window.apiPurge === 'function'){
         const ok = await window.apiPurge();
         return !!ok;
       }
+      // fallback: intenta derivar base de apiList (si deja pista)
       if (window.__conc_api_base){
         const url = window.__conc_api_base + "?mode=purge";
         const r = await fetch(url, {method:"POST"});
@@ -3104,10 +3149,19 @@ document.addEventListener('DOMContentLoaded', () => {
     try{
       if(!confirm("¿Eliminar/depurar el historial mostrado en Concentrado?")) return;
       if(!confirm("Esta acción no se puede deshacer. ¿Confirmas?")) return;
+
       const mat = (sessionStorage.getItem('matricula')||'').trim();
-      if(mat !== DEPURACION_MAT){ alert("Matrícula no autorizada."); return; }
+      if(mat !== DEPURACION_MAT){
+        alert("Matrícula no autorizada para depuración.");
+        return;
+      }
       const pass = prompt("Clave de depuración:");
-      if(pass !== DEPURACION_PASS){ alert("Clave incorrecta."); return; }
+      if(pass !== DEPURACION_PASS){
+        alert("Clave incorrecta.");
+        return;
+      }
+
+      // Primero backend (si existe), luego UI
       let done = await purgeBackendMaybe();
       const uiDone = purgeUI();
       if(done || uiDone){
@@ -3115,7 +3169,9 @@ document.addEventListener('DOMContentLoaded', () => {
       }else{
         alert("No se pudo depurar el historial.");
       }
-    }catch(e){ console.error(e); alert("No se pudo depurar el historial."); }
+    }catch(e){
+      console.error(e); alert("No se pudo depurar el historial.");
+    }
   };
 
   function placeBtn(){
@@ -3129,10 +3185,9 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.id = 'conc-purge-btn';
     btn.type = 'button';
     btn.textContent = 'Depurar';
-    btn.className = 'btn danger';
-    btn.style.cssText = 'background:#ef4444;color:#fff;border:none;border-radius:10px;padding:8px 12px;font-weight:700;cursor:pointer;';
     btn.onclick = ()=> window.__hkPurgeWithConfirm();
 
+    // Inserta antes de "Cerrar" si existe, sino al final
     const closeBtn = toolbar.querySelector('#conc-cerrar');
     if (closeBtn && closeBtn.parentNode === toolbar){
       toolbar.insertBefore(btn, closeBtn);
@@ -3141,6 +3196,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Hook robusto
   function hookOpen(){
     if(typeof window.openConcentrado!=='function') return;
     if(window.__hkConcPurgeHooked) return; window.__hkConcPurgeHooked = true;
@@ -3158,6 +3214,127 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('DOMContentLoaded', hookOpen);
   hookOpen();
   placeBtn();
+})();
+</script>
+
+<script>
+(()=>{
+  if(window.__hkPurgeModalZupWired) return; window.__hkPurgeModalZupWired = true;
+
+  const AUTH_MAT  = "3072167";
+  const AUTH_PASS = "JRPNLS96050220H500";
+
+  async function purgeBackendMaybe(){
+    try{
+      if (typeof window.apiPurge === 'function'){
+        const ok = await window.apiPurge();
+        return !!ok;
+      }
+      if (window.__conc_api_base){
+        const url = window.__conc_api_base + "?mode=purge";
+        const r = await fetch(url, {method:"POST"});
+        const j = await r.json().catch(()=>null);
+        return j && j.status === "ok";
+      }
+    }catch(e){ console.warn("purgeBackendMaybe:", e); }
+    return false;
+  }
+
+  function purgeUI(){
+    try{
+      const ov = document.getElementById('concentradoOverlay');
+      const tbody = ov && ov.querySelector('table tbody');
+      if(!tbody) return false;
+      tbody.innerHTML = "";
+      const counter = ov.querySelector('.conc-count');
+      if(counter) counter.textContent = "0 registros";
+      return true;
+    }catch(e){ console.error(e); return false; }
+  }
+
+  function openPurgeModal(){
+    const mask = document.createElement('div');
+    mask.className = 'hk-purge-mask';
+    mask.innerHTML = `
+      <div class="hk-purge-dialog" role="dialog" aria-modal="true" aria-labelledby="hk-purge-title">
+        <h3 id="hk-purge-title">Depurar / Eliminar historial</h3>
+        <p class="desc">Esta acción elimina el historial mostrado en <b>Concentrado</b>.</p>
+        <div class="warn">⚠️ No se puede deshacer.</div>
+        <div class="row">
+          <div style="flex:1">
+            <label for="pmat">Matrícula</label>
+            <input id="pmat" type="text" placeholder="Ingresa tu matrícula">
+          </div>
+          <div style="flex:1">
+            <label for="ppass">Clave de depuración</label>
+            <input id="ppass" type="password" placeholder="Clave">
+          </div>
+        </div>
+        <div class="confirm">
+          <input id="pchk" type="checkbox">
+          <label for="pchk">Entiendo que esta acción no se puede deshacer</label>
+        </div>
+        <div id="perr" class="error"></div>
+        <div class="actions">
+          <button class="btn-cancel" id="pcancel" type="button">Cancelar</button>
+          <button class="btn-go" id="pgo" type="button" disabled>Eliminar</button>
+        </div>
+      </div>
+    `;
+
+    function close(){ mask.remove(); try{document.body.classList.remove('hk-no-scroll');}catch(_){}};
+
+    mask.querySelector('#pchk').addEventListener('change', (e)=>{
+      mask.querySelector('#pgo').disabled = !e.target.checked;
+    });
+
+    mask.querySelector('#pgo').addEventListener('click', async ()=>{
+      const mat = mask.querySelector('#pmat').value.trim();
+      const pass = mask.querySelector('#ppass').value.trim();
+      const err = mask.querySelector('#perr');
+
+      if(mat !== AUTH_MAT){ err.textContent = "Matrícula no autorizada."; return; }
+      if(pass !== AUTH_PASS){ err.textContent = "Clave incorrecta."; return; }
+      err.textContent = "";
+
+      const btn = mask.querySelector('#pgo');
+      btn.disabled = true; btn.textContent = "Eliminando…";
+
+      let okServer = await purgeBackendMaybe();
+      let okUI = purgeUI();
+
+      btn.disabled = false; btn.textContent = "Eliminar";
+
+      if(okServer || okUI){
+        mask.querySelector('.desc').innerHTML = "<b>Historial eliminado.</b>";
+        mask.querySelector('.warn').style.display = "none";
+        btn.style.display = "none";
+        mask.querySelector('#pcancel').textContent = "Cerrar";
+      }else{
+        err.textContent = "No se pudo depurar el historial.";
+      }
+    });
+
+    mask.querySelector('#pcancel').addEventListener('click', close);
+    mask.addEventListener('click', (e)=>{ if(e.target === mask) close(); });
+
+    document.body.appendChild(mask);
+    try{document.body.classList.add('hk-no-scroll');}catch(_){}
+    setTimeout(()=> mask.querySelector('#pmat').focus(), 0);
+  }
+
+  function wireBtn(){
+    const btn = document.getElementById('conc-purge-btn');
+    if(btn && !btn.dataset.zup){
+      btn.dataset.zup = '1';
+      btn.onclick = (ev)=>{ ev.preventDefault(); openPurgeModal(); };
+    }
+  }
+
+  const mo = new MutationObserver(wireBtn);
+  mo.observe(document.documentElement, { childList:true, subtree:true });
+  document.addEventListener('DOMContentLoaded', wireBtn);
+  wireBtn();
 })();
 </script>
 </body>
